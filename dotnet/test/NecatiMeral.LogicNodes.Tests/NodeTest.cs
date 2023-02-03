@@ -1,13 +1,20 @@
-﻿using Xunit;
+﻿using LogicModule.Nodes.TestHelper;
+using LogicModule.ObjectModel;
 
-namespace LogicNodesTest
+namespace NecatiMeral.LogicNodes.Tests;
+
+public class NodeTest
 {
-    public class NodeTest
-    {
-        [Fact]
-        public void YourTest()
-        {
+    protected INodeContext Context { get; }
 
-        }
+    public NodeTest()
+    {
+        Context = TestNodeContext.Create();
+    }
+
+    [Fact]
+    public void YourTest()
+    {
+
     }
 }

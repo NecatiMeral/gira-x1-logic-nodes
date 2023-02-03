@@ -12,6 +12,15 @@
     <IsTestProject Condition="$(MSBuildProjectFullPath.Contains('test')) and ($(MSBuildProjectName.EndsWith('.Tests')) or $(MSBuildProjectName.EndsWith('.TestBase')))">true</IsTestProject>
   </PropertyGroup>
 
+  <ItemGroup Condition="'$(IsTestProject)' != 'true'">
+    <Using Include="LogicModule.Nodes.Helpers" />
+    <Using Include="LogicModule.ObjectModel" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(IsTestProject)' == 'true'">
+    <Using Include="Xunit" />
+  </ItemGroup>
+
   <ItemGroup Condition="'$(IsTestProject)' == 'true'">
     <PackageReference Include="coverlet.collector" Version="3.1.2">
       <PrivateAssets>all</PrivateAssets>
@@ -42,7 +51,7 @@
     <xUnitExtensibilityExecutionPackageVersion>2.4.1</xUnitExtensibilityExecutionPackageVersion>
 
     <!-- xunit.runner.visualstudio https://www.nuget.org/packages/xunit.runner.visualstudio -->
-    <xUnitRunnerVisualstudioPackageVersion>2.4.3</xUnitRunnerVisualstudioPackageVersion>
+    <xUnitRunnerVisualstudioPackageVersion>2.4.1</xUnitRunnerVisualstudioPackageVersion>
 
   </PropertyGroup>
 

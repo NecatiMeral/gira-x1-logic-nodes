@@ -13,5 +13,14 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="LogicModule.Nodes.TestHelper">
+      <HintPath>..\..\src\LogicNodesSDK\LogicModule.Nodes.TestHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicModule.ObjectModel">
+      <HintPath>..\..\src\LogicNodesSDK\LogicModule.ObjectModel.dll</HintPath>
+    </Reference>
+  </ItemGroup>
   
 </Project>

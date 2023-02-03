@@ -27,11 +27,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  
-  <PropertyGroup>
+
+  <!-- TODO: Create a more developer and VS friendly approach-->
+  <!-- <PropertyGroup>
     <PostBuildEvent>"$(SolutionDir)src\LogicNodesSDK\LogicNodeTool.exe" create "$(TargetDir) " "$(SolutionDir)Zip"
 
 echo INFO: Logic Nodes are not signed yet and can only be used in the simulation in GPA.
 REM "$(SolutionDir)src\LogicNodesSDK\SignLogicNodes.exe" $(SolutionDir)..\..\build\dev\gira-developer-cert.p7b [certificate_password] $(SolutionDir)Zip</PostBuildEvent>
-  </PropertyGroup>
+  </PropertyGroup> -->
 </Project>
