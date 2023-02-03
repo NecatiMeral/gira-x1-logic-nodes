@@ -1,0 +1,55 @@
+<Project>
+
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Version>0.0.1</Version>
+    <PackageProjectUrl>https://github.com/NecatiMeral/gira-x1-logic-nodes/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/NecatiMeral/gira-x1-logic-nodes.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <IsTestProject Condition="$(MSBuildProjectFullPath.Contains('test')) and ($(MSBuildProjectName.EndsWith('.Tests')) or $(MSBuildProjectName.EndsWith('.TestBase')))">true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(IsTestProject)' == 'true'">
+    <PackageReference Include="coverlet.collector" Version="3.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdkPackageVersion)" />
+    <PackageReference Include="Shouldly" Version="$(ShouldlyPackageVersion)" />
+    <PackageReference Include="xunit" Version="$(xUnitPackageVersion)" />
+    <PackageReference Include="xunit.extensibility.execution" Version="$(xUnitExtensibilityExecutionPackageVersion)" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="$(xUnitRunnerVisualStudioPackageVersion)" />
+  </ItemGroup>
+
+  <PropertyGroup>
+
+    <!-- Microsoft .NET-Framework reference assemblies -->
+    <MicrosoftNetFramework45PackageVersion>1.0.3</MicrosoftNetFramework45PackageVersion>
+
+    <!-- Microsoft.NET.Test.Sdk https://www.nuget.org/packages/Microsoft.NET.Test.Sdk -->
+    <MicrosoftNETTestSdkPackageVersion>17.2.0</MicrosoftNETTestSdkPackageVersion>
+
+    <!-- Shouldly https://www.nuget.org/packages/Shouldly -->
+    <ShouldlyPackageVersion>4.1.0</ShouldlyPackageVersion>
+
+    <!-- xunit https://www.nuget.org/packages/xUnit -->
+    <xUnitPackageVersion>2.4.1</xUnitPackageVersion>
+
+    <!-- xunit.extensibility.execution https://www.nuget.org/packages/xunit.extensibility.execution -->
+    <xUnitExtensibilityExecutionPackageVersion>2.4.1</xUnitExtensibilityExecutionPackageVersion>
+
+    <!-- xunit.runner.visualstudio https://www.nuget.org/packages/xunit.runner.visualstudio -->
+    <xUnitRunnerVisualstudioPackageVersion>2.4.3</xUnitRunnerVisualstudioPackageVersion>
+
+  </PropertyGroup>
+
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Manifest_1json__JSONSchema="$(SolutionDir)src\LogicNodesSDK\gira_manifest_schema.json" />
+    </VisualStudio>
+  </ProjectExtensions>
+
+</Project>
