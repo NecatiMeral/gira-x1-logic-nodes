@@ -1,0 +1,429 @@
+{
+	"info": {
+		"_postman_id": "27577593-9f21-46b2-8acd-8d56d867fd4b",
+		"name": "Gira IoT REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "3. API availability check",
+			"item": [
+				{
+					"name": "API availability check",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{HostOrIp}}/api/v2/",
+							"protocol": "https",
+							"host": [
+								"{{HostOrIp}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "4. Registration",
+			"item": [
+				{
+					"name": "Register client",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"\r",
+									"pm.test(\"Client registration succeed\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201]);\r",
+									"    var jsonData = JSON.parse(responseBody);\r",
+									"    pm.collectionVariables.set(\"ClientToken\", jsonData.token);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"client\": \"{{ClientId}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{HostOrIp}}/api/v2/clients",
+							"protocol": "https",
+							"host": [
+								"{{HostOrIp}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unregister client",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Client unregister succeed\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([204]);\r",
+									"    pm.collectionVariables.set(\"ClientToken\", '');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"client\": \"{{ClientId}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{HostOrIp}}/api/v2/clients/{{ClientToken}}",
+							"protocol": "https",
+							"host": [
+								"{{HostOrIp}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"clients",
+								"{{ClientToken}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register callback",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"\r",
+									"pm.test(\"Client registration succeed\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201]);\r",
+									"    var jsonData = JSON.parse(responseBody);\r",
+									"    pm.collectionVariables.set(\"ClientToken\", jsonData.token);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"serviceCallback\": \"{{ServiceCallbackUrl}}\",\r\n \"valueCallback\": \"{{ValueCallbackUrl}}\",\r\n \"testCallbacks\": {{TestCallbacks}}\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{HostOrIp}}/api/v2/clients/{{ClientToken}}/callbacks",
+							"protocol": "https",
+							"host": [
+								"{{HostOrIp}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"clients",
+								"{{ClientToken}}",
+								"callbacks"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "5. UI configuration",
+			"item": [
+				{
+					"name": "5.1 UI configuration identifier",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{HostOrIp}}/api/v2/uiconfig/uid?token={{ClientToken}}",
+							"protocol": "https",
+							"host": [
+								"{{HostOrIp}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"uiconfig",
+								"uid"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{ClientToken}}"
+								}
+							]
+						},
+						"description": "Unique identifier of current configuration. This identifier changes each time the configuration  \nis changed (e.g. GPA project download, configuration changes with the Gira Smart Home  \nApp)."
+					},
+					"response": []
+				},
+				{
+					"name": "5.2 Get configuration",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{HostOrIp}}/api/v2/uiconfig?token={{ClientToken}}&expand=datapontsFlags,parameters,locations,trades",
+							"protocol": "https",
+							"host": [
+								"{{HostOrIp}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"uiconfig"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{ClientToken}}"
+								},
+								{
+									"key": "expand",
+									"value": "datapontsFlags,parameters,locations,trades"
+								}
+							]
+						},
+						"description": "Get complete UI configuration.  \n\n# Response\n\n| Key          | Description\n|--------------|---------\n| `uid`        | The unique UI configuration identifier.\n| functionType | Function types unique resource name. See 9.1 Function definitions for further information.\n| channelType  | Channel types unique resource name. See 9.2 Channel definitions for further information.\n| displayName  | UTF-8 based display name.\n| functions    | A list of all functions.\n| dataPoints   | A list of all available data points in the function. See DataPoints.\n\n## DataPoints \n\n| Key        | Description\n|------------|---------\n| uid        | The unique identifier of the data point.  \n| name       | The logical name of the data point based on the channel definition.\n| canRead    | Whether the data point can be read. Will be returned if dataPointFlags present within expand parameter only.\n| canWrite   | Whether the data point can be written. Will be returned if dataPointFlags present within expand parameter only.\n| canEvent   | Whether the data point can event. Will be returned if dataPointFlags present within expand parameter only.\n| parameters | A list of function parameters. Will be returned if present within expand parameter only.\n| locations  | A nested list of all locations and the contained unique function identifiers. Will be returned if present within expand parameter only.  \n| trades     | A list of all trades and the contained unique function identifiers. Will be returned if present within expand parameter only."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "6. Values",
+			"item": [
+				{
+					"name": "6.1 Get value(s)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{HostOrIp}}/api/v2/values/{{DataPointUid}}?token={{ClientToken}}",
+							"protocol": "https",
+							"host": [
+								"{{HostOrIp}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"values",
+								"{{DataPointUid}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{ClientToken}}"
+								}
+							]
+						},
+						"description": "The UID can refer to:\n\n*   A data point in which case only this data point’s value is returned.\n*   A function in which case all the function’s data point values are returned"
+					},
+					"response": []
+				},
+				{
+					"name": "6.2 Set value(s)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"values\": [\r\n        {\r\n            \"uid\": \"{{DataPointUid}}\",\r\n            \"value\": 0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{HostOrIp}}/api/v2/values?token={{ClientToken}}",
+							"protocol": "https",
+							"host": [
+								"{{HostOrIp}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"values"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{ClientToken}}"
+								}
+							]
+						},
+						"description": "The UID can refer to:\n\n*   A data point in which case only this data point’s value is returned.\n*   A function in which case all the function’s data point values are returned"
+					},
+					"response": []
+				},
+				{
+					"name": "6.3 Set single value",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"value\": \"0\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{HostOrIp}}/api/v2/values/{{DataPointUid}}?token={{ClientToken}}",
+							"protocol": "https",
+							"host": [
+								"{{HostOrIp}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"values",
+								"{{DataPointUid}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{ClientToken}}"
+								}
+							]
+						},
+						"description": "The UID can refer to:\n\n*   A data point in which case only this data point’s value is returned.\n*   A function in which case all the function’s data point values are returned"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{Password}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{Username}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Username",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "Password",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "HostOrIp",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "ClientId",
+			"value": "de.neco.postman.client",
+			"type": "string"
+		},
+		{
+			"key": "ClientToken",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "ServiceCallbackUrl",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "ValueCallbackUrl",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "TestCallbacks",
+			"value": "false",
+			"type": "string"
+		},
+		{
+			"key": "DataPointUid",
+			"value": "a0aw",
+			"type": "string"
+		}
+	]
+}
