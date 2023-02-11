@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\logic-node.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NecatiMeral.LogicNodes\NecatiMeral.LogicNodes.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Manifest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <!-- TODO: Create a more developer and VS friendly approach-->
+  <!-- <PropertyGroup>
+    <PostBuildEvent>"$(SolutionDir)src\LogicNodesSDK\LogicNodeTool.exe" create "$(TargetDir) " "$(SolutionDir)Zip"
+
+echo INFO: Logic Nodes are not signed yet and can only be used in the simulation in GPA.
+REM "$(SolutionDir)src\LogicNodesSDK\SignLogicNodes.exe" $(SolutionDir)..\..\build\dev\gira-developer-cert.p7b [certificate_password] $(SolutionDir)Zip</PostBuildEvent>
+  </PropertyGroup> -->
+
+</Project>

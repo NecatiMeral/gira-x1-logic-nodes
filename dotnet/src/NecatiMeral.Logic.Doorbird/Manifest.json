@@ -1,0 +1,31 @@
+﻿{
+  "PackageFormatVersion": "1.0",
+  "Assembly": "Necati_Meral_Yahoo_De.Logic.Doorbird.dll",
+  "PackageName": {
+    "en": "Doorbird nodes"
+  },
+  "DependentFiles": [
+    "NecatiMeral.LogicNodes.dll"
+  ],
+  "Version": "1.0.0",
+  "Author": "Necati Meral",
+  "Copyright": "COPYRIGHT",
+  "DeveloperId": "necati_meral_yahoo_de",
+  "License": "Free",
+  "PackageId": "CB18E39C-C1A8-421F-882A-4E3B4B36A996",
+  "Nodes": [
+    {
+      "Type": "Necati_Meral_Yahoo_De.Logic.Doorbird.DoorbirdListenerNode",
+      "Name": {
+        "en": "Logic Node"
+      },
+      "IsConverter": false,
+      "Category": "Node",
+      "DefaultIcon": "",
+      "HelpTooltip": {
+        "en": "Logic Node."
+      },
+      "HelpFileReference": null
+    }
+  ]
+}

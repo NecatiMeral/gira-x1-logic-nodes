@@ -4,7 +4,7 @@
     <Platform>AnyCPU</Platform>
     <ProjectGuid>{8A4DFEEE-CC9F-467E-8903-ED93D272D884}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <TargetFramework>net45</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,12 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="LogicModule.Nodes.TestHelper">
-      <HintPath>..\..\src\LogicNodesSDK\LogicModule.Nodes.TestHelper.dll</HintPath>
-    </Reference>
-    <Reference Include="LogicModule.ObjectModel">
-      <HintPath>..\..\src\LogicNodesSDK\LogicModule.ObjectModel.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\..\src\NecatiMeral.LogicNodes\NecatiMeral.LogicNodes.csproj" />
   </ItemGroup>
   
 </Project>

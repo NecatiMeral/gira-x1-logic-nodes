@@ -9,19 +9,63 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <IsTestProject Condition="$(MSBuildProjectFullPath.Contains('test')) and ($(MSBuildProjectName.EndsWith('.Tests')) or $(MSBuildProjectName.EndsWith('.TestBase')))">true</IsTestProject>
+    <GiraDeveloperId>necati_meral_yahoo_de</GiraDeveloperId>
   </PropertyGroup>
 
-  <ItemGroup Condition="'$(IsTestProject)' != 'true'">
+  <PropertyGroup Label="Project classification">
+    <IsTestProject Condition="$(MSBuildProjectFullPath.Contains('test')) and ($(MSBuildProjectName.EndsWith('.Tests')) or $(MSBuildProjectName.EndsWith('.TestBase')))">true</IsTestProject>
+    
+    <IsNodeProject Condition="$(MSBuildProjectFullPath.Contains('.Logic.')) and (!$(MSBuildProjectName.Contains('.Tests')))">true</IsNodeProject>
+
+    <RepositoryRoot>$(MSBuildThisFileDirectory)</RepositoryRoot>
+  </PropertyGroup>
+  
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(Configuration)' == 'Debug' and $(IsNodeProject) == 'true'">
+    <Exec Command="pwsh -NoProfile -ExecutionPolicy RemoteSigned -File &quot;$(MSBuildThisFileDirectory)..\build\pack-node.ps1&quot; -Project $(MSBuildProjectDirectory)\$(OutputPath) " />
+  </Target>
+
+  <!-- TODO: Create a more developer and VS friendly approach-->
+   <!--<PropertyGroup Condition="'$(IsNodeProject)' == 'true'">
+     <PostBuildEvent>
+       echo INFO: Creating ZIP archive
+       echo INFO: INPUT: "$(MSBuildProjectDirectory)\$(OutputPath)bin\Debug\net48"
+       echo INFO: OUTPUT "$(RepositoryRoot)dist"
+       echo TEST: "$(TargetDir)"
+
+       ;"$(MSBuildThisFileDirectory)..\build\tools\gira\LogicNodeTool.exe" create $(MSBuildProjectDirectory)\$(OutputPath) $(RepositoryRoot)dist
+
+       ;echo INFO: Logic Nodes are not signed yet and can only be used in the simulation in GPA.
+       ;REM "$(SolutionDir)src\LogicNodesSDK\SignLogicNodes.exe" $(SolutionDir)..\..\build\dev\gira-developer-cert.p7b [certificate_password] $(SolutionDir)Zip
+     </PostBuildEvent>
+  </PropertyGroup>-->
+
+  <ItemGroup Label="Implicit usings">
     <Using Include="LogicModule.Nodes.Helpers" />
     <Using Include="LogicModule.ObjectModel" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(IsTestProject)' == 'true'">
+  <ItemGroup Label="Workaround for missing dependency on implicit usings">
+    <Using Remove="System.Net.Http" />
+  </ItemGroup>
+
+  <ItemGroup Label="Add Xunit for tests" Condition="'$(IsTestProject)' == 'true'">
     <Using Include="Xunit" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(IsTestProject)' == 'true'">
+  <ItemGroup Label="SDK dependencies">
+    <Reference Include="LogicModule.Nodes.Helpers">
+      <HintPath>$(SolutionDir)src\LogicNodesSDK\LogicModule.Nodes.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicModule.ObjectModel">
+      <HintPath>$(SolutionDir)src\LogicNodesSDK\LogicModule.ObjectModel.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup Label="Test dependencies" Condition="'$(IsTestProject)' == 'true'">
+    <Reference Include="LogicModule.Nodes.TestHelper">
+      <HintPath>$(SolutionDir)src\LogicNodesSDK\LogicModule.Nodes.TestHelper.dll</HintPath>
+    </Reference>
+    
     <PackageReference Include="coverlet.collector" Version="3.1.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
@@ -33,7 +77,7 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="$(xUnitRunnerVisualStudioPackageVersion)" />
   </ItemGroup>
 
-  <PropertyGroup>
+  <PropertyGroup Label="Package versions">
 
     <!-- Microsoft .NET-Framework reference assemblies -->
     <MicrosoftNetFramework45PackageVersion>1.0.3</MicrosoftNetFramework45PackageVersion>

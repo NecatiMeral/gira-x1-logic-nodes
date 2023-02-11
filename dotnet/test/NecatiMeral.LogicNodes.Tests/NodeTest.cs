@@ -1,7 +1,7 @@
 ﻿using LogicModule.Nodes.TestHelper;
 using LogicModule.ObjectModel;
 
-namespace NecatiMeral.LogicNodes.Tests;
+namespace Necati_Meral_Yahoo_De.LogicNodes.Tests;
 
 public class NodeTest
 {
