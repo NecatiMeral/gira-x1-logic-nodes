@@ -53,6 +53,10 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net45" Version="$(MicrosoftNetFrameworkPackageVersion)" PrivateAssets="All" />
+  </ItemGroup>
+
   <ItemGroup Label="SDK dependencies">
     <Reference Include="LogicModule.Nodes.Helpers">
       <HintPath>$(SolutionDir)src\LogicNodesSDK\LogicModule.Nodes.Helpers.dll</HintPath>
@@ -82,7 +86,7 @@
   <PropertyGroup Label="Package versions">
 
     <!-- Microsoft .NET-Framework reference assemblies -->
-    <MicrosoftNetFramework45PackageVersion>1.0.3</MicrosoftNetFramework45PackageVersion>
+    <MicrosoftNetFrameworkPackageVersion>1.0.3</MicrosoftNetFrameworkPackageVersion>
 
     <!-- Microsoft.NET.Test.Sdk https://www.nuget.org/packages/Microsoft.NET.Test.Sdk -->
     <MicrosoftNETTestSdkPackageVersion>17.2.0</MicrosoftNETTestSdkPackageVersion>

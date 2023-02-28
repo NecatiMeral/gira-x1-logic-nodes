@@ -2,14 +2,15 @@
   "PackageFormatVersion": "1.0",
   "Assembly": "Necati_Meral_Yahoo_De.Logic.ComfortOnline.dll",
   "PackageName": {
-    "en": "ComfortOnline nodes"
+    "en": "KWB Comfort Online Nodes",
+    "de": "KWB Comfort Online Logikbausteine"
   },
   "DependentFiles": [
     "NecatiMeral.LogicNodes.dll"
   ],
-  "Version": "1.0.0",
+  "Version": "0.1.0",
   "Author": "Necati Meral",
-  "Copyright": "COPYRIGHT",
+  "Copyright": "2023 Necati Meral",
   "DeveloperId": "necati_meral_yahoo_de",
   "License": "Free",
   "PackageId": "CB18E39C-C1A8-421F-882A-4E3B4B36A999",
@@ -21,7 +22,7 @@
         "de": "ComfortOnline Eingang"
       },
       "IsConverter": false,
-      "Category": "Node",
+      "Category": "Event",
       "DefaultIcon": "icons/kwb-node-logo.png",
       "HelpTooltip": {
         "en": "Loads asset information from ComfortOnline and provides it as JSON.",

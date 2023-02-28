@@ -1,0 +1,5 @@
+<Project>
+  <ItemGroup Label="Workaround for missing dependency on implicit usings">
+    <Using Remove="System.Net.Http" />
+  </ItemGroup>
+</Project>

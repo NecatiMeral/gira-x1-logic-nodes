@@ -1,10 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="..\..\logic-node.props" />
-
   <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework>net45</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ProjectGuid>{3F1FF768-FD27-46B2-961C-B6EFDF9CB3B3}</ProjectGuid>
     <AssemblyName>Necati_Meral_Yahoo_De.Logic.ComfortOnline</AssemblyName>
     <RootNamespace>Necati_Meral_Yahoo_De.Logic.ComfortOnline</RootNamespace>
   </PropertyGroup>
