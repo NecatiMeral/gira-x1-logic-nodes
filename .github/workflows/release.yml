@@ -74,22 +74,22 @@ jobs:
 
     # Build the solution
     - name: Build
-      run: dotnet build "dotnet" -c Release
+      run: dotnet build "dotnet" --no-restore -c Release
 
     # Execute all unit tests in the solution
     - name: Test
-      run: dotnet test "dotnet" -c Release
+      run: dotnet test "dotnet" --no-build -c Release
 
     # Decode the base 64 encoded pfx and save the Signing_Certificate
     - name: Decode the pfx
       run: |
         $pfx_cert_byte = [System.Convert]::FromBase64String("${{ secrets.GIRA_CERT_CONTENT }}")
-        $certificatePath = Join-Path -Path "build\dev" -ChildPath GitHubActionsWorkflow.pfx
+        $certificatePath = Join-Path -Path "build" -ChildPath GitHubActionsWorkflow.pfx
         [IO.File]::WriteAllBytes("$certificatePath", $pfx_cert_byte)
 
     # Remove the pfx
     - name: Remove the pfx
-      run: Remove-Item -path build\dev\GitHubActionsWorkflow.pfx
+      run: Remove-Item -path build\GitHubActionsWorkflow.pfx
 
     # Upload the packages: https://github.com/marketplace/actions/upload-a-build-artifact
     - name: Upload build artifacts
