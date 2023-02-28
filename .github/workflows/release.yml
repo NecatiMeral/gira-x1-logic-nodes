@@ -59,7 +59,7 @@ jobs:
         fetch-depth: 0
 
     - name: Install GitVersion
-      uses: gittools/actions/gitversion/actions@v0.9.15
+      uses: gittools/actions/gitversion/setup@v0.9.15
       with:
         versionSpec: '5.x'
         
