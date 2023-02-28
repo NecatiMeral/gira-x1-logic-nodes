@@ -74,7 +74,7 @@ jobs:
 
     # Restore
     - name: Restore
-      run: dotnet restore "dotnet" -c $env:Configuration
+      run: dotnet restore "dotnet"
 
     # Build the solution
     - name: Build
