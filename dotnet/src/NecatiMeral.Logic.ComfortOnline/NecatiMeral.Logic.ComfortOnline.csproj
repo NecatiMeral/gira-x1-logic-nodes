@@ -5,7 +5,8 @@
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <AssemblyName>Necati_Meral_Yahoo_De.Logic.ComfortOnline</AssemblyName>
+    <RootNamespace>Necati_Meral_Yahoo_De.Logic.ComfortOnline</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,6 +14,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="icons\*.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Manifest.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

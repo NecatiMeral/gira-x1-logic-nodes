@@ -9,17 +9,18 @@
   </PropertyGroup>
 
   <PropertyGroup>
+    <RootNamespace>Necati_Meral_Yahoo_De</RootNamespace>
     <GiraDeveloperId>necati_meral_yahoo_de</GiraDeveloperId>
   </PropertyGroup>
 
   <PropertyGroup Label="Project classification">
     <IsTestProject Condition="$(MSBuildProjectFullPath.Contains('test')) and ($(MSBuildProjectName.EndsWith('.Tests')) or $(MSBuildProjectName.EndsWith('.TestBase')))">true</IsTestProject>
-    
+
     <IsNodeProject Condition="$(MSBuildProjectFullPath.Contains('.Logic.')) and (!$(MSBuildProjectName.Contains('.Tests')))">true</IsNodeProject>
 
     <RepositoryRoot>$(MSBuildThisFileDirectory)</RepositoryRoot>
   </PropertyGroup>
-  
+
   <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(Configuration)' == 'Debug' and $(IsNodeProject) == 'true'">
     <Exec Command="pwsh -NoProfile -ExecutionPolicy RemoteSigned -File &quot;$(MSBuildThisFileDirectory)..\build\pack-node.ps1&quot; -Project $(MSBuildProjectDirectory)\$(OutputPath) " />
   </Target>
@@ -65,7 +66,7 @@
     <Reference Include="LogicModule.Nodes.TestHelper">
       <HintPath>$(SolutionDir)src\LogicNodesSDK\LogicModule.Nodes.TestHelper.dll</HintPath>
     </Reference>
-    
+
     <PackageReference Include="coverlet.collector" Version="3.1.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
@@ -75,6 +76,7 @@
     <PackageReference Include="xunit" Version="$(xUnitPackageVersion)" />
     <PackageReference Include="xunit.extensibility.execution" Version="$(xUnitExtensibilityExecutionPackageVersion)" />
     <PackageReference Include="xunit.runner.visualstudio" Version="$(xUnitRunnerVisualStudioPackageVersion)" />
+    <PackageReference Include="Moq" Version="$(MoqPackageVersion)" />
   </ItemGroup>
 
   <PropertyGroup Label="Package versions">
@@ -96,6 +98,8 @@
 
     <!-- xunit.runner.visualstudio https://www.nuget.org/packages/xunit.runner.visualstudio -->
     <xUnitRunnerVisualstudioPackageVersion>2.4.1</xUnitRunnerVisualstudioPackageVersion>
+
+    <MoqPackageVersion>4.18.4</MoqPackageVersion>
 
   </PropertyGroup>
 

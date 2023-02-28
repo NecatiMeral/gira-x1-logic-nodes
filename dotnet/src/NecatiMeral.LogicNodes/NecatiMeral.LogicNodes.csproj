@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="..\..\logic-node.props"/>
+  <Import Project="..\..\logic-node.props" />
   
   <PropertyGroup>
     <Platform>AnyCPU</Platform>

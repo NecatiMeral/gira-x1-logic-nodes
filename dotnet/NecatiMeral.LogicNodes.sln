@@ -11,15 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1EE7FB73-9
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NecatiMeral.LogicNodes.Tests", "test\NecatiMeral.LogicNodes.Tests\NecatiMeral.LogicNodes.Tests.csproj", "{8A4DFEEE-CC9F-467E-8903-ED93D272D884}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NecatiMeral.Logic.Doorbird", "src\NecatiMeral.Logic.Doorbird\NecatiMeral.Logic.Doorbird.csproj", "{01386FAD-6E3E-408C-9948-D61DA886C584}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projektmappenelemente", "Projektmappenelemente", "{40954188-75ED-47A1-9E72-5B1B3F7EA544}"
 	ProjectSection(SolutionItems) = preProject
 		Directory.Build.props = Directory.Build.props
 		logic-node.props = logic-node.props
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NecatiMeral.DoorbirdListener.Tests", "test\NecatiMeral.DoorbirdListener.Tests\NecatiMeral.DoorbirdListener.Tests.csproj", "{F3BC8C87-7DEA-432C-A66F-375BA31D1944}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NecatiMeral.Logic.ComfortOnline", "src\NecatiMeral.Logic.ComfortOnline\NecatiMeral.Logic.ComfortOnline.csproj", "{90731595-1712-4F0C-82C9-56408D26064E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,14 +33,10 @@ Global
 		{8A4DFEEE-CC9F-467E-8903-ED93D272D884}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A4DFEEE-CC9F-467E-8903-ED93D272D884}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A4DFEEE-CC9F-467E-8903-ED93D272D884}.Release|Any CPU.Build.0 = Release|Any CPU
-		{01386FAD-6E3E-408C-9948-D61DA886C584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{01386FAD-6E3E-408C-9948-D61DA886C584}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{01386FAD-6E3E-408C-9948-D61DA886C584}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{01386FAD-6E3E-408C-9948-D61DA886C584}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F3BC8C87-7DEA-432C-A66F-375BA31D1944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F3BC8C87-7DEA-432C-A66F-375BA31D1944}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F3BC8C87-7DEA-432C-A66F-375BA31D1944}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F3BC8C87-7DEA-432C-A66F-375BA31D1944}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90731595-1712-4F0C-82C9-56408D26064E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90731595-1712-4F0C-82C9-56408D26064E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90731595-1712-4F0C-82C9-56408D26064E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90731595-1712-4F0C-82C9-56408D26064E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,8 +44,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{3F1FF768-FD27-46A2-961C-B6EFDF9CB3B3} = {B4F57F38-7B57-4225-9BD4-264ABC47DE33}
 		{8A4DFEEE-CC9F-467E-8903-ED93D272D884} = {1EE7FB73-9DEA-4D45-9CD0-2F4BFE480FF6}
-		{01386FAD-6E3E-408C-9948-D61DA886C584} = {B4F57F38-7B57-4225-9BD4-264ABC47DE33}
-		{F3BC8C87-7DEA-432C-A66F-375BA31D1944} = {1EE7FB73-9DEA-4D45-9CD0-2F4BFE480FF6}
+		{90731595-1712-4F0C-82C9-56408D26064E} = {B4F57F38-7B57-4225-9BD4-264ABC47DE33}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {471310B7-D205-4EEC-A063-0A534164AB9A}

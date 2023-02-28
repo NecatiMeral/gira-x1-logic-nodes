@@ -6,6 +6,11 @@
     <OutputType>Library</OutputType>
     <TargetFramework>net48</TargetFramework>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <None Remove="TestData\*.html" />
+    <EmbeddedResource Include="TestData\*.html" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net45" Version="$(MicrosoftNetFramework45PackageVersion)">
@@ -16,6 +21,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\NecatiMeral.LogicNodes\NecatiMeral.LogicNodes.csproj" />
+    <ProjectReference Include="..\..\src\NecatiMeral.Logic.ComfortOnline\NecatiMeral.Logic.ComfortOnline.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
   
 </Project>
