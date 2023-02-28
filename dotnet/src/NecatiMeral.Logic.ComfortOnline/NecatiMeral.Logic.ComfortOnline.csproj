@@ -15,7 +15,7 @@
   <ItemGroup>
     <Reference Include="System.Net.Http" />
   </ItemGroup>
-
+test
   <ItemGroup>
     <None Update="icons\*.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
