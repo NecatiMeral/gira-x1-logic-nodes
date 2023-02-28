@@ -78,7 +78,7 @@ public class ComfortOnlineRequestNode : LocalizablePrefixLogicNodeBase
             var plantSectionResponse = await HttpClient.GetStringAsync($"/Measurand/Values?plant={PlantId.Value}&name={PlantSection.Value}");
             var parsed = Parser.Parse(plantSectionResponse);
 
-            var entries = parsed.Values.Select(p => string.Format("\"{0}\": \"{1}\"", p.Key, string.Join(",", p.Value)));
+            var entries = parsed.Values.Select(p => string.Format("\"val_{0}\": \"{1}\"", p.Key, string.Join(",", p.Value)));
 
             Data.Value = $"{{{string.Join(", ", entries)}}}";
             Diagnostics.Value = ComfortOnlineConsts.ErrorCodes.Ok;
