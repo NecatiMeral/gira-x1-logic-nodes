@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <Version>0.0.1</Version>
+    <Version>0.1.0</Version>
     <PackageProjectUrl>https://github.com/NecatiMeral/gira-x1-logic-nodes/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/NecatiMeral/gira-x1-logic-nodes.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
