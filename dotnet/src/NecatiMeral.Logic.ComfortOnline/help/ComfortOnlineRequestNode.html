@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html lang="de">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>NecatiMeral - Hilfe - Formelberechnung</title>
+    <link rel="StyleSheet" href="default.css" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <span id="headBlack">NecatiMeral Logikbausteine</span>
+        <span id="headGray">Hilfe</span>
+    </header>
+    <section>
+        <div class="contentholder">
+            <div class="navlinks-top">
+            </div>
+            <h1>
+                <img src="../icons/ExpressionCalculatorNode.png" alt="" />&nbsp;
+                Formelberechnung
+            </h1>
+            <h2>Inhaltsverzeichnis</h2>
+            <img src="ComfortOnlineRequestNode.png" alt="" class="description" />
+            <ul>
+                <li><a href="#description">Beschreibung</a></li>
+                <li><a href="#inputs">Eingänge</a></li>
+                <li><a href="#outputs">Ausgänge</a></li>
+            </ul>
+            <h2 id="description">Beschreibung</h2>
+            <p>
+                Dieser Baustein ist in der Lage Daten aus dem Comfort Online-Portal des
+                Herstellers für Biomassekessel abzurufen. Die abgerufenen Werte werden als
+                auswertbare Struktur bereitgestellt.
+            </p>
+            <h2 id="inputs">Eingänge</h2>
+            <p>
+                Um Daten abzurufen, muss der <c>Trigger</c>-Eingang geschaltet werden. Weitere Eingänge sind:
+            </p>
+            <table class="Tabelle_Logicnode">
+                <colgroup>
+                    <col style="width: 115px">
+                    <col style="width: 180px">
+                    <col>
+                </colgroup>
+                <tr>
+                    <th>Bezeichnung</th>
+                    <th>Porttyp</th>
+                    <th>Beschreibung</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p><i>Trigger</i></p>
+                    </td>
+                    <td>
+                        <p>Bool</p>
+                    </td>
+                    <td>
+                        <p>
+                            Triggert das abrufen der Daten
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><i>PlantId</i></p>
+                    </td>
+                    <td>
+                        <p>Text</p>
+                    </td>
+                    <td>
+                        <p>
+                            Die ID der abzufragenden Anlage (siehe nachfolgende Beschreibung)
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><i>PlantSection</i></p>
+                    </td>
+                    <td>
+                        <p>Text</p>
+                    </td>
+                    <td>
+                        <p>
+                            Die ID des abzufragenden Anlagenteils (siehe nachfolgende Beschreibung)
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><i>UserName</i></p>
+                    </td>
+                    <td>
+                        <p>Text</p>
+                    </td>
+                    <td>
+                        <p>
+                            Benutzername (E-Mail-Adresse) für Comfort Online
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><i>Password</i></p>
+                    </td>
+                    <td>
+                        <p>Text</p>
+                    </td>
+                    <td>
+                        <p>
+                            Password für Comfort Online
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <p>
+                Die <c>PlantId</c> sowie <c>PlantSection</c> kann im Comfort Online-Portal abgerufen werden.
+                Um an die erforderlichen Werte zu kommen, bitte das Comfort Online-Portal im Browser öffnen und
+                anmelden.
+                In der Navigationsleiste erscheint nun eine Adresse wie folgt:
+                <br>
+                <c>https://www.comfort-online.com/de-DE/Measurand/Values?plant=KWB%20EF2-10458&name=KWB%20EF2-96_0</c>
+                <br>
+                Hier wird nun der Teil nach dem letzten Bindestrich (<c>-</c>) der URL-Parameter <c>plant</c> und <c>
+                    name</c> benötigt. In diesem Beispiel also <c>10458</c> für die PlantId und <c>96_0</c> für
+                PlantSection.
+            </p>
+            <h2 id="outputs">Ausgänge</h2>
+            <table class="Tabelle_Logicnode">
+                <colgroup>
+                    <col style="width: 115px">
+                    <col style="width: 180px">
+                    <col>
+                </colgroup>
+                <tr>
+                    <th>Bezeichnung</th>
+                    <th>Porttyp</th>
+                    <th>Beschreibung</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p><i>Data</i></p>
+                    </td>
+                    <td>
+                        <p>Text</p>
+                    </td>
+                    <td>
+                        <p>
+                            Gibt alle erkannten Werte des Anlagenteils als <c>JSON</c>-Struktur aus.
+                            Diese Struktur kann nachfolgend weiter ausgewertet werden.
+                        </p>
+                        <p>
+                            Hinweise:
+                        </p>
+                        <ul>
+                            <li>
+                                Die Schlüssel der Struktur entsprechend den Schlüsseln aus Comfort Online mit <c>val_
+                                </c>-Prefix.
+                            </li>
+                            <li>
+                                Zahlenwerte o.Ä. werden i.d.R. im internationalen Format ausgegeben.
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><i>Diagnostics</i></p>
+                    </td>
+                    <td>
+                        <p>Text</p>
+                    </td>
+                    <td>
+                        <p>
+                            Kurztext zur Diagnose.
+                        </p>
+                        <p>
+                            Bekannte Werte:
+                        </p>
+                        <ul>
+                            <li>
+                                <c>Ok</c>: Baustein arbeitet wie erwartet.
+                            </li>
+                            <li>
+                                <c>InitialRequestFailed</c>: Initiale Anfrage an Comfort Online ist fehlgeschlagen.
+                                Mögliche Ursachen: Allgemeine Netzwerkfehler.
+                            </li>
+                            <li>
+                                <c>MissingRequestVerificationToken</c>: Extraktion des Anfrage-Tokens aus Initialanfrage
+                                fehlgeschlagen. Mögliche Ursachen: Umstellung seitens KWB oder Fehler im Baustein.
+                            </li>
+                            <li>
+                                <c>InvalidCredentials</c>: <c>UserName</c> oder <c>Password</c> ist fehlerhaft.
+                            </li>
+                            <li>
+                                <c>LoginFailed</c>: Allgemeiner Anmeldefehler. Mögliche Ursachen: Fehler im Baustein.
+                            </li>
+                            <li>
+                                <c>UnexpectedError: <i>Detailtext</i></c>: Allgemeiner, unerwarteter Fehler. Anstelle
+                                von <i>Detailtext</i> werden detaillierte Informationen ausgegeben. Mögliche Ursachen:
+                                Fehler im Baustein.
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <footer>
+        <div id="footerHead">
+            NecatiMeral Logikbausteine &nbsp; <span style="color: #a0a0a0;">Hilfe</span>
+        </div>
+        <div id="footerNav">
+            <span style="float: right;"><a href="https://github.com/NecatiMeral/gira-x1-logic-nodes"
+                    target="_blank">NecatiMeral
+                    /
+                    gira-x1-logic-nodes auf GitHub</a></span>
+        </div>
+    </footer>
+</body>
+
+</html>

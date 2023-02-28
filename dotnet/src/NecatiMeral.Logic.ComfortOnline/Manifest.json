@@ -28,7 +28,7 @@
         "en": "Loads asset information from ComfortOnline and provides it as JSON.",
         "de": "Lädt Anlageninformationen aus ComfortOnline und stellt diese als JSON bereit."
       },
-      "HelpFileReference": null
+      "HelpFileReference": "$help/ComfortOnlineRequestNode.html"
     }
   ]
 }
