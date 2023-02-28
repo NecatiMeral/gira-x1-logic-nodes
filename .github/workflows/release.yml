@@ -46,10 +46,6 @@ jobs:
 
   build:
 
-    strategy:
-      matrix:
-        configuration: [Release]
-
     runs-on: windows-latest  # For a list of available runner types, refer to
                              # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
 
@@ -78,11 +74,11 @@ jobs:
 
     # Build the solution
     - name: Build
-      run: dotnet build "dotnet" -c $env:Configuration
+      run: dotnet build "dotnet" -c Release
 
     # Execute all unit tests in the solution
     - name: Test
-      run: dotnet test "dotnet" -c $env:Configuration
+      run: dotnet test "dotnet" -c Release
 
     # Decode the base 64 encoded pfx and save the Signing_Certificate
     - name: Decode the pfx
@@ -99,5 +95,5 @@ jobs:
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: MSIX Package
+        name: Logic nodes
         path: dist/*.zip
