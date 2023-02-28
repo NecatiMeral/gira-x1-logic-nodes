@@ -74,15 +74,15 @@ jobs:
 
     # Restore
     - name: Restore
-      run: dotnet restore "dotnet"
+      run: dotnet restore "dotnet" -c $env:Configuration
 
     # Build the solution
     - name: Build
-      run: dotnet build "dotnet" -Configuration $env:Configuration
+      run: dotnet build "dotnet" -c $env:Configuration
 
     # Execute all unit tests in the solution
     - name: Test
-      run: dotnet test "dotnet" -Configuration $env:Configuration
+      run: dotnet test "dotnet" -c $env:Configuration
 
     # Decode the base 64 encoded pfx and save the Signing_Certificate
     - name: Decode the pfx
