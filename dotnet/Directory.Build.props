@@ -21,7 +21,7 @@
     <RepositoryRoot>$(MSBuildThisFileDirectory)</RepositoryRoot>
   </PropertyGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(Configuration)' == 'Debug' and $(IsNodeProject) == 'true'">
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="$(IsNodeProject) == 'true'">
     <Exec Command="pwsh -NoProfile -ExecutionPolicy RemoteSigned -File &quot;$(MSBuildThisFileDirectory)..\build\pack-node.ps1&quot; -Project $(MSBuildProjectDirectory)\$(OutputPath) " />
   </Target>
 
