@@ -1,0 +1,1069 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+
+    <div data-role="page"
+         class="ui-responsive-panel
+        "
+         data-site-keep-dialog="false"
+         data-site-load-notification="false"
+         data-dom-cache="true" data-theme="a" data-add-back-btn="true" data-close-btn="right" id="page__de__DE__Measurand__Values__plant__KWB__20EF2__10458__name__KWB__20EF2__96_0__638132040826659413" data-url="https://www.comfort-online.com/de-DE/Measurand/Values?plant=KWB EF2-10458&amp;name=KWB EF2-96_0">
+
+
+        <script type="text/javascript">
+        function useMeasurandSetCommandManager($page) {
+            $page.data("setCommandMgr",
+                createMeasurandSetCommandManager($page, {
+                    setCommandUrl: "/de-DE/Measurand/SetValue?name=Kessel-96_0&plant=KWB%20EF2-10458"
+
+                }, {
+                    unexpected_response_on_set_command: "Unerwartete Antwort"
+                })
+            );
+        }
+        </script>
+
+        <script type="text/javascript">
+     function restartReloadMeasurandLivePage(forceDelay) {
+         var curPageId = $.mobile.activePage.attr('id');
+
+         if (forceDelay === undefined) {
+             forceDelay = window.siteConfig.timings.measurand_reload_interval;
+         }
+
+         //clears an already scheduled page reload and starts a new one
+         reloadPage(forceDelay, function() {
+             if ($.mobile.activePage.attr('id') != curPageId) return false;
+
+             if (isContextMenuOpen()) { //defined in Layout_js
+                 restartReloadMeasurandLivePage(5000); //retry in 5 seconds when the menu is currently open
+                 return false;
+             }
+
+             //cache all opened submodules and subsubmodules
+             var selector = $.mobile.activePage.find(".ui-collapsible:not(.ui-collapsible-collapsed)").map(function() { return this.id;}).get().join(",#");
+             if (selector) {
+                 window.uncollapseSelector = "#" + selector;
+             }
+
+             return true;
+         }, false);
+     }
+
+     function pageinit_page__de__DE__Measurand__Values__plant__KWB__20EF2__10458__name__KWB__20EF2__96_0__638132040826659413_(page) {
+         var $page = $(page);
+         enhance_slider_layout($page);
+             useMeasurandSetCommandManager($page);
+
+             var rebindRestartReloadMeasurandLivePage = function() {
+                 $page.one('site:restartReloadMeasurandLivePage', function() {
+                     //restart the reload timer
+                     restartReloadMeasurandLivePage();
+
+                     //wait the delayed milliseconds and then allow processing the restartReloadMeasurandLivePage-event again
+                     setTimeout(rebindRestartReloadMeasurandLivePage, window.siteConfig.timings.measurand_reload_event_delayed);
+                 });
+             };
+
+             rebindRestartReloadMeasurandLivePage();
+             //see also pageshow-eventhandler that calls restartReloadMeasurandLivePage() for the first time
+
+     }
+        </script>
+
+        <script type="text/javascript">
+            //define this function in the view
+            //function pageinit_page__de__DE__Measurand__Values__plant__KWB__20EF2__10458__name__KWB__20EF2__96_0__638132040826659413_(page) {
+            //}
+
+            $(document).off("pageinit", "#page__de__DE__Measurand__Values__plant__KWB__20EF2__10458__name__KWB__20EF2__96_0__638132040826659413:jqmData(role=page), #page__de__DE__Measurand__Values__plant__KWB__20EF2__10458__name__KWB__20EF2__96_0__638132040826659413:jqmData(role=dialog)");
+            $(document).on("pageinit", "#page__de__DE__Measurand__Values__plant__KWB__20EF2__10458__name__KWB__20EF2__96_0__638132040826659413:jqmData(role=page), #page__de__DE__Measurand__Values__plant__KWB__20EF2__10458__name__KWB__20EF2__96_0__638132040826659413:jqmData(role=dialog)", function () {
+                //at this point, the DOM is ready for manipulations
+                //called only once when the page is loaded from the server
+                //.ui-page-active and $.mobile.activePage are not set yet
+
+                pageinit_page__de__DE__Measurand__Values__plant__KWB__20EF2__10458__name__KWB__20EF2__96_0__638132040826659413_(this);
+            });
+        </script>
+
+
+
+        <script>
+
+
+        function pageshow_page__de__DE__Measurand__Values__plant__KWB__20EF2__10458__name__KWB__20EF2__96_0__638132040826659413_(page) {
+
+                var $page = $(page);
+                initSwiper(page, "Seite {pagenum}");
+                allowSetCommand($page);
+                   createChart("page__de__DE__Measurand__Values__plant__KWB__20EF2__10458__name__KWB__20EF2__96_0__638132040826659413",$page);
+                    restartReloadMeasurandLivePage(); //we call it in pageshow because then $.mobile.activePage is correctly filled
+        }
+        </script>
+
+
+        <script type="text/javascript">
+            //define this function in the view
+            //function pageshow_page__de__DE__Measurand__Values__plant__KWB__20EF2__10458__name__KWB__20EF2__96_0__638132040826659413_(page, ui) {
+            //}
+
+            $(document).off("pageshow", "#page__de__DE__Measurand__Values__plant__KWB__20EF2__10458__name__KWB__20EF2__96_0__638132040826659413:jqmData(role=page), #page__de__DE__Measurand__Values__plant__KWB__20EF2__10458__name__KWB__20EF2__96_0__638132040826659413:jqmData(role=dialog)");
+            $(document).on("pageshow", "#page__de__DE__Measurand__Values__plant__KWB__20EF2__10458__name__KWB__20EF2__96_0__638132040826659413:jqmData(role=page), #page__de__DE__Measurand__Values__plant__KWB__20EF2__10458__name__KWB__20EF2__96_0__638132040826659413:jqmData(role=dialog)", function (e, ui) {
+                //at this point, the ".ui-page-active" class is set
+                //at this point $.mobile.activePage contains the active page
+                pageshow_page__de__DE__Measurand__Values__plant__KWB__20EF2__10458__name__KWB__20EF2__96_0__638132040826659413_(this, ui);
+            });
+        </script>
+
+
+
+
+
+        <script type="text/javascript">
+    function pagebeforeload_page__de__DE__Measurand__Values__plant__KWB__20EF2__10458__name__KWB__20EF2__96_0__638132040826659413_(page) {
+        if (window.graphUpdateManager) {
+            window.graphUpdateManager.stop();
+        }
+
+        if ($.mobile.activePage) {
+            var cmdMgr = $.mobile.activePage.data("setCommandMgr");
+            if (cmdMgr) {
+                cmdMgr.setPageInvalid(); //inform the current CommandManager that we leave the page and he should not use the page to display informations
+            }
+        }
+    }
+        </script>
+
+        <script type="text/javascript">
+            //define this function in the view
+            //function pagebeforeload_page__de__DE__Measurand__Values__plant__KWB__20EF2__10458__name__KWB__20EF2__96_0__638132040826659413_(page) {
+            //}
+
+            $(document).off("pagebeforeload");
+            $(document).on("pagebeforeload", function () {
+                //at this point, the ".ui-page-active" class is set
+                //at this point $.mobile.activePage contains the active page
+                pagebeforeload_page__de__DE__Measurand__Values__plant__KWB__20EF2__10458__name__KWB__20EF2__96_0__638132040826659413_(this);
+            });
+        </script>
+
+
+        <div data-role="header" data-position="inline">
+
+            <a href="#page__de__DE__Measurand__Values__plant__KWB__20EF2__10458__name__KWB__20EF2__96_0__638132040826659413_ContextMenuPanel_Tablet" data-icon="grid" data-corners="false" class="ui-btn-right ui-btn-icon32" data-iconpos="notext" data-role="button">Men&#252;</a>
+
+
+            <h1>
+                KWB EF2 - Kessel            <span class="debugdata"> / Plant = 10458</span>
+            </h1>
+
+        </div> <!-- header end -->
+
+        <div data-role="content" style="clear:both" id="content_area">
+            <!--
+            <div data-role="content" style="clear:both; background: transparent url(/Content/images/Produktfamilie2014.jpg?v=1.73.18.0) center center no-repeat fixed !important; background-size:cover">
+            -->
+
+
+
+            <style type="text/css">
+
+                .ui-slider .ui-btn-inner {
+                    padding: 5px 0 0 0 !important;
+                    font-size: .8em;
+                    color: #333;
+                }
+
+                .ui-slider-popup {
+                    position: absolute !important;
+                    width: 80px;
+                    height: 64px;
+                    text-align: center;
+                    font-size: 36px;
+                    padding-top: 14px;
+                    z-index: 100;
+                    opacity: 0.8;
+                }
+            </style>
+
+
+
+
+
+
+
+
+
+
+
+            <form action="/de-DE/Measurand/CustomizeListView?name=KWB%20EF2-96_0&amp;plant=KWB%20EF2-10458" class="measurandform" method="post">
+                <input name="__RequestVerificationToken" type="hidden" value="T7X4ViNo8pfR5unUl9U8Y_gnzdxiiMPksX2HmyOTxV1Phh4-GxHekMl51LZAjrpPTn2SCwiLVidc8vFaxCjh13GIuCaUyEZIwzN9hoq-RZC3Xx_ugoTVC0moukicbeayqgoJP3AT4tw7h2T5hC-PNQ2" />    <!-- layout grid with two columns -->
+                <div class="ui-grid-a">
+                    <!-- left column -->
+                    <div class="ui-block-a" id="measurands">
+
+
+
+
+                        <div class="item">
+
+
+                            <ul data-role="listview" data-inset="true" data-filter="false" class="measurandlist main " data-sortorder="002_000_000" data-level="0">
+
+
+                                <li class="">
+                                    <h2>
+                                        Kessel    <span class="debugdata">&nbsp;(1) / bool / switch</span>
+                                    </h2>
+                                    <img alt="switch" class="ui-li-icon ui-li-icon32" src="/Content/images/switch_32x32.png" />
+                                    <div id="container_000_00001" class="ui-li-switch measurandCommonSwitchContainer realtimeValue ">
+                                        <select name="switch_000_00001" id="switch_000_00001" data-role="slider" class="measurandCommonSwitch" data-site-propertyId="000_00001"
+                                                data-cop-oldvaluetext="1"
+                                                autocomplete="off">
+                                            <option value="0">Aus</option>
+                                            <option selected value="1">Ein</option>
+                                        </select>
+                                    </div>
+                                    <p class="setCommandStatus setCommandStatus000_00001"></p>
+
+                                    <p class="measurandinfobox000_00001">
+                                        <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                    </p>
+
+                                </li>
+                                <li data-icon="false" class=" trendable">
+                                    <a href=/de-DE/Measurand/ValueGraphs?name =Kessel-96_0&plant =KWB%20EF2-10458&item =Status-000_00939>
+
+                                        <h2>
+                                            Status    <span class="debugdata">&nbsp;(939) / lut_status / display</span>
+                                        </h2>
+                                        <img alt="status" class="ui-li-icon ui-li-icon32" src="/Content/images/status_32x32.png" />
+                                        <div id="container_000_00939" class="realtimeValue valueContainer  ui-li-value"><span id="val_000_00939">Bereit (-Anf)</span></div>
+
+                                        <p class="measurandinfobox000_00939">
+                                            <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                        </p>
+
+
+                                    </a>
+                                </li>
+                                <li data-icon="false" class=" trendable">
+                                    <a href=/de-DE/Measurand/ValueGraphs?name =Kessel-96_0&plant =KWB%20EF2-10458&item =Kesselleistung-000_00002>
+
+                                        <h2>
+                                            Kesselleistung    <span class="debugdata">&nbsp;(2) / percent / slider</span>
+                                        </h2>
+                                        <img alt="Prozent" class="ui-li-icon ui-li-icon32" src="/Content/images/Prozent_32x32.png" />
+
+
+                                        <div id="container_000_00002" class="realtimeValue valueContainer  ui-li-value numbercomma-no"><span id="val_000_00002">0</span>&nbsp;%</div>
+
+                                        <p class="measurandinfobox000_00002">
+                                            <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                        </p>
+
+                                    </a>
+                                </li>
+                                <li data-icon="false" class=" trendable">
+                                    <a href=/de-DE/Measurand/ValueGraphs?name =Kessel-96_0&plant =KWB%20EF2-10458&item =Kesseltemperatur%20Ist-000_00589>
+
+                                        <h2>
+                                            Kesseltemperatur Ist    <span class="debugdata">&nbsp;(589) / sensor_temperature / display</span>
+                                        </h2>
+                                        <img alt="temperature" class="ui-li-icon ui-li-icon32" src="/Content/images/temperature_32x32.png" />
+                                        <div id="container_000_00589" class="realtimeValue valueContainer  ui-li-value numbercomma-no"><span id="val_000_00589">71</span>&nbsp;°C</div>
+
+                                        <p class="measurandinfobox000_00589">
+                                            <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                        </p>
+
+
+                                    </a>
+                                </li>
+                                <li data-icon="false" class=" trendable">
+                                    <a href=/de-DE/Measurand/ValueGraphs?name =Kessel-96_0&plant =KWB%20EF2-10458&item =Kesseltemperatur%20Soll-000_00617>
+
+                                        <h2>
+                                            Kesseltemperatur Soll    <span class="debugdata">&nbsp;(617) / temperature / slider</span>
+                                        </h2>
+                                        <img alt="temperature" class="ui-li-icon ui-li-icon32" src="/Content/images/temperature_32x32.png" />
+
+
+                                        <div id="container_000_00617" class="realtimeValue valueContainer  ui-li-value numbercomma-no"><span id="val_000_00617">60</span>&nbsp;°C</div>
+
+                                        <p class="measurandinfobox000_00617">
+                                            <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                        </p>
+
+                                    </a>
+                                </li>
+                                <li data-icon="false" class=" trendable">
+                                    <a href=/de-DE/Measurand/ValueGraphs?name =Kessel-96_0&plant =KWB%20EF2-10458&item =Kesselpumpe-000_00608>
+
+                                        <h2>
+                                            Kesselpumpe    <span class="debugdata">&nbsp;(608) / lut_status / display</span>
+                                        </h2>
+                                        <img alt="status" class="ui-li-icon ui-li-icon32" src="/Content/images/status_32x32.png" />
+                                        <div id="container_000_00608" class="realtimeValue valueContainer  ui-li-value"><span id="val_000_00608">Aus</span></div>
+
+                                        <p class="measurandinfobox000_00608">
+                                            <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                        </p>
+
+
+                                    </a>
+                                </li>
+                                <li data-icon="false" class=" trendable">
+                                    <a href=/de-DE/Measurand/ValueGraphs?name =Kessel-96_0&plant =KWB%20EF2-10458&item =Kesselpumpe%20%25-000_00758>
+
+                                        <h2>
+                                            Kesselpumpe %    <span class="debugdata">&nbsp;(758) / percent / slider</span>
+                                        </h2>
+                                        <img alt="Prozent" class="ui-li-icon ui-li-icon32" src="/Content/images/Prozent_32x32.png" />
+
+
+                                        <div id="container_000_00758" class="realtimeValue valueContainer  ui-li-value numbercomma-no"><span id="val_000_00758">0</span>&nbsp;%</div>
+
+                                        <p class="measurandinfobox000_00758">
+                                            <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                        </p>
+
+                                    </a>
+                                </li>
+                                <li data-icon="false" class=" trendable">
+                                    <a href=/de-DE/Measurand/ValueGraphs?name =Kessel-96_0&plant =KWB%20EF2-10458&item =R%C3%BCcklauftemperatur%20Ist-000_00590>
+
+                                        <h2>
+                                            R&#252;cklauftemperatur Ist    <span class="debugdata">&nbsp;(590) / sensor_temperature / display</span>
+                                        </h2>
+                                        <img alt="temperature" class="ui-li-icon ui-li-icon32" src="/Content/images/temperature_32x32.png" />
+                                        <div id="container_000_00590" class="realtimeValue valueContainer  ui-li-value numbercomma-no"><span id="val_000_00590">72</span>&nbsp;°C</div>
+
+                                        <p class="measurandinfobox000_00590">
+                                            <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                        </p>
+
+
+                                    </a>
+                                </li>
+                                <li data-icon="false" class=" trendable">
+                                    <a href=/de-DE/Measurand/ValueGraphs?name =Kessel-96_0&plant =KWB%20EF2-10458&item =R%C3%BCcklauftemperatur%20Soll-000_00625>
+
+                                        <h2>
+                                            R&#252;cklauftemperatur Soll    <span class="debugdata">&nbsp;(625) / temperature / slider</span>
+                                        </h2>
+                                        <img alt="temperature" class="ui-li-icon ui-li-icon32" src="/Content/images/temperature_32x32.png" />
+
+
+                                        <div id="container_000_00625" class="realtimeValue valueContainer  ui-li-value numbercomma-no"><span id="val_000_00625">70</span>&nbsp;°C</div>
+
+                                        <p class="measurandinfobox000_00625">
+                                            <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                        </p>
+
+                                    </a>
+                                </li>
+                                <li data-icon="false" class="">
+
+
+                                    <h2>
+                                        Volllaststunden    <span class="debugdata">&nbsp;(729) / hour_high_boundaries / spinbox</span>
+                                    </h2>
+                                    <img alt="default" class="ui-li-icon ui-li-icon32" src="/Content/images/default_32x32.png" />
+                                    <div id="container_000_00729" class="realtimeValue valueContainer  ui-li-value numbercomma-no"><span id="val_000_00729">1.206</span>&nbsp;h</div>
+
+                                    <p class="measurandinfobox000_00729">
+                                        <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                    </p>
+
+
+
+                                </li>
+                                <li data-icon="false" class=" trendable">
+                                    <a href=/de-DE/Measurand/ValueGraphs?name =Kessel-96_0&plant =KWB%20EF2-10458&item =Flammtemperatur%20Ist-000_00917>
+
+                                        <h2>
+                                            Flammtemperatur Ist    <span class="debugdata">&nbsp;(917) / sensor_temperature / display</span>
+                                        </h2>
+                                        <img alt="temperature" class="ui-li-icon ui-li-icon32" src="/Content/images/temperature_32x32.png" />
+                                        <div id="container_000_00917" class="realtimeValue valueContainer  ui-li-value numbercomma-no"><span id="val_000_00917">106</span>&nbsp;°C</div>
+
+                                        <p class="measurandinfobox000_00917">
+                                            <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                        </p>
+
+
+                                    </a>
+                                </li>
+                                <li data-icon="false" class="">
+
+
+                                    <h2>
+                                        F&#252;llstand Asche    <span class="debugdata">&nbsp;(1343) / percent / slider</span>
+                                    </h2>
+                                    <img alt="Prozent" class="ui-li-icon ui-li-icon32" src="/Content/images/Prozent_32x32.png" />
+
+
+                                    <div id="container_000_01343" class="realtimeValue valueContainer  ui-li-value numbercomma-no"><span id="val_000_01343">16</span>&nbsp;%</div>
+
+                                    <p class="measurandinfobox000_01343">
+                                        <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                    </p>
+
+
+                                </li>
+                                <li class=" ui-li-slider">
+                                    <img alt="default" class="ui-li-icon ui-li-icon32" src="/Content/images/default_32x32.png" />
+                                    <div data-role="fieldcontain" id="container_000_01335" class="measurandSliderContainer measurandSliderCommonContainer realtimeValue  numbercomma-no">
+                                        <label for="slider_000_01335" style="font-weight:bold; color:black!Important">Restmenge</label> <!-- stylesheet for labels necessary -->
+                                        <span></span>
+                                        <input name="slider_000_01335" id="slider_000_01335" class="measurandSlider" type="range" min="0" max="100000" step="1" value="4500" data-popup-enabled="true" data-show-value="false" data-cop-oldvalue="4500" data-site-propertyId="000_01335"
+                                               autocomplete="off" />
+                                        <span>&nbsp;kg</span>
+                                    </div>
+                                    <p class="setCommandStatus setCommandStatus000_01335"></p>
+
+                                    <p class="measurandinfobox000_01335">
+                                        <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                    </p>
+
+                                    <span class="debugdata">&nbsp;(1335) / kg / slider</span>
+
+                                </li>
+                                <li class=" ui-li-slider">
+                                    <img alt="default" class="ui-li-icon ui-li-icon32" src="/Content/images/default_32x32.png" />
+                                    <div data-role="fieldcontain" id="container_000_01339" class="measurandSliderContainer measurandSliderCommonContainer realtimeValue  numbercomma-no">
+                                        <label for="slider_000_01339" style="font-weight:bold; color:black!Important">Meldung bei Restmenge</label> <!-- stylesheet for labels necessary -->
+                                        <span></span>
+                                        <input name="slider_000_01339" id="slider_000_01339" class="measurandSlider" type="range" min="0" max="10000" step="1" value="600" data-popup-enabled="true" data-show-value="false" data-cop-oldvalue="600" data-site-propertyId="000_01339"
+                                               autocomplete="off" />
+                                        <span>&nbsp;kg</span>
+                                    </div>
+                                    <p class="setCommandStatus setCommandStatus000_01339"></p>
+
+                                    <p class="measurandinfobox000_01339">
+                                        <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                    </p>
+
+                                    <span class="debugdata">&nbsp;(1339) / kg / slider</span>
+
+                                </li>
+                                <li data-icon="false" class="">
+                                    <h2>
+                                        F&#252;llmenge hinzuf&#252;gen    <span class="debugdata">&nbsp;(1349) / kg_spinbox / spinbox</span>
+                                    </h2>
+                                    <img alt="default" class="ui-li-icon ui-li-icon32" src="/Content/images/default_32x32.png" />
+                                    <div id="container_000_01349" class="ui-li-spinbox measurandCommonSpinContainer realtimeValue  ui-li-value" data-role="controlgroup" data-type="horizontal">
+                                        <input autocomplete="off" class="measurandCommonSpin" data-cop-oldvalue="0.00" data-disabled="false" data-role="spinbox" data-site-propertyId="000_01349" id="spin_000_01349" max="40000" min="0" name="spin_000_01349" step="1" type="text" value="0" />
+                                        &nbsp;kg<a href="#" data-role="button" data-inline="true">OK</a>
+                                    </div>
+                                    <p class="setCommandStatus setCommandStatus000_01349"></p>
+
+                                    <p class="measurandinfobox000_01349">
+                                        <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                    </p>
+
+                                </li>
+                                <li data-icon="false" class="">
+
+
+                                    <h2>
+                                        Verbrauch    <span class="debugdata">&nbsp;(630) / tonne_3 / spinbox</span>
+                                    </h2>
+                                    <img alt="default" class="ui-li-icon ui-li-icon32" src="/Content/images/default_32x32.png" />
+                                    <div id="container_000_00630" class="realtimeValue valueContainer  ui-li-value numbercomma-three"><span id="val_000_00630">5,955</span>&nbsp;t</div>
+
+                                    <p class="measurandinfobox000_00630">
+                                        <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                    </p>
+
+
+
+                                </li>
+                                <li data-icon="false" class="">
+
+
+                                    <h2>
+                                        Kesselnennleistung    <span class="debugdata">&nbsp;(19) / lut_selection / dropdown</span>
+                                    </h2>
+                                    <img alt="lut_selection" class="ui-li-icon ui-li-icon32" src="/Content/images/lut_selection_32x32.png" />
+
+
+                                    <div id="container_000_00019" class="realtimeValue valueContainer  ui-li-value"><span id="val_000_00019">22kW</span></div>
+
+                                    <p class="measurandinfobox000_00019">
+                                        <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                    </p>
+
+                                    <span class="debugdata">&nbsp;(19) / lut_selection / dropdown</span>
+
+
+
+                                </li>
+                                <li data-icon="false" class="">
+
+
+                                    <h2>
+                                        Auswahl F&#246;rdersystem    <span class="debugdata">&nbsp;(914) / lut_selection / dropdown</span>
+                                    </h2>
+                                    <img alt="lut_selection" class="ui-li-icon ui-li-icon32" src="/Content/images/lut_selection_32x32.png" />
+
+
+                                    <div id="container_000_00914" class="realtimeValue valueContainer  ui-li-value"><span id="val_000_00914">Entnahmesonden</span></div>
+
+                                    <p class="measurandinfobox000_00914">
+                                        <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                    </p>
+
+                                    <span class="debugdata">&nbsp;(914) / lut_selection / dropdown</span>
+
+
+
+                                </li>
+                                <li class="submodule">
+                                    <div data-role="collapsible" data-theme="b" data-inset="true" id="module-10458__125_0">
+                                        <h2>Kesselprogramm</h2>
+                                        <ul data-role="listview" data-filter="false" data-divider-theme="a" class="measurandlist " data-sortorder="002_004_000" data-level="1">
+
+
+
+                                            <li class="submodule">
+                                                <div data-role="collapsible" data-theme="c" data-inset="true" id="module-10458__126_0">
+                                                    <h2>Au&#223;entemperatur Einschaltung</h2>
+                                                    <ul data-role="listview" data-filter="false" data-divider-theme="a" class="measurandlist " data-sortorder="002_004_001" data-level="2">
+                                                        <li data-icon="false" class=" trendable">
+                                                            <a href=/de-DE/Measurand/ValueGraphs?name =Kessel-96_0&plant =KWB%20EF2-10458&item =Au%C3%9Fentemperatur%20Istwert-000_00390>
+
+                                                                <h2>
+                                                                    Au&#223;entemperatur Istwert    <span class="debugdata">&nbsp;(390) / sensor_temperature_1 / display</span>
+                                                                </h2>
+                                                                <img alt="temperature" class="ui-li-icon ui-li-icon32" src="/Content/images/temperature_32x32.png" />
+                                                                <div id="container_000_00390" class="realtimeValue valueContainer  ui-li-value numbercomma-one"><span id="val_000_00390">-1,1</span>&nbsp;°C</div>
+
+                                                                <p class="measurandinfobox000_00390">
+                                                                    <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                                                </p>
+
+
+                                                            </a>
+                                                        </li>
+
+
+
+
+                                                    </ul>
+
+                                                </div> <!-- collapsible -->
+
+                                            </li>
+
+                                        </ul>
+
+                                    </div> <!-- collapsible -->
+
+                                </li>
+                                <li class="submodule">
+                                    <div data-role="collapsible" data-theme="b" data-inset="true" id="module-10458__130_0">
+                                        <h2>Kesselleistung</h2>
+                                        <ul data-role="listview" data-filter="false" data-divider-theme="a" class="measurandlist " data-sortorder="002_008_000" data-level="1">
+
+
+
+                                            <li class="submodule">
+                                                <div data-role="collapsible" data-theme="c" data-inset="true" id="module-10458__221_0">
+                                                    <h2>Puffer Ladelogik</h2>
+                                                    <ul data-role="listview" data-filter="false" data-divider-theme="a" class="measurandlist " data-sortorder="002_008_006" data-level="2">
+                                                        <li class="">
+
+
+                                                            <h2>
+                                                                Modulierender Pufferbetrieb    <span class="debugdata">&nbsp;(1196) / bool / switch</span>
+                                                            </h2>
+                                                            <img alt="switch" class="ui-li-icon ui-li-icon32" src="/Content/images/switch_32x32.png" />
+                                                            <div id="container_000_01196" class="realtimeValue valueContainer  ui-li-value"><span id="val_000_01196">Ein</span></div>
+
+                                                            <p class="measurandinfobox000_01196">
+                                                                <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                                            </p>
+
+
+
+                                                        </li>
+                                                        <li data-icon="false" class=" trendable">
+                                                            <a href=/de-DE/Measurand/ValueGraphs?name =Kessel-96_0&plant =KWB%20EF2-10458&item =Puffermanagement%20Status-000_01197>
+
+                                                                <h2>
+                                                                    Puffermanagement Status    <span class="debugdata">&nbsp;(1197) / lut_status / display</span>
+                                                                </h2>
+                                                                <img alt="status" class="ui-li-icon ui-li-icon32" src="/Content/images/status_32x32.png" />
+                                                                <div id="container_000_01197" class="realtimeValue valueContainer  ui-li-value"><span id="val_000_01197">Aktiv</span></div>
+
+                                                                <p class="measurandinfobox000_01197">
+                                                                    <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                                                </p>
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li data-icon="false" class="">
+
+
+                                                            <h2>
+                                                                Nennlast    <span class="debugdata">&nbsp;(1198) / percent / slider</span>
+                                                            </h2>
+                                                            <img alt="Prozent" class="ui-li-icon ui-li-icon32" src="/Content/images/Prozent_32x32.png" />
+
+
+                                                            <div id="container_000_01198" class="realtimeValue valueContainer  ui-li-value numbercomma-no"><span id="val_000_01198">100</span>&nbsp;%</div>
+
+                                                            <p class="measurandinfobox000_01198">
+                                                                <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                                            </p>
+
+
+                                                        </li>
+                                                        <li data-icon="false" class="">
+
+
+                                                            <h2>
+                                                                Mittellast    <span class="debugdata">&nbsp;(1199) / percent / slider</span>
+                                                            </h2>
+                                                            <img alt="Prozent" class="ui-li-icon ui-li-icon32" src="/Content/images/Prozent_32x32.png" />
+
+
+                                                            <div id="container_000_01199" class="realtimeValue valueContainer  ui-li-value numbercomma-no"><span id="val_000_01199">65</span>&nbsp;%</div>
+
+                                                            <p class="measurandinfobox000_01199">
+                                                                <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                                            </p>
+
+
+                                                        </li>
+                                                        <li data-icon="false" class="">
+
+
+                                                            <h2>
+                                                                Teillast    <span class="debugdata">&nbsp;(1200) / percent / slider</span>
+                                                            </h2>
+                                                            <img alt="Prozent" class="ui-li-icon ui-li-icon32" src="/Content/images/Prozent_32x32.png" />
+
+
+                                                            <div id="container_000_01200" class="realtimeValue valueContainer  ui-li-value numbercomma-no"><span id="val_000_01200">40</span>&nbsp;%</div>
+
+                                                            <p class="measurandinfobox000_01200">
+                                                                <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                                            </p>
+
+
+                                                        </li>
+
+
+
+
+                                                    </ul>
+
+                                                </div> <!-- collapsible -->
+
+                                            </li>
+
+                                        </ul>
+
+                                    </div> <!-- collapsible -->
+
+                                </li>
+                                <li class="submodule">
+                                    <div data-role="collapsible" data-theme="b" data-inset="true" id="module-10458__119_0">
+                                        <h2>Wartung</h2>
+                                        <ul data-role="listview" data-filter="false" data-divider-theme="a" class="measurandlist " data-sortorder="002_013_000" data-level="1">
+                                            <li data-icon="false" class="">
+
+
+                                                <h2>
+                                                    Anzahl Wartungen    <span class="debugdata">&nbsp;(690) / number_spinbox / spinbox</span>
+                                                </h2>
+                                                <img alt="default" class="ui-li-icon ui-li-icon32" src="/Content/images/default_32x32.png" />
+                                                <div id="container_000_00690" class="realtimeValue valueContainer  ui-li-value numbercomma-no"><span id="val_000_00690">0</span></div>
+
+                                                <p class="measurandinfobox000_00690">
+                                                    <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                                </p>
+
+
+
+                                            </li>
+                                            <li data-icon="false" class="">
+
+
+                                                <h2>
+                                                    Letzte Wartung am    <span class="debugdata">&nbsp;(698) / date / date</span>
+                                                </h2>
+                                                <img alt="time" class="ui-li-icon ui-li-icon32" src="/Content/images/time_32x32.png" />
+                                                <div id="container_000_00698" class="realtimeValue valueContainer  ui-li-value"><span id="val_000_00698">01.01.1970</span></div>
+
+                                                <p class="measurandinfobox000_00698">
+                                                    <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                                </p>
+
+
+
+                                            </li>
+                                            <li data-icon="false" class="">
+
+
+                                                <h2>
+                                                    Intervall    <span class="debugdata">&nbsp;(695) / hour / slider</span>
+                                                </h2>
+                                                <img alt="default" class="ui-li-icon ui-li-icon32" src="/Content/images/default_32x32.png" />
+
+
+                                                <div id="container_000_00695" class="realtimeValue valueContainer  ui-li-value numbercomma-no"><span id="val_000_00695">1.500</span>&nbsp;h</div>
+
+                                                <p class="measurandinfobox000_00695">
+                                                    <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                                </p>
+
+
+                                            </li>
+                                            <li data-icon="false" class="">
+
+
+                                                <h2>
+                                                    N&#228;chste Wartung in    <span class="debugdata">&nbsp;(739) / hour / slider</span>
+                                                </h2>
+                                                <img alt="default" class="ui-li-icon ui-li-icon32" src="/Content/images/default_32x32.png" />
+
+
+                                                <div id="container_000_00739" class="realtimeValue valueContainer  ui-li-value numbercomma-no"><span id="val_000_00739">295</span>&nbsp;h</div>
+
+                                                <p class="measurandinfobox000_00739">
+                                                    <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                                </p>
+
+
+                                            </li>
+
+
+
+
+                                        </ul>
+
+                                    </div> <!-- collapsible -->
+
+                                </li>
+                                <li class="submodule">
+                                    <div data-role="collapsible" data-theme="b" data-inset="true" id="module-10458__121_0">
+                                        <h2>Kontrolle</h2>
+                                        <ul data-role="listview" data-filter="false" data-divider-theme="a" class="measurandlist " data-sortorder="002_014_000" data-level="1">
+                                            <li data-icon="false" class="">
+                                                <h2>
+                                                    Anzahl    <span class="debugdata">&nbsp;(691) / number_spinbox / spinbox</span>
+                                                </h2>
+                                                <img alt="default" class="ui-li-icon ui-li-icon32" src="/Content/images/default_32x32.png" />
+                                                <div id="container_000_00691" class="ui-li-spinbox measurandCommonSpinContainer realtimeValue  ui-li-value" data-role="controlgroup" data-type="horizontal">
+                                                    <input autocomplete="off" class="measurandCommonSpin" data-cop-oldvalue="0.00" data-disabled="false" data-role="spinbox" data-site-propertyId="000_00691" id="spin_000_00691" max="" min="" name="spin_000_00691" step="1" type="text" value="0" />
+                                                    <a href="#" data-role="button" data-inline="true">OK</a>
+                                                </div>
+                                                <p class="setCommandStatus setCommandStatus000_00691"></p>
+
+                                                <p class="measurandinfobox000_00691">
+                                                    <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                                </p>
+
+                                            </li>
+                                            <li data-icon="false" class="">
+                                                <h2>
+                                                    Intervall    <span class="debugdata">&nbsp;(694) / hour_high_boundaries / spinbox</span>
+                                                </h2>
+                                                <img alt="default" class="ui-li-icon ui-li-icon32" src="/Content/images/default_32x32.png" />
+                                                <div id="container_000_00694" class="ui-li-spinbox measurandCommonSpinContainer realtimeValue  ui-li-value" data-role="controlgroup" data-type="horizontal">
+                                                    <input autocomplete="off" class="measurandCommonSpin" data-cop-oldvalue="0.00" data-disabled="false" data-role="spinbox" data-site-propertyId="000_00694" id="spin_000_00694" max="99990" min="0" name="spin_000_00694" step="1" type="text" value="0" />
+                                                    &nbsp;h<a href="#" data-role="button" data-inline="true">OK</a>
+                                                </div>
+                                                <p class="setCommandStatus setCommandStatus000_00694"></p>
+
+                                                <p class="measurandinfobox000_00694">
+                                                    <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                                </p>
+
+                                            </li>
+                                            <li data-icon="false" class="">
+
+
+                                                <h2>
+                                                    Restdauer    <span class="debugdata">&nbsp;(740) / hour / slider</span>
+                                                </h2>
+                                                <img alt="default" class="ui-li-icon ui-li-icon32" src="/Content/images/default_32x32.png" />
+
+
+                                                <div id="container_000_00740" class="realtimeValue valueContainer  ui-li-value numbercomma-no"><span id="val_000_00740">0</span>&nbsp;h</div>
+
+                                                <p class="measurandinfobox000_00740">
+                                                    <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                                </p>
+
+
+                                            </li>
+
+
+
+
+                                        </ul>
+
+                                    </div> <!-- collapsible -->
+
+                                </li>
+                                <li class="submodule">
+                                    <div data-role="collapsible" data-theme="b" data-inset="true" id="module-10458__220_0">
+                                        <h2>Condenser</h2>
+                                        <ul data-role="listview" data-filter="false" data-divider-theme="a" class="measurandlist " data-sortorder="002_016_000" data-level="1">
+                                            <li class="">
+
+
+                                                <h2>
+                                                    Condens-Modul vorhanden    <span class="debugdata">&nbsp;(1153) / bool / switch</span>
+                                                </h2>
+                                                <img alt="switch" class="ui-li-icon ui-li-icon32" src="/Content/images/switch_32x32.png" />
+                                                <div id="container_000_01153" class="realtimeValue valueContainer  ui-li-value"><span id="val_000_01153">Nein</span></div>
+
+                                                <p class="measurandinfobox000_01153">
+                                                    <span class="lastvalid-container ">letzter Wert: <span class="lastvalid-date"></span></span>
+                                                </p>
+
+
+
+                                            </li>
+
+
+
+
+                                        </ul>
+
+                                    </div> <!-- collapsible -->
+
+                                </li>
+                            </ul>
+                        </div> <!-- item -->
+                        <!-- end left block = measurands-->
+                    </div>
+
+                    <!-- right block with graph -->
+                    <div id="measurement" class="ui-block-b">
+
+
+
+
+
+
+                        <div class="measurement-title" id="graphTitle">
+                            Dieser Bereich ist f&#252;r Diagramme reserviert
+                        </div>
+                        <div class="chart_area" style="display:none;"><svg /></div>
+
+                        <div class="uix-highlightable" style="display:none;" id="intervalButtons">
+                            <div class="ui-grid-solo uix-highlightable">
+                                <div>
+                                    <a href="/de-DE/Measurand/ValueGraphs?name=Kessel-96_0&amp;plant=KWB%20EF2-10458&amp;period=0" id="intervalHour" data-role="button">letzte Stunde</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <script type="text/javascript">
+    function measurands() {
+        series = [];
+        var lookupTableValueList = null;
+        var key = '';
+        var unit = '';
+        var startdate = 0;
+        var enddate = 0;
+        var interval = 0;
+        var id = '';
+
+
+            return [
+            {
+                values: series,
+                lookupTableValueList: lookupTableValueList,
+                id: id,
+                key: key,
+                color: "#F9B700",
+                axisLabel: unit,
+                start : startdate,
+                end: enddate,
+                period : interval * 1000,
+                lNextHistoryDate : 0
+            }];
+    }
+
+                        </script>
+
+
+
+
+
+                        <!-- end right block -->
+                    </div>
+                    <!-- end grid -->
+                </div>
+            </form>
+
+            <script type="text/javascript">
+        //from utilites.js
+        failsafeLogging(function(logger) {
+            logger("------------------ Measurands - 28.02.2023 18:01:22 ----------------");
+            var obj;
+                obj = {"Id":"000_00001","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":1,"PlantModule":null,"SortOrder":"002_000_000_000","TimeStamp":"2023-02-28T17:57:58Z","TimeStampEpoch":1677607078,"TimeStampLastUpdate":"2023-02-28T17:57:59.7614654Z","Name":"Kessel","Value":null,"ValueString":"1","DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":null,"MaxValue":null,"ShowInTrend":false,"Permission":"modify","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"bool","ValueText":"Ein","WidgetType":"switch","Icon":"switch","DisplayClassPropertyList":[{"Name":"icon","Value":"switch"},{"Name":"name","Value":"bool"},{"Name":"widget","Value":"switch"}],"WidgetValueList":[{"Value":"0","Text":"Aus"},{"Value":"1","Text":"Ein"}],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_00939","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":939,"PlantModule":null,"SortOrder":"002_000_000_001","TimeStamp":"2023-02-28T17:57:58Z","TimeStampEpoch":1677607078,"TimeStampLastUpdate":"2023-02-28T17:57:59.7614654Z","Name":"Status","Value":null,"ValueString":"30","DateTimeValue":null,"DateTimeParsed":true,"FullParameter":null,"MinValue":null,"MaxValue":null,"ShowInTrend":true,"Permission":"view","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"lut","ValueText":"Bereit (-Anf)","WidgetType":"display","Icon":"status","DisplayClassPropertyList":[{"Name":"icon","Value":"status"},{"Name":"name","Value":"lut_status"},{"Name":"widget","Value":"display"}],"WidgetValueList":[{"Value":"0","Text":"Aus"},{"Value":"1","Text":"Messbetrieb"},{"Value":"2","Text":"Betrieb (Reinigung)"},{"Value":"3","Text":"Einmessen"},{"Value":"4","Text":"Betrieb"},{"Value":"5","Text":"Nachlauf"},{"Value":"6","Text":"Neustart"},{"Value":"7","Text":"Störung Nachlauf"},{"Value":"8","Text":"Störung Aus"},{"Value":"9","Text":"Wartung"},{"Value":"10","Text":"Bereit (-Zuendanf)"},{"Value":"11","Text":"Zünden Start Saugzug"},{"Value":"12","Text":"Zünden FS Füllen"},{"Value":"13","Text":"Zünden Einschieben 1"},{"Value":"14","Text":"Zünden Einschieben 3"},{"Value":"15","Text":"Zünden Heizen"},{"Value":"16","Text":"Heizen Durchzünden"},{"Value":"17","Text":"Zünden Einschieben 2"},{"Value":"18","Text":"Zünden Warten"},{"Value":"19","Text":"Durchzünden"},{"Value":"20","Text":"1. IB Betrieb"},{"Value":"21","Text":"Bereit (-Ext1)"},{"Value":"22","Text":"Bereit (-Zweitkessel)"},{"Value":"23","Text":"Bereit (-FS)"},{"Value":"24","Text":"Bereit (-Reinigung)"},{"Value":"25","Text":"Bereit (+Stop)"},{"Value":"26","Text":"Bereit (-Ext3)"},{"Value":"27","Text":"Bereit (-Lambdasonde)"},{"Value":"30","Text":"Bereit (-Anf)"},{"Value":"31","Text":"Bereit (+Wartezeit)"},{"Value":"32","Text":"Bereit (+Anf)"},{"Value":"34","Text":"Betrieb Leerschieben"},{"Value":"35","Text":"Aus"},{"Value":"36","Text":"Anheizen"},{"Value":"37","Text":"Warten Zündanf."},{"Value":"38","Text":"Warten Zündfreig."},{"Value":"39","Text":"Start Zündung"},{"Value":"40","Text":"Zünden"},{"Value":"41","Text":"Heizen"},{"Value":"42","Text":"Feuerhaltung"},{"Value":"43","Text":"Feuer aus"},{"Value":"44","Text":"Störung Feuer aus"},{"Value":"45","Text":"Tür offen"},{"Value":"46","Text":"Überhitzung"},{"Value":"47","Text":"Störung Feuerhaltung"},{"Value":"49","Text":"Sh aus, PM freigegeben"},{"Value":"50","Text":"Start Pelletmodul "},{"Value":"51","Text":"Pelletmodul Gesperrt"},{"Value":"52","Text":"Wartung"}],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_00002","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":2,"PlantModule":null,"SortOrder":"002_000_000_002","TimeStamp":"2023-02-28T17:57:58Z","TimeStampEpoch":1677607078,"TimeStampLastUpdate":"2023-02-28T17:57:59.7614654Z","Name":"Kesselleistung","Value":0.0,"ValueString":null,"DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":null,"MaxValue":null,"ShowInTrend":true,"Permission":"view","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"s16","ValueText":null,"WidgetType":"slider","Icon":"Prozent","DisplayClassPropertyList":[{"Name":"icon","Value":"Prozent"},{"Name":"name","Value":"percent"},{"Name":"postfix","Value":"%"},{"Name":"widget","Value":"slider"},{"Name":"decimal-places","Value":"0"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_00589","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":589,"PlantModule":null,"SortOrder":"002_000_000_003","TimeStamp":"2023-02-28T17:57:58Z","TimeStampEpoch":1677607078,"TimeStampLastUpdate":"2023-02-28T17:57:59.7614654Z","Name":"Kesseltemperatur Ist","Value":71.1,"ValueString":null,"DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":null,"MaxValue":null,"ShowInTrend":true,"Permission":"view","Required":true,"State":"valid","Unit":null,"ArraySize":1,"RawType":"sensorS16","ValueText":null,"WidgetType":"display","Icon":"temperature","DisplayClassPropertyList":[{"Name":"icon","Value":"temperature"},{"Name":"name","Value":"sensor_temperature"},{"Name":"postfix","Value":"°C"},{"Name":"widget","Value":"display"},{"Name":"decimal-places","Value":"0"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_00617","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":617,"PlantModule":null,"SortOrder":"002_000_000_004","TimeStamp":"2023-02-28T17:57:58Z","TimeStampEpoch":1677607078,"TimeStampLastUpdate":"2023-02-28T17:57:59.7624648Z","Name":"Kesseltemperatur Soll","Value":60.0,"ValueString":null,"DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":null,"MaxValue":null,"ShowInTrend":true,"Permission":"view","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"s16","ValueText":null,"WidgetType":"slider","Icon":"temperature","DisplayClassPropertyList":[{"Name":"icon","Value":"temperature"},{"Name":"name","Value":"temperature"},{"Name":"postfix","Value":"°C"},{"Name":"widget","Value":"slider"},{"Name":"decimal-places","Value":"0"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_00608","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":608,"PlantModule":null,"SortOrder":"002_000_000_005","TimeStamp":"2023-02-28T17:57:58Z","TimeStampEpoch":1677607078,"TimeStampLastUpdate":"2023-02-28T17:57:59.7624648Z","Name":"Kesselpumpe","Value":null,"ValueString":"0","DateTimeValue":null,"DateTimeParsed":true,"FullParameter":null,"MinValue":null,"MaxValue":null,"ShowInTrend":true,"Permission":"view","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"bool","ValueText":"Aus","WidgetType":"display","Icon":"status","DisplayClassPropertyList":[{"Name":"icon","Value":"status"},{"Name":"name","Value":"lut_status"},{"Name":"widget","Value":"display"}],"WidgetValueList":[{"Value":"0","Text":"Aus"},{"Value":"1","Text":"Ein"}],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_00758","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":758,"PlantModule":null,"SortOrder":"002_000_000_006","TimeStamp":"2023-02-28T17:57:58Z","TimeStampEpoch":1677607078,"TimeStampLastUpdate":"2023-02-28T17:57:59.7624648Z","Name":"Kesselpumpe %","Value":0.0,"ValueString":null,"DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":0.0,"MaxValue":100.0,"ShowInTrend":true,"Permission":"view","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"u16","ValueText":null,"WidgetType":"slider","Icon":"Prozent","DisplayClassPropertyList":[{"Name":"icon","Value":"Prozent"},{"Name":"name","Value":"percent"},{"Name":"postfix","Value":"%"},{"Name":"widget","Value":"slider"},{"Name":"decimal-places","Value":"0"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_00590","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":590,"PlantModule":null,"SortOrder":"002_000_000_007","TimeStamp":"2023-02-28T17:57:58Z","TimeStampEpoch":1677607078,"TimeStampLastUpdate":"2023-02-28T17:57:59.7624648Z","Name":"Rücklauftemperatur Ist","Value":72.3,"ValueString":null,"DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":null,"MaxValue":null,"ShowInTrend":true,"Permission":"view","Required":true,"State":"valid","Unit":null,"ArraySize":1,"RawType":"sensorS16","ValueText":null,"WidgetType":"display","Icon":"temperature","DisplayClassPropertyList":[{"Name":"icon","Value":"temperature"},{"Name":"name","Value":"sensor_temperature"},{"Name":"postfix","Value":"°C"},{"Name":"widget","Value":"display"},{"Name":"decimal-places","Value":"0"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_00625","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":625,"PlantModule":null,"SortOrder":"002_000_000_008","TimeStamp":"2023-02-28T17:57:58Z","TimeStampEpoch":1677607078,"TimeStampLastUpdate":"2023-02-28T17:57:59.7624648Z","Name":"Rücklauftemperatur Soll","Value":70.4,"ValueString":null,"DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":null,"MaxValue":null,"ShowInTrend":true,"Permission":"view","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"s16","ValueText":null,"WidgetType":"slider","Icon":"temperature","DisplayClassPropertyList":[{"Name":"icon","Value":"temperature"},{"Name":"name","Value":"temperature"},{"Name":"postfix","Value":"°C"},{"Name":"widget","Value":"slider"},{"Name":"decimal-places","Value":"0"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_00729","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":729,"PlantModule":null,"SortOrder":"002_000_000_009","TimeStamp":"2023-02-28T17:57:58Z","TimeStampEpoch":1677607078,"TimeStampLastUpdate":"2023-02-28T17:57:59.7634643Z","Name":"Volllaststunden","Value":1205.5333333333333,"ValueString":null,"DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":0.0,"MaxValue":250000.0,"ShowInTrend":false,"Permission":"view","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"u32","ValueText":null,"WidgetType":"spinbox","Icon":"default","DisplayClassPropertyList":[{"Name":"icon","Value":"default"},{"Name":"name","Value":"hour_high_boundaries"},{"Name":"postfix","Value":"h"},{"Name":"widget","Value":"spinbox"},{"Name":"decimal-places","Value":"0"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_00917","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":917,"PlantModule":null,"SortOrder":"002_000_000_011","TimeStamp":"2023-02-28T18:00:58Z","TimeStampEpoch":1677607258,"TimeStampLastUpdate":"2023-02-28T18:01:00.2709491Z","Name":"Flammtemperatur Ist","Value":106.3,"ValueString":null,"DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":null,"MaxValue":null,"ShowInTrend":true,"Permission":"view","Required":true,"State":"valid","Unit":null,"ArraySize":1,"RawType":"sensorS16","ValueText":null,"WidgetType":"display","Icon":"temperature","DisplayClassPropertyList":[{"Name":"icon","Value":"temperature"},{"Name":"name","Value":"sensor_temperature"},{"Name":"postfix","Value":"°C"},{"Name":"widget","Value":"display"},{"Name":"decimal-places","Value":"0"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_01343","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":1343,"PlantModule":null,"SortOrder":"002_000_000_012","TimeStamp":"2023-02-28T17:57:58Z","TimeStampEpoch":1677607078,"TimeStampLastUpdate":"2023-02-28T17:57:59.7674619Z","Name":"Füllstand Asche","Value":16.0,"ValueString":null,"DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":null,"MaxValue":null,"ShowInTrend":false,"Permission":"view","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"u16","ValueText":null,"WidgetType":"slider","Icon":"Prozent","DisplayClassPropertyList":[{"Name":"icon","Value":"Prozent"},{"Name":"name","Value":"percent"},{"Name":"postfix","Value":"%"},{"Name":"widget","Value":"slider"},{"Name":"decimal-places","Value":"0"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_01335","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":1335,"PlantModule":null,"SortOrder":"002_000_000_013","TimeStamp":"2023-02-28T15:57:58Z","TimeStampEpoch":1677599878,"TimeStampLastUpdate":"2023-02-28T15:57:59.66937Z","Name":"Restmenge","Value":4500.0,"ValueString":null,"DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":0.0,"MaxValue":100000.0,"ShowInTrend":false,"Permission":"modify","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"u32","ValueText":null,"WidgetType":"slider","Icon":"default","DisplayClassPropertyList":[{"Name":"icon","Value":"default"},{"Name":"name","Value":"kg"},{"Name":"postfix","Value":"kg"},{"Name":"widget","Value":"slider"},{"Name":"decimal-places","Value":"0"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_01339","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":1339,"PlantModule":null,"SortOrder":"002_000_000_014","TimeStamp":"2023-02-28T15:57:58Z","TimeStampEpoch":1677599878,"TimeStampLastUpdate":"2023-02-28T15:57:59.66937Z","Name":"Meldung bei Restmenge","Value":600.0,"ValueString":null,"DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":0.0,"MaxValue":10000.0,"ShowInTrend":false,"Permission":"modify","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"u32","ValueText":null,"WidgetType":"slider","Icon":"default","DisplayClassPropertyList":[{"Name":"icon","Value":"default"},{"Name":"name","Value":"kg"},{"Name":"postfix","Value":"kg"},{"Name":"widget","Value":"slider"},{"Name":"decimal-places","Value":"0"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_01349","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":1349,"PlantModule":null,"SortOrder":"002_000_000_015","TimeStamp":"2023-02-28T15:57:58Z","TimeStampEpoch":1677599878,"TimeStampLastUpdate":"2023-02-28T15:57:59.66937Z","Name":"Füllmenge hinzufügen","Value":0.0,"ValueString":null,"DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":0.0,"MaxValue":40000.0,"ShowInTrend":false,"Permission":"modify","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"u32","ValueText":null,"WidgetType":"spinbox","Icon":"default","DisplayClassPropertyList":[{"Name":"icon","Value":"default"},{"Name":"name","Value":"kg_spinbox"},{"Name":"postfix","Value":"kg"},{"Name":"widget","Value":"spinbox"},{"Name":"decimal-places","Value":"0"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_00630","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":630,"PlantModule":null,"SortOrder":"002_000_000_016","TimeStamp":"2023-02-28T17:57:58Z","TimeStampEpoch":1677607078,"TimeStampLastUpdate":"2023-02-28T17:57:59.7674619Z","Name":"Verbrauch","Value":5.955,"ValueString":null,"DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":null,"MaxValue":null,"ShowInTrend":false,"Permission":"view","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"u32","ValueText":null,"WidgetType":"spinbox","Icon":"default","DisplayClassPropertyList":[{"Name":"icon","Value":"default"},{"Name":"name","Value":"tonne_3"},{"Name":"postfix","Value":"t"},{"Name":"widget","Value":"spinbox"},{"Name":"decimal-places","Value":"3"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_00019","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":19,"PlantModule":null,"SortOrder":"002_000_000_017","TimeStamp":"2023-02-28T15:57:58Z","TimeStampEpoch":1677599878,"TimeStampLastUpdate":"2023-02-28T15:57:59.6703693Z","Name":"Kesselnennleistung","Value":null,"ValueString":"4","DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":null,"MaxValue":null,"ShowInTrend":false,"Permission":"view","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"lut","ValueText":"22kW","WidgetType":"dropdown","Icon":"lut_selection","DisplayClassPropertyList":[{"Name":"icon","Value":"lut_selection"},{"Name":"name","Value":"lut_selection"},{"Name":"widget","Value":"dropdown"}],"WidgetValueList":[{"Value":"0","Text":"8kW"},{"Value":"1","Text":"10kW"},{"Value":"2","Text":"12kW"},{"Value":"3","Text":"15kW"},{"Value":"4","Text":"22kW"},{"Value":"5","Text":"25kW"},{"Value":"6","Text":"30kW"},{"Value":"7","Text":"35kW"},{"Value":"8","Text":"40kW"},{"Value":"9","Text":"-"}],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_00914","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":914,"PlantModule":null,"SortOrder":"002_000_000_018","TimeStamp":"2023-02-28T15:57:58Z","TimeStampEpoch":1677599878,"TimeStampLastUpdate":"2023-02-28T15:57:59.6713686Z","Name":"Auswahl Fördersystem","Value":null,"ValueString":"3","DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":null,"MaxValue":null,"ShowInTrend":false,"Permission":"view","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"lut","ValueText":"Entnahmesonden","WidgetType":"dropdown","Icon":"lut_selection","DisplayClassPropertyList":[{"Name":"icon","Value":"lut_selection"},{"Name":"name","Value":"lut_selection"},{"Name":"widget","Value":"dropdown"}],"WidgetValueList":[{"Value":"0","Text":"Vorratsbehälter"},{"Value":"1","Text":"Schnecke"},{"Value":"2","Text":"Sauganlage"},{"Value":"3","Text":"Entnahmesonden"},{"Value":"4","Text":"Einpunkt Entnahmesonde"},{"Value":"5","Text":"Direkt"},{"Value":"6","Text":"Zwischenbehälter"}],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_00390","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":390,"PlantModule":null,"SortOrder":"002_004_001_000","TimeStamp":"2023-02-28T17:58:58Z","TimeStampEpoch":1677607138,"TimeStampLastUpdate":"2023-02-28T17:58:59.55184Z","Name":"Außentemperatur Istwert","Value":-1.1,"ValueString":null,"DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":null,"MaxValue":null,"ShowInTrend":true,"Permission":"view","Required":true,"State":"valid","Unit":null,"ArraySize":1,"RawType":"sensorS16","ValueText":null,"WidgetType":"display","Icon":"temperature","DisplayClassPropertyList":[{"Name":"icon","Value":"temperature"},{"Name":"name","Value":"sensor_temperature_1"},{"Name":"postfix","Value":"°C"},{"Name":"widget","Value":"display"},{"Name":"decimal-places","Value":"1"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_01196","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":1196,"PlantModule":null,"SortOrder":"002_008_006_000","TimeStamp":"2023-02-28T15:57:58Z","TimeStampEpoch":1677599878,"TimeStampLastUpdate":"2023-02-28T15:57:59.7503226Z","Name":"Modulierender Pufferbetrieb","Value":null,"ValueString":"1","DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":null,"MaxValue":null,"ShowInTrend":false,"Permission":"view","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"bool","ValueText":"Ein","WidgetType":"switch","Icon":"switch","DisplayClassPropertyList":[{"Name":"icon","Value":"switch"},{"Name":"name","Value":"bool"},{"Name":"widget","Value":"switch"}],"WidgetValueList":[{"Value":"0","Text":"Aus"},{"Value":"1","Text":"Ein"}],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_01197","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":1197,"PlantModule":null,"SortOrder":"002_008_006_001","TimeStamp":"2023-02-28T17:57:58Z","TimeStampEpoch":1677607078,"TimeStampLastUpdate":"2023-02-28T17:57:59.7694611Z","Name":"Puffermanagement Status","Value":null,"ValueString":"1","DateTimeValue":null,"DateTimeParsed":true,"FullParameter":null,"MinValue":null,"MaxValue":null,"ShowInTrend":true,"Permission":"view","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"lut","ValueText":"Aktiv","WidgetType":"display","Icon":"status","DisplayClassPropertyList":[{"Name":"icon","Value":"status"},{"Name":"name","Value":"lut_status"},{"Name":"widget","Value":"display"}],"WidgetValueList":[{"Value":"0","Text":"Aus"},{"Value":"1","Text":"Aktiv"},{"Value":"2","Text":"Inaktiv (Kein Pufferspeicher)"},{"Value":"3","Text":"Inaktiv (Hydraulische Verschaltung ungültig)"},{"Value":"4","Text":"Inaktiv (Pufferprogramm ungültig)"},{"Value":"5","Text":"Inaktiv (Mehr als 1 Puffer mit Quelle Kessel)"},{"Value":"6","Text":"Inaktiv (Kessel überhitzt)"},{"Value":"7","Text":"Inaktiv (Kesselprogramm ungültig)"},{"Value":"8","Text":"Inaktiv (Extern 2 angefordert)"},{"Value":"9","Text":"Inaktiv (Außentemperatur Einschaltung aktiv)"},{"Value":"10","Text":"Inaktiv (Pufferfühler fehlt/defekt)"}],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_01198","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":1198,"PlantModule":null,"SortOrder":"002_008_006_002","TimeStamp":"2023-02-28T15:57:58Z","TimeStampEpoch":1677599878,"TimeStampLastUpdate":"2023-02-28T15:57:59.7503226Z","Name":"Nennlast","Value":100.0,"ValueString":null,"DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":30.0,"MaxValue":100.0,"ShowInTrend":false,"Permission":"view","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"u16","ValueText":null,"WidgetType":"slider","Icon":"Prozent","DisplayClassPropertyList":[{"Name":"icon","Value":"Prozent"},{"Name":"name","Value":"percent"},{"Name":"postfix","Value":"%"},{"Name":"widget","Value":"slider"},{"Name":"decimal-places","Value":"0"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_01199","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":1199,"PlantModule":null,"SortOrder":"002_008_006_003","TimeStamp":"2023-02-28T15:57:58Z","TimeStampEpoch":1677599878,"TimeStampLastUpdate":"2023-02-28T15:57:59.7503226Z","Name":"Mittellast","Value":65.0,"ValueString":null,"DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":30.0,"MaxValue":100.0,"ShowInTrend":false,"Permission":"view","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"u16","ValueText":null,"WidgetType":"slider","Icon":"Prozent","DisplayClassPropertyList":[{"Name":"icon","Value":"Prozent"},{"Name":"name","Value":"percent"},{"Name":"postfix","Value":"%"},{"Name":"widget","Value":"slider"},{"Name":"decimal-places","Value":"0"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_01200","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":1200,"PlantModule":null,"SortOrder":"002_008_006_004","TimeStamp":"2023-02-28T15:57:58Z","TimeStampEpoch":1677599878,"TimeStampLastUpdate":"2023-02-28T15:57:59.7503226Z","Name":"Teillast","Value":40.0,"ValueString":null,"DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":30.0,"MaxValue":100.0,"ShowInTrend":false,"Permission":"view","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"u16","ValueText":null,"WidgetType":"slider","Icon":"Prozent","DisplayClassPropertyList":[{"Name":"icon","Value":"Prozent"},{"Name":"name","Value":"percent"},{"Name":"postfix","Value":"%"},{"Name":"widget","Value":"slider"},{"Name":"decimal-places","Value":"0"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_00690","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":690,"PlantModule":null,"SortOrder":"002_013_000_000","TimeStamp":"2023-02-28T15:57:58Z","TimeStampEpoch":1677599878,"TimeStampLastUpdate":"2023-02-28T15:57:59.7563196Z","Name":"Anzahl Wartungen","Value":0.0,"ValueString":null,"DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":null,"MaxValue":null,"ShowInTrend":false,"Permission":"view","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"u16","ValueText":null,"WidgetType":"spinbox","Icon":"default","DisplayClassPropertyList":[{"Name":"icon","Value":"default"},{"Name":"name","Value":"number_spinbox"},{"Name":"widget","Value":"spinbox"},{"Name":"decimal-places","Value":"0"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_00698","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":698,"PlantModule":null,"SortOrder":"002_013_000_001","TimeStamp":"2023-02-28T15:57:58Z","TimeStampEpoch":1677599878,"TimeStampLastUpdate":"2023-02-28T15:57:59.7563196Z","Name":"Letzte Wartung am","Value":null,"ValueString":"\"01.01.1970\"","DateTimeValue":"1970-01-01T00:00:00Z","DateTimeParsed":true,"FullParameter":null,"MinValue":null,"MaxValue":null,"ShowInTrend":false,"Permission":"view","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"date","ValueText":null,"WidgetType":"date","Icon":"time","DisplayClassPropertyList":[{"Name":"icon","Value":"time"},{"Name":"name","Value":"date"},{"Name":"format_code","Value":"dd.MM.yyyy"},{"Name":"widget","Value":"date"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_00695","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":695,"PlantModule":null,"SortOrder":"002_013_000_002","TimeStamp":"2023-02-28T15:57:58Z","TimeStampEpoch":1677599878,"TimeStampLastUpdate":"2023-02-28T15:57:59.7563196Z","Name":"Intervall","Value":1500.0,"ValueString":null,"DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":1500.0,"MaxValue":3000.0,"ShowInTrend":false,"Permission":"view","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"u32","ValueText":null,"WidgetType":"slider","Icon":"default","DisplayClassPropertyList":[{"Name":"icon","Value":"default"},{"Name":"name","Value":"hour"},{"Name":"postfix","Value":"h"},{"Name":"widget","Value":"slider"},{"Name":"decimal-places","Value":"0"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_00739","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":739,"PlantModule":null,"SortOrder":"002_013_000_003","TimeStamp":"2023-02-28T15:57:58Z","TimeStampEpoch":1677599878,"TimeStampLastUpdate":"2023-02-28T15:57:59.7573188Z","Name":"Nächste Wartung in","Value":295.0,"ValueString":null,"DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":null,"MaxValue":null,"ShowInTrend":false,"Permission":"view","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"s16","ValueText":null,"WidgetType":"slider","Icon":"default","DisplayClassPropertyList":[{"Name":"icon","Value":"default"},{"Name":"name","Value":"hour"},{"Name":"postfix","Value":"h"},{"Name":"widget","Value":"slider"},{"Name":"decimal-places","Value":"0"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_00691","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":691,"PlantModule":null,"SortOrder":"002_014_000_000","TimeStamp":"2023-02-28T15:57:58Z","TimeStampEpoch":1677599878,"TimeStampLastUpdate":"2023-02-28T15:57:59.7573188Z","Name":"Anzahl","Value":0.0,"ValueString":null,"DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":null,"MaxValue":null,"ShowInTrend":false,"Permission":"modify","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"u16","ValueText":null,"WidgetType":"spinbox","Icon":"default","DisplayClassPropertyList":[{"Name":"icon","Value":"default"},{"Name":"name","Value":"number_spinbox"},{"Name":"widget","Value":"spinbox"},{"Name":"decimal-places","Value":"0"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_00694","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":694,"PlantModule":null,"SortOrder":"002_014_000_001","TimeStamp":"2023-02-28T15:57:58Z","TimeStampEpoch":1677599878,"TimeStampLastUpdate":"2023-02-28T15:57:59.7573188Z","Name":"Intervall","Value":0.0,"ValueString":null,"DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":0.0,"MaxValue":99990.0,"ShowInTrend":false,"Permission":"modify","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"u32","ValueText":null,"WidgetType":"spinbox","Icon":"default","DisplayClassPropertyList":[{"Name":"icon","Value":"default"},{"Name":"name","Value":"hour_high_boundaries"},{"Name":"postfix","Value":"h"},{"Name":"widget","Value":"spinbox"},{"Name":"decimal-places","Value":"0"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_00740","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":740,"PlantModule":null,"SortOrder":"002_014_000_002","TimeStamp":"2023-02-28T15:57:58Z","TimeStampEpoch":1677599878,"TimeStampLastUpdate":"2023-02-28T15:57:59.7573188Z","Name":"Restdauer","Value":0.0,"ValueString":null,"DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":null,"MaxValue":null,"ShowInTrend":false,"Permission":"view","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"s16","ValueText":null,"WidgetType":"slider","Icon":"default","DisplayClassPropertyList":[{"Name":"icon","Value":"default"},{"Name":"name","Value":"hour"},{"Name":"postfix","Value":"h"},{"Name":"widget","Value":"slider"},{"Name":"decimal-places","Value":"0"}],"WidgetValueList":[],"UseWidgetWhenReadonly":false};
+                logger(obj);
+                obj = {"Id":"000_01153","FullParameterId":null,"PlantId":10458,"ModuleIndex":0,"ParameterIndex":1153,"PlantModule":null,"SortOrder":"002_016_000_000","TimeStamp":"2023-02-28T17:57:58Z","TimeStampEpoch":1677607078,"TimeStampLastUpdate":"2023-02-28T17:57:59.7714598Z","Name":"Condens-Modul vorhanden","Value":null,"ValueString":"0","DateTimeValue":null,"DateTimeParsed":false,"FullParameter":null,"MinValue":null,"MaxValue":null,"ShowInTrend":false,"Permission":"view","Required":null,"State":"valid","Unit":null,"ArraySize":1,"RawType":"bool","ValueText":"Nein","WidgetType":"switch","Icon":"switch","DisplayClassPropertyList":[{"Name":"icon","Value":"switch"},{"Name":"name","Value":"bool"},{"Name":"widget","Value":"switch"}],"WidgetValueList":[{"Value":"0","Text":"Nein"},{"Value":"1","Text":"Ja"}],"UseWidgetWhenReadonly":false};
+                logger(obj);
+        });
+            </script>
+
+
+
+
+
+
+
+        </div>  <!-- end content -->
+
+        <div data-role="footer" data-position="fixed">
+            <div style="clear:both">
+                <div style="float:left;padding-left:20px">
+
+
+                    <span>&copy; KWB <a href="/de-DE/Home/Impressum" style="color:#79797C !important;">Impressum</a></span>
+                </div>
+                <div class="userDetails">
+                    Necati_meral@yahoo.de (Basis - Bediener)
+
+                    W. Europe Standard Time
+                    <text>(UTC&nbsp;</text>1<text>h)</text>
+
+                </div>
+            </div>
+        </div> <!-- end footer -->
+        <!--
+        This code uses a panel to display the menu
+        -->
+        <div data-role="panel" data-display="push" data-position="right" id="page__de__DE__Measurand__Values__plant__KWB__20EF2__10458__name__KWB__20EF2__96_0__638132040826659413_ContextMenuPanel_Tablet" data-theme="b" class="ContextMenuPanel_Tablet">
+
+
+            <!-- panel content goes here -->
+
+            <h2 style="text-align:center">Men&#252;</h2>
+            <ul data-role="listview" class="contextmenulist ui-icon32" data-theme="b">
+                <!-- overview -->
+                <li data-icon="false">
+                    <!-- <img src="/Content/images/Ubersicht_48x48.png"  class="ui-li-icon ui-li-icon48" />-->
+                    <img alt="Ubersicht" class="ui-li-icon ui-li-icon32" src="/Content/images/Ubersicht_32x32.png" />
+                    <a href="/de-DE">&#220;bersicht</a>
+                </li>
+                <!-- -->
+                <li data-icon="false">
+                    <!-- <img src="/Content/images/Anlagenteile_48x48.png"  class="ui-li-icon ui-li-icon48" />-->
+                    <img alt="Anlagenteile" class="ui-li-icon ui-li-icon32" src="/Content/images/Anlagenteile_32x32.png" />
+                    <a href="/de-DE/Home/Equipment?name=KWB%20EF2-10458">Anlagenteile</a>
+                </li>
+                <li data-icon="false">
+                    <!-- <img src="/Content/images/Ansicht_bearbeiten_48x48.png"  class="ui-li-icon ui-li-icon48" />-->
+                    <img alt="Ansicht_bearbeiten" class="ui-li-icon ui-li-icon32" src="/Content/images/Ansicht_bearbeiten_32x32.png" />
+                    <a class="closeMenuPanel" href="/de-DE/Measurand/CustomizeListView?name=Kessel-96_0&amp;plant=KWB%20EF2-10458">Ansicht bearbeiten</a>
+                </li>
+                <li data-icon="false">
+                    <!-- <img src="/Content/images/Feedback_48x48.png"  class="ui-li-icon ui-li-icon48" />-->
+                    <img alt="Feedback" class="ui-li-icon ui-li-icon32" src="/Content/images/Feedback_32x32.png" />
+                    <a href="/de-DE/Feedback">Feedback</a>
+                </li>
+
+                <li data-icon="false">
+                    <!-- <img src="/Content/images/Help_48x48.png"  class="ui-li-icon ui-li-icon48" />-->
+                    <img alt="Help" class="ui-li-icon ui-li-icon32" src="/Content/images/Help_32x32.png" />
+                    <a href="https://www.comfort-online.com/Content/info/help_de.html" target="_blank">Hilfe</a>
+                </li>
+
+                <li data-icon="false">
+                    <form action="/de-DE/Account/LogOff" class="navbar-right" data-ajax="false" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="FEZ88-XVquK8NoC8PVCbap-LTsOFmrR8MIpRV4ezlJhAl7jxhx1b48IQQ1j0bP6hF5dti50_lc8s6xeMmrgDUhZ3Ynx7HngoJOnMlVpuCmQjMtaRtBqRK_9O4ndbizas-IlrNFOjtu69ElGWbO0yyw2" /></form>        <!-- <img src="/Content/images/Abmelden_48x48.png"  class="ui-li-icon ui-li-icon48" />-->
+                    <img alt="Abmelden" class="ui-li-icon ui-li-icon32" src="/Content/images/Abmelden_32x32.png" />            <a href="javascript:document.getElementById('logoutForm').submit()">Abmelden</a>
+                </li>
+
+            </ul>
+        </div><!-- /panel -->
+
+
+
+
+
+
+
+
+
+
+    </div> <!-- end page -->
+
+</body>
+</html>

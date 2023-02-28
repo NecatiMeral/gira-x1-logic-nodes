@@ -1,0 +1,33 @@
+﻿{
+  "PackageFormatVersion": "1.0",
+  "Assembly": "Necati_Meral_Yahoo_De.Logic.ComfortOnline.dll",
+  "PackageName": {
+    "en": "ComfortOnline nodes"
+  },
+  "DependentFiles": [
+    "NecatiMeral.LogicNodes.dll"
+  ],
+  "Version": "1.0.0",
+  "Author": "Necati Meral",
+  "Copyright": "COPYRIGHT",
+  "DeveloperId": "necati_meral_yahoo_de",
+  "License": "Free",
+  "PackageId": "CB18E39C-C1A8-421F-882A-4E3B4B36A999",
+  "Nodes": [
+    {
+      "Type": "Necati_Meral_Yahoo_De.Logic.ComfortOnline.ComfortOnlineRequestNode",
+      "Name": {
+        "en": "ComfortOnline DataPoint",
+        "de": "ComfortOnline Eingang"
+      },
+      "IsConverter": false,
+      "Category": "Node",
+      "DefaultIcon": "icons/kwb-node-logo.png",
+      "HelpTooltip": {
+        "en": "Loads asset information from ComfortOnline and provides it as JSON.",
+        "de": "Lädt Anlageninformationen aus ComfortOnline und stellt diese als JSON bereit."
+      },
+      "HelpFileReference": null
+    }
+  ]
+}

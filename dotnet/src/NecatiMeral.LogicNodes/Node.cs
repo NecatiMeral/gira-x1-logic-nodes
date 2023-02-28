@@ -1,4 +1,4 @@
-﻿namespace NecatiMeral.LogicNodes;
+﻿namespace Necati_Meral_Yahoo_De.LogicNodes;
 
 public class Node : LogicNodeBase
 {

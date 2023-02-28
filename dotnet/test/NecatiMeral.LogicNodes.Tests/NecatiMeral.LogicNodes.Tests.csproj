@@ -4,8 +4,13 @@
     <Platform>AnyCPU</Platform>
     <ProjectGuid>{8A4DFEEE-CC9F-467E-8903-ED93D272D884}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <TargetFramework>net45</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <None Remove="TestData\*.html" />
+    <EmbeddedResource Include="TestData\*.html" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net45" Version="$(MicrosoftNetFramework45PackageVersion)">
@@ -15,12 +20,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="LogicModule.Nodes.TestHelper">
-      <HintPath>..\..\src\LogicNodesSDK\LogicModule.Nodes.TestHelper.dll</HintPath>
-    </Reference>
-    <Reference Include="LogicModule.ObjectModel">
-      <HintPath>..\..\src\LogicNodesSDK\LogicModule.ObjectModel.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\..\src\NecatiMeral.LogicNodes\NecatiMeral.LogicNodes.csproj" />
+    <ProjectReference Include="..\..\src\NecatiMeral.Logic.ComfortOnline\NecatiMeral.Logic.ComfortOnline.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
   
 </Project>
