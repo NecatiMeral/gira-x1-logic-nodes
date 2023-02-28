@@ -41,10 +41,10 @@ name: Create Release
 on:
   push:
     branches: [ "main" ]
-
+    
 jobs:
-
-  build:
+  deployment:
+    environment: production
 
     runs-on: windows-latest  # For a list of available runner types, refer to
                              # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
@@ -68,6 +68,11 @@ jobs:
       uses: gittools/actions/gitversion/execute@v0.9.15
       with:
         useConfigFile: true
+
+    # Set version
+    - name: Set Version
+      run: |
+        .\build\set-version.ps1 -Version ${{ steps.gitversion.outputs.fullSemVer }}
       
     # Install the .NET Core workload
     - name: Install .NET Core
@@ -90,13 +95,22 @@ jobs:
     # Decode the base 64 encoded pfx and save the Signing_Certificate
     - name: Decode the pfx
       run: |
-        $pfx_cert_byte = [System.Convert]::FromBase64String("${{ secrets.GIRA_CERT_CONTENT }}")
+        $pfx_cert_byte = [System.Convert]::FromBase64String($Env:GIRA_CERT_CONTENT)
         $certificatePath = Join-Path -Path "build" -ChildPath GitHubActionsWorkflow.pfx
         [IO.File]::WriteAllBytes("$certificatePath", $pfx_cert_byte)
+      env:
+        GIRA_CERT_CONTENT: ${{ secrets.GIRA_CERT_CONTENT }}
+
+    # Set version
+    - name: Sign packages
+      run: |
+        .\build\create-packages.ps1 -SigniningCertFile .\build\GitHubActionsWorkflow.pfx -SigniningCertPass $Env:GIRA_CERT_PASS
+      env:
+        GIRA_CERT_PASS: ${{ secrets.GIRA_CERT_PASS }}
 
     # Remove the pfx
     - name: Remove the pfx
-      run: Remove-Item -path build\GitHubActionsWorkflow.pfx
+      run: Remove-Item -path .\build\GitHubActionsWorkflow.pfx
 
     # Upload the packages: https://github.com/marketplace/actions/upload-a-build-artifact
     - name: Upload build artifacts
