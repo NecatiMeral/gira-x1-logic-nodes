@@ -76,17 +76,17 @@ jobs:
 
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore
-      run: dotnet restore "dotnet" -Configuration=$env:Configuration
+      run: dotnet restore "dotnet" -Configuration $env:Configuration
       env:
         Configuration: ${{ matrix.configuration }}
 
     # Build the solution
     - name: Build
-      run: dotnet build "dotnet" -Configuration=$env:Configuration
+      run: dotnet build "dotnet" -Configuration $env:Configuration
 
     # Execute all unit tests in the solution
     - name: Test
-      run: dotnet test "dotnet" -Configuration=$env:Configuration
+      run: dotnet test "dotnet" -Configuration $env:Configuration
 
     # Decode the base 64 encoded pfx and save the Signing_Certificate
     - name: Decode the pfx
