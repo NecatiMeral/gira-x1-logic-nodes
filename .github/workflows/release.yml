@@ -95,7 +95,7 @@ jobs:
     # Decode the base 64 encoded pfx and save the Signing_Certificate
     - name: Decode the pfx
       run: |
-        $pfx_cert_byte = [System.Convert]::FromBase64String("$Env:GIRA_CERT_CONTENT")
+        $pfx_cert_byte = [System.Convert]::FromBase64String($Env:GIRA_CERT_CONTENT)
         $certificatePath = Join-Path -Path "build" -ChildPath GitHubActionsWorkflow.pfx
         [IO.File]::WriteAllBytes("$certificatePath", $pfx_cert_byte)
       env:
@@ -104,7 +104,7 @@ jobs:
     # Set version
     - name: Sign packages
       run: |
-        .\build\create-packages.ps1 -SigniningCertFile .\build\GitHubActionsWorkflow.pfx -SigniningCertPass "$Env:GIRA_CERT_PASS"
+        .\build\create-packages.ps1 -SigniningCertFile .\build\GitHubActionsWorkflow.pfx -SigniningCertPass $Env:GIRA_CERT_PASS
       env:
         GIRA_CERT_PASS: ${{ secrets.GIRA_CERT_PASS }}
 
