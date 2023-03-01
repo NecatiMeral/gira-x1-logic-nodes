@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -27,19 +28,19 @@ public class TestComfortOnlineRequestNode : ComfortOnlineRequestNode
 
         httpClientMock.Setup(c => c.PostAsync(
             It.Is<string>(x => x.EndsWith("/Account/Login")),
-            It.Is<IDictionary<string, string>>(x =>
-                x.ContainsKey("UserName") && x["UserName"] == ComfortOnlineTestConsts.UserName &&
-                x.ContainsKey("Password") && x["Password"] == ComfortOnlineTestConsts.Password &&
-                x.ContainsKey("__RequestVerificationToken") && x["__RequestVerificationToken"] == ComfortOnlineTestConsts.RequestVerificationToken
+            It.Is<NameValueCollection>(x =>
+                x["UserName"] == ComfortOnlineTestConsts.UserName &&
+                x["Password"] == ComfortOnlineTestConsts.Password &&
+                x["__RequestVerificationToken"] == ComfortOnlineTestConsts.RequestVerificationToken
             )))
             .Returns(() => GetEmbeddedResourceContentAsync("Plant-List"));
 
         httpClientMock.Setup(c => c.PostAsync(
             It.Is<string>(x => x.EndsWith("/Account/Login")),
-            It.Is<IDictionary<string, string>>(x =>
-                !x.ContainsKey("UserName") || x["UserName"] != ComfortOnlineTestConsts.UserName ||
-                !x.ContainsKey("Password") || x["Password"] != ComfortOnlineTestConsts.Password ||
-                !x.ContainsKey("__RequestVerificationToken") || x["__RequestVerificationToken"] != ComfortOnlineTestConsts.RequestVerificationToken
+            It.Is<NameValueCollection>(x =>
+                x["UserName"] != ComfortOnlineTestConsts.UserName ||
+                x["Password"] != ComfortOnlineTestConsts.Password ||
+                x["__RequestVerificationToken"] != ComfortOnlineTestConsts.RequestVerificationToken
             )))
             .Returns(() => GetEmbeddedResourceContentAsync("Login"));
 

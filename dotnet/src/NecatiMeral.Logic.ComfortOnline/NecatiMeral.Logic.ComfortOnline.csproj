@@ -10,8 +10,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NecatiMeral.LogicNodes\NecatiMeral.LogicNodes.csproj" />
-
-    <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
   </ItemGroup>
 
   <ItemGroup>

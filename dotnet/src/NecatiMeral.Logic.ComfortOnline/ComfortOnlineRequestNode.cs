@@ -1,6 +1,5 @@
-﻿using System.CodeDom;
+﻿using System.Collections.Specialized;
 using System.Net;
-using System.Net.Http;
 using System.Text.RegularExpressions;
 using LogicModule.ObjectModel.TypeSystem;
 using Necati_Meral_Yahoo_De.Helpers;
@@ -107,7 +106,7 @@ public class ComfortOnlineRequestNode : LocalizablePrefixLogicNodeBase
 
         try
         {
-            var loginPage = await HttpClient.PostAsync("/Account/Login", new Dictionary<string, string>
+            var loginPage = await HttpClient.PostAsync("/Account/Login", new NameValueCollection
             {
                 { "UserName", UserName.Value },
                 { "Password", Password.Value },
@@ -132,10 +131,9 @@ public class ComfortOnlineRequestNode : LocalizablePrefixLogicNodeBase
 
     protected virtual IHttpClient CreateHttpClient()
     {
-        var cookies = new CookieContainer();
-        var httpClient = new HttpClient(new HttpClientHandler { CookieContainer = cookies })
+        var httpClient = new BetterWebClient()
         {
-            BaseAddress = new Uri(ComfortOnlineConsts.ComfortOnlineBaseAddress)
+            BaseAddress = ComfortOnlineConsts.ComfortOnlineBaseAddress
         };
 
         return new NetHttpClient(httpClient);
