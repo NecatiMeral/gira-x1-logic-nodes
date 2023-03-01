@@ -6,7 +6,9 @@
     "de": "KWB Comfort Online Logikbausteine"
   },
   "DependentFiles": [
-    "NecatiMeral.LogicNodes.dll"
+    "NecatiMeral.LogicNodes.dll",
+    "LogicModule.Nodes.Helpers.dll",
+    "LogicModule.ObjectModel.dll"
   ],
   "Version": "0.1.0",
   "Author": "Necati Meral",

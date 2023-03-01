@@ -10,19 +10,27 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NecatiMeral.LogicNodes\NecatiMeral.LogicNodes.csproj" />
-  </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
   </ItemGroup>
 
   <ItemGroup>
     <None Update="icons\*.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="help\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Manifest.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Update="System.IO.Compression.FileSystem">
+      <IncludeAssets>all</IncludeAssets>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
 
   <!-- TODO: Create a more developer and VS friendly approach-->
