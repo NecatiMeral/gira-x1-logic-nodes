@@ -1,5 +1,4 @@
 ﻿using System.Collections.Specialized;
-using System.Net;
 using System.Text.RegularExpressions;
 using LogicModule.ObjectModel.TypeSystem;
 using Necati_Meral_Yahoo_De.Helpers;
@@ -7,9 +6,8 @@ using Necati_Meral_Yahoo_De.Http;
 using Necati_Meral_Yahoo_De.LogicNodes;
 
 namespace Necati_Meral_Yahoo_De.Logic.ComfortOnline;
-public class ComfortOnlineRequestNode : LocalizablePrefixLogicNodeBase
+public class ComfortOnlineRequestNode : LocalizableNode
 {
-    protected ITypeService TypeService { get; }
     protected ComfortOnlinePageParser Parser { get; }
     protected IHttpClient HttpClient { get; }
 
@@ -35,11 +33,10 @@ public class ComfortOnlineRequestNode : LocalizablePrefixLogicNodeBase
     public StringValueObject Diagnostics { get; private set; }
 
     public ComfortOnlineRequestNode(INodeContext context)
-        : base(context, LogicNodeConsts.InputPrefix)
+        : base(context, nameof(ComfortOnlineRequestNode))
     {
         context.ThrowIfNull("context");
 
-        TypeService = context.GetService<ITypeService>();
         Parser = new ComfortOnlinePageParser();
 
         Trigger = TypeService.CreateBool("BINARY", "Trigger", false);
@@ -55,7 +52,7 @@ public class ComfortOnlineRequestNode : LocalizablePrefixLogicNodeBase
 
     public override void Execute()
     {
-        if(Trigger.HasValue && Trigger.WasSet)
+        if (Trigger.WasSet && (bool)Trigger)
         {
             try
             {

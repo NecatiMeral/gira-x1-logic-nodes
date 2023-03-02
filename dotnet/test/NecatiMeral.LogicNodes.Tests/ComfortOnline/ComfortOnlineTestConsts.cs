@@ -1,6 +1,4 @@
-﻿using System.CodeDom;
-
-namespace Necati_Meral_Yahoo_De;
+﻿namespace Necati_Meral_Yahoo_De.LogicNodes.Tests.ComfortOnline;
 public static class ComfortOnlineTestConsts
 {
     public const string UserName = "a-mocked-username";

@@ -1,0 +1,36 @@
+{
+  "PackageFormatVersion": "1.0",
+  "Assembly": "Necati_Meral_Yahoo_De.Logic.Common.dll",
+  "PackageName": {
+    "en": "Common logic nodes",
+    "de": "Allgemeine Logikbausteine"
+  },
+  "DependentFiles": [
+    "NecatiMeral.LogicNodes.dll",
+    "LogicModule.Nodes.Helpers.dll",
+    "LogicModule.ObjectModel.dll"
+  ],
+  "Version": "0.1.0",
+  "Author": "Necati Meral",
+  "Copyright": "2023 Necati Meral",
+  "DeveloperId": "necati_meral_yahoo_de",
+  "License": "Free",
+  "PackageId": "CB18E39C-C1A8-421F-882A-4E3B4B36B999",
+  "Nodes": [
+    {
+      "Type": "Necati_Meral_Yahoo_De.Logic.Common.KeyValueNode",
+      "Name": {
+        "en": "Key-value selector",
+        "de": "Schlüssel-Wert-Auswahl"
+      },
+      "IsConverter": false,
+      "Category": "Node",
+      "DefaultIcon": "icons/noun-dictionary-2298128-44x44.png",
+      "HelpTooltip": {
+        "en": "Outputs the value with corresponding key.",
+        "de": "Gibt den Wert mit entsprechendem Schlüssel aus."
+      },
+      "HelpFileReference": "$help/KeyValueNode.html"
+    }
+  ]
+}
