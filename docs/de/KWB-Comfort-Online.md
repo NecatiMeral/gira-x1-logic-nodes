@@ -6,7 +6,7 @@ Der Kesselstatus wird in der UI in textueller Form dargestellt. Schaltet man das
 
 | ID | Status EN | Status DE |
 |----|-----------------|----------------
-| 30 | Ready (-Requ | Bereit (-Anf)
+| 30 | Ready (-Requ) | Bereit (-Anf)
 | 31 | Ready (+Wait time) | Bereit (+Wartezeit)
 | 32 | Ready (+Requ) | Bereit (+Anf)
 | 11 | Ignite start suction | Zünden Start Saugzug
@@ -14,6 +14,7 @@ Der Kesselstatus wird in der UI in textueller Form dargestellt. Schaltet man das
 | 15 | Ignition heating | Zünden Heizen
 | 19 | Complete ignition | Durchzünden
 |  4 | operation | Betrieb
+|  5 | Afterrun | Nachlauf
 
 ## Pufferstatus
 
