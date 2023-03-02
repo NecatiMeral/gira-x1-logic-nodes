@@ -14,16 +14,16 @@ public class ComfortOnlineRequestNode : LocalizableNode
     [Input(DisplayOrder = 1, IsRequired = true)]
     public BoolValueObject Trigger { get; private set; }
 
-    [Input(IsDefaultShown = true, DisplayOrder = 2)]
+    [Input(DisplayOrder = 2, IsDefaultShown = true, IsInput = false)]
     public StringValueObject PlantId { get; }
 
-    [Input(IsDefaultShown = true, DisplayOrder = 3)]
+    [Input(DisplayOrder = 3, IsDefaultShown = true, IsInput = false)]
     public StringValueObject PlantSection { get; }
 
-    [Input(IsDefaultShown = false, DisplayOrder = 4)]
+    [Input(DisplayOrder = 4, IsDefaultShown = true, IsInput = false)]
     public StringValueObject UserName { get; }
 
-    [Input(IsDefaultShown = false, DisplayOrder = 5)]
+    [Input(DisplayOrder = 5, IsDefaultShown = true, IsInput = false)]
     public StringValueObject Password { get; }
 
     [Output(IsDefaultShown = true, DisplayOrder = 1)]
