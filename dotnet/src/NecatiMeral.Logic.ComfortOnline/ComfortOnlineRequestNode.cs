@@ -26,10 +26,10 @@ public class ComfortOnlineRequestNode : LocalizableNode
     [Input(DisplayOrder = 5, IsDefaultShown = true, IsInput = false)]
     public StringValueObject Password { get; }
 
-    [Output(IsDefaultShown = true, DisplayOrder = 1)]
+    [Output(DisplayOrder = 1, IsDefaultShown = true)]
     public StringValueObject Data { get; private set; }
 
-    [Output(IsDefaultShown = false, DisplayOrder = 99)]
+    [Output(DisplayOrder = 99, IsDefaultShown = false)]
     public StringValueObject Diagnostics { get; private set; }
 
     public ComfortOnlineRequestNode(INodeContext context)
