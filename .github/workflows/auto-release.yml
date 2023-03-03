@@ -41,16 +41,14 @@ name: Create Release
 on:
   push:
     branches: [ "main" ]
-    
+    tags:
+      - "v*.*.*"
+
 jobs:
   deployment:
     environment: production
 
-    runs-on: windows-latest  # For a list of available runner types, refer to
-                             # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
-
-    env:
-      Solution_Name: your-solution-name                         # Replace with your solution name, i.e. MyWpfApp.sln.
+    runs-on: windows-latest
 
     steps:
     - name: Checkout
@@ -62,7 +60,7 @@ jobs:
       uses: gittools/actions/gitversion/setup@v0.9.15
       with:
         versionSpec: '5.x'
-        
+
     - name: Determine Version
       id: gitversion
       uses: gittools/actions/gitversion/execute@v0.9.15
@@ -73,7 +71,7 @@ jobs:
     - name: Set Version
       run: |
         .\build\set-version.ps1 -Version ${{ steps.gitversion.outputs.fullSemVer }}
-      
+
     # Install the .NET Core workload
     - name: Install .NET Core
       uses: actions/setup-dotnet@v3
@@ -111,6 +109,13 @@ jobs:
     # Remove the pfx
     - name: Remove the pfx
       run: Remove-Item -path .\build\GitHubActionsWorkflow.pfx
+
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: dist/*.zip
+        generate_release_notes: true
 
     # Upload the packages: https://github.com/marketplace/actions/upload-a-build-artifact
     - name: Upload build artifacts
