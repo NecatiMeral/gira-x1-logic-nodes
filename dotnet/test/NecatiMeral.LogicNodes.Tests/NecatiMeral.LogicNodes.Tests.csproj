@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <Platform>AnyCPU</Platform>
@@ -9,8 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="TestData\*.html" />
-    <EmbeddedResource Include="TestData\*.html" />
+    <None Remove="ComfortOnline\TestData\*.html" />
+    <EmbeddedResource Include="ComfortOnline\TestData\*.html" />
   </ItemGroup>
 
   <ItemGroup>
