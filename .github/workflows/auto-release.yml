@@ -42,6 +42,8 @@ on:
   push:
     branches:
     - "main"
+    tags:
+    - "v*.*.*"
 
 permissions:
   contents: write
@@ -118,7 +120,7 @@ jobs:
       with:
         files: dist/*.zip
         generate_release_notes: true
-        
+
     # Upload the packages: https://github.com/marketplace/actions/upload-a-build-artifact
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
