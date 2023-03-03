@@ -5,19 +5,19 @@ namespace Necati_Meral_Yahoo_De.Logic.Common;
 
 public class KeyValueNode : LocalizableNode
 {
-    [Input(DisplayOrder = 1, IsDefaultShown = true, IsInput = true)]
+    [Input(InitOrder = 1, DisplayOrder = 1, IsDefaultShown = true, IsInput = true)]
     public StringValueObject Input { get; }
 
-    [Input(DisplayOrder = 2, IsRequired = false, IsInput = false)]
+    [Input(InitOrder = 2, DisplayOrder = 2, IsRequired = false, IsInput = false)]
     public BoolValueObject Reverse { get; }
 
-    [Input(DisplayOrder = 3, IsDefaultShown = false, IsInput = false)]
+    [Input(InitOrder = 3, DisplayOrder = 3, IsDefaultShown = false, IsInput = false)]
     public StringValueObject SeparatorString { get; }
 
-    [Input(DisplayOrder = 4, IsRequired = false, IsInput = false)]
+    [Input(InitOrder = 5, DisplayOrder = 4, IsRequired = false, IsInput = false)]
     public List<StringValueObject> Inputs { get; }
 
-    [Parameter(DisplayOrder = 1)]
+    [Parameter(InitOrder = 4, DisplayOrder = 1)]
     public IntValueObject InputCount { get; }
 
     [Output(DisplayOrder = 1)]
