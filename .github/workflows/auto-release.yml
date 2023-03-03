@@ -42,7 +42,7 @@ on:
   push:
     branches: [ "main" ]
     tags:
-      - "v*.*.*"
+    - "v*.*.*"
 
 jobs:
   deployment:
@@ -116,10 +116,3 @@ jobs:
       with:
         files: dist/*.zip
         generate_release_notes: true
-
-    # Upload the packages: https://github.com/marketplace/actions/upload-a-build-artifact
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: Logic nodes
-        path: dist/*.zip
