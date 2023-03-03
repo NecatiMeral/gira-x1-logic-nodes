@@ -1,18 +1,13 @@
 ﻿using Necati_Meral_Yahoo_De.Logic.ComfortOnline;
-using Necati_Meral_Yahoo_De.LogicNodes.Tests;
 using Shouldly;
 
-namespace Necati_Meral_Yahoo_De;
-public class ComfortOnlineListenerNodeIntegrationTests : NodeTestBase<ComfortOnlineRequestNode>
+namespace Necati_Meral_Yahoo_De.LogicNodes.Tests.ComfortOnline;
+public class ComfortOnlineListenerNodeTests : NodeTestBase<TestComfortOnlineRequestNode>
 {
-    const string IntegrationTestSkipReason = "Don't run integration tests by default.";
-
     const string PlantId = "10458";
     const string PlantSectionId = "96_0";
-    const string UserName = "";
-    const string Password = "";
 
-    [Fact(Skip = IntegrationTestSkipReason)]
+    [Fact]
     public void Should_Fail_Login()
     {
         var node = CreateNode();
@@ -26,14 +21,14 @@ public class ComfortOnlineListenerNodeIntegrationTests : NodeTestBase<ComfortOnl
         node.Diagnostics.Value.ShouldBe(ComfortOnlineConsts.ErrorCodes.InvalidCredentials);
     }
 
-    [Fact(Skip = IntegrationTestSkipReason)]
+    [Fact]
     public void Should_Login()
     {
         var node = CreateNode();
 
         node.Trigger.Value = true;
-        node.UserName.Value = UserName;
-        node.Password.Value = Password;
+        node.UserName.Value = ComfortOnlineTestConsts.UserName;
+        node.Password.Value = ComfortOnlineTestConsts.Password;
         node.PlantId.Value = PlantId;
         node.PlantSection.Value = PlantSectionId;
 
@@ -42,7 +37,7 @@ public class ComfortOnlineListenerNodeIntegrationTests : NodeTestBase<ComfortOnl
         node.Diagnostics.Value.ShouldBe(ComfortOnlineConsts.ErrorCodes.Ok);
     }
 
-    [Fact(Skip = IntegrationTestSkipReason)]
+    [Fact]
     public void Should_Recover_From_Error()
     {
         var node = CreateNode();
@@ -55,8 +50,8 @@ public class ComfortOnlineListenerNodeIntegrationTests : NodeTestBase<ComfortOnl
 
         node.Diagnostics.Value.ShouldBe(ComfortOnlineConsts.ErrorCodes.InvalidCredentials);
 
-        node.UserName.Value = UserName;
-        node.Password.Value = Password;
+        node.UserName.Value = ComfortOnlineTestConsts.UserName;
+        node.Password.Value = ComfortOnlineTestConsts.Password;
 
         node.Execute();
 

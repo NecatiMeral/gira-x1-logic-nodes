@@ -1,5 +1,4 @@
 ﻿using System.Collections.Specialized;
-using System.Net;
 using System.Text.RegularExpressions;
 using LogicModule.ObjectModel.TypeSystem;
 using Necati_Meral_Yahoo_De.Helpers;
@@ -7,39 +6,37 @@ using Necati_Meral_Yahoo_De.Http;
 using Necati_Meral_Yahoo_De.LogicNodes;
 
 namespace Necati_Meral_Yahoo_De.Logic.ComfortOnline;
-public class ComfortOnlineRequestNode : LocalizablePrefixLogicNodeBase
+public class ComfortOnlineRequestNode : LocalizableNode
 {
-    protected ITypeService TypeService { get; }
     protected ComfortOnlinePageParser Parser { get; }
     protected IHttpClient HttpClient { get; }
 
     [Input(DisplayOrder = 1, IsRequired = true)]
     public BoolValueObject Trigger { get; private set; }
 
-    [Input(IsDefaultShown = true, DisplayOrder = 2)]
+    [Input(DisplayOrder = 2, IsDefaultShown = true, IsInput = false)]
     public StringValueObject PlantId { get; }
 
-    [Input(IsDefaultShown = true, DisplayOrder = 3)]
+    [Input(DisplayOrder = 3, IsDefaultShown = true, IsInput = false)]
     public StringValueObject PlantSection { get; }
 
-    [Input(IsDefaultShown = false, DisplayOrder = 4)]
+    [Input(DisplayOrder = 4, IsDefaultShown = true, IsInput = false)]
     public StringValueObject UserName { get; }
 
-    [Input(IsDefaultShown = false, DisplayOrder = 5)]
+    [Input(DisplayOrder = 5, IsDefaultShown = true, IsInput = false)]
     public StringValueObject Password { get; }
 
-    [Output(IsDefaultShown = true, DisplayOrder = 1)]
+    [Output(DisplayOrder = 1, IsDefaultShown = true)]
     public StringValueObject Data { get; private set; }
 
-    [Output(IsDefaultShown = false, DisplayOrder = 99)]
+    [Output(DisplayOrder = 99, IsDefaultShown = false)]
     public StringValueObject Diagnostics { get; private set; }
 
     public ComfortOnlineRequestNode(INodeContext context)
-        : base(context, LogicNodeConsts.InputPrefix)
+        : base(context, nameof(ComfortOnlineRequestNode))
     {
         context.ThrowIfNull("context");
 
-        TypeService = context.GetService<ITypeService>();
         Parser = new ComfortOnlinePageParser();
 
         Trigger = TypeService.CreateBool("BINARY", "Trigger", false);
@@ -55,7 +52,7 @@ public class ComfortOnlineRequestNode : LocalizablePrefixLogicNodeBase
 
     public override void Execute()
     {
-        if(Trigger.HasValue && Trigger.WasSet)
+        if (Trigger.WasSet && (bool)Trigger)
         {
             try
             {

@@ -3,9 +3,9 @@
   <PropertyGroup>
     <TargetFramework>net45</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <ProjectGuid>{3F1FF768-FD27-46B2-961C-B6EFDF9CB3B3}</ProjectGuid>
-    <AssemblyName>Necati_Meral_Yahoo_De.Logic.ComfortOnline</AssemblyName>
-    <RootNamespace>Necati_Meral_Yahoo_De.Logic.ComfortOnline</RootNamespace>
+    <ProjectGuid>{722DD859-ABFA-4B2C-94A6-5D4AD5C5F377}</ProjectGuid>
+    <AssemblyName>Necati_Meral_Yahoo_De.Logic.Common</AssemblyName>
+    <RootNamespace>Necati_Meral_Yahoo_De.Logic.Common</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

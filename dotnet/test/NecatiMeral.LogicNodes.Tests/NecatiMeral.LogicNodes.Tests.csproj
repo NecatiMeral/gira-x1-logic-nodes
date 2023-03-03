@@ -5,20 +5,37 @@
     <ProjectGuid>{8A4DFEEE-CC9F-467E-8903-ED93D272D884}</ProjectGuid>
     <OutputType>Library</OutputType>
     <TargetFramework>net48</TargetFramework>
+    <RootNamespace>Necati_Meral_Yahoo_De.LogicNodes.Tests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="TestData\*.html" />
-    <EmbeddedResource Include="TestData\*.html" />
+    <None Remove="ComfortOnline\TestData\*.html" />
+    <EmbeddedResource Include="ComfortOnline\TestData\*.html" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\NecatiMeral.Logic.Common\NecatiMeral.Logic.Common.csproj" />
     <ProjectReference Include="..\..\src\NecatiMeral.LogicNodes\NecatiMeral.LogicNodes.csproj" />
     <ProjectReference Include="..\..\src\NecatiMeral.Logic.ComfortOnline\NecatiMeral.Logic.ComfortOnline.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="System.Net.Http" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

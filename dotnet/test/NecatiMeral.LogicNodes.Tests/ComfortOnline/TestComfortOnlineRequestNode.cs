@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Collections.Specialized;
+﻿using System.Collections.Specialized;
 using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -8,7 +6,7 @@ using Moq;
 using Necati_Meral_Yahoo_De.Http;
 using Necati_Meral_Yahoo_De.Logic.ComfortOnline;
 
-namespace Necati_Meral_Yahoo_De;
+namespace Necati_Meral_Yahoo_De.LogicNodes.Tests.ComfortOnline;
 public class TestComfortOnlineRequestNode : ComfortOnlineRequestNode
 {
     public TestComfortOnlineRequestNode(INodeContext context)

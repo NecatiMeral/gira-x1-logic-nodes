@@ -9,8 +9,5 @@
 
   <ItemGroup>
     <Using Remove="System.Net.Http" />
-    <None Update="Manifest.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 </Project>
