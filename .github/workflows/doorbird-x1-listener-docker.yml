@@ -28,7 +28,7 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v4
       with:
-        context: dotnet/NecatiMeral.DoorbirdX1Listener.Host/Release.Dockerfile
-        file: src/
+        context: dotnet
+        file: src/NecatiMeral.DoorbirdX1Listener.Host/Release.Dockerfile
         push: true
         tags: ghcr.io/necatimeral/doorbird-x1-listener:latest
