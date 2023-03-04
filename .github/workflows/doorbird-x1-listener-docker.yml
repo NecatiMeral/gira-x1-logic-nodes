@@ -3,7 +3,7 @@ name: Release Doorbird X1 Listener (Docker))
 on:
   push:
     branches:
-    - 'nm/doorbird-http-server'
+    - 'main'
 
 jobs:
   docker:
