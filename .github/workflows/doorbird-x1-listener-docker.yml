@@ -1,4 +1,4 @@
-name: Doorbird X1 Listener Docker-Image
+name: Release Doorbird X1 Listener (Docker))
 
 on:
   push:
