@@ -15,6 +15,15 @@ changelog:
   - title: 💥 Breaking Changes
     labels:
     - breaking-change
+  - title: Comfort Online Nodes
+    labels:
+    - node-comfort-online
+  - title: Common Logic Nodes
+    labels:
+    - node-common
+  - title: Doorbird X1 Listener
+    labels:
+    - app-doorbird-x1-listener
   - title: 🔨 Other Changes
     labels:
     - "*"
