@@ -25,39 +25,20 @@
     <Exec Command="pwsh -NoProfile -ExecutionPolicy RemoteSigned -File &quot;$(MSBuildThisFileDirectory)..\build\pack-node.ps1&quot; -Project $(MSBuildProjectDirectory)\$(OutputPath) " />
   </Target>
 
-  <!-- TODO: Create a more developer and VS friendly approach-->
-   <!--<PropertyGroup Condition="'$(IsNodeProject)' == 'true'">
-     <PostBuildEvent>
-       echo INFO: Creating ZIP archive
-       echo INFO: INPUT: "$(MSBuildProjectDirectory)\$(OutputPath)bin\Debug\net48"
-       echo INFO: OUTPUT "$(RepositoryRoot)dist"
-       echo TEST: "$(TargetDir)"
-
-       ;"$(MSBuildThisFileDirectory)..\build\tools\gira\LogicNodeTool.exe" create $(MSBuildProjectDirectory)\$(OutputPath) $(RepositoryRoot)dist
-
-       ;echo INFO: Logic Nodes are not signed yet and can only be used in the simulation in GPA.
-       ;REM "$(SolutionDir)src\LogicNodesSDK\SignLogicNodes.exe" $(SolutionDir)..\..\build\dev\gira-developer-cert.p7b [certificate_password] $(SolutionDir)Zip
-     </PostBuildEvent>
-  </PropertyGroup>-->
-
-  <ItemGroup Label="Implicit usings">
-    <Using Include="LogicModule.Nodes.Helpers" />
-    <Using Include="LogicModule.ObjectModel" />
-  </ItemGroup>
-
   <ItemGroup Label="Workaround for missing dependency on implicit usings">
     <Using Remove="System.Net.Http" />
-  </ItemGroup>
-
-  <ItemGroup Label="Add Xunit for tests" Condition="'$(IsTestProject)' == 'true'">
-    <Using Include="Xunit" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net45" Version="$(MicrosoftNetFrameworkPackageVersion)" PrivateAssets="All" />
   </ItemGroup>
 
-  <ItemGroup Label="SDK dependencies">
+  <ItemGroup Label="SDK Implicit usings" Condition="'$(IsStandaloneProject)' != 'true'">
+    <Using Include="LogicModule.Nodes.Helpers" />
+    <Using Include="LogicModule.ObjectModel" />
+  </ItemGroup>
+
+  <ItemGroup Label="SDK dependencies" Condition="'$(IsStandaloneProject)' != 'true'">
     <Reference Include="LogicModule.Nodes.Helpers">
       <HintPath>$(SolutionDir)src\LogicNodesSDK\LogicModule.Nodes.Helpers.dll</HintPath>
     </Reference>
@@ -70,6 +51,8 @@
     <Reference Include="LogicModule.Nodes.TestHelper">
       <HintPath>$(SolutionDir)src\LogicNodesSDK\LogicModule.Nodes.TestHelper.dll</HintPath>
     </Reference>
+    
+    <Using Include="Xunit" />
 
     <PackageReference Include="coverlet.collector" Version="3.1.2">
       <PrivateAssets>all</PrivateAssets>
@@ -102,6 +85,9 @@
 
     <!-- xunit.runner.visualstudio https://www.nuget.org/packages/xunit.runner.visualstudio -->
     <xUnitRunnerVisualstudioPackageVersion>2.4.1</xUnitRunnerVisualstudioPackageVersion>
+    
+    <!-- Microsoft Framework Extensions -->
+    <MicrosoftPackageVersion>7.0.*</MicrosoftPackageVersion>
 
     <MoqPackageVersion>4.18.4</MoqPackageVersion>
 
