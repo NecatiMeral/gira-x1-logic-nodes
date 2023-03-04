@@ -9,8 +9,6 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
 
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v2
@@ -28,7 +26,7 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v4
       with:
-        context: dotnet
+        context: {{defaultContext}}:dotnet
         file: src/NecatiMeral.DoorbirdX1Listener.Host/Release.Dockerfile
         push: true
         tags: ghcr.io/necatimeral/doorbird-x1-listener:latest
