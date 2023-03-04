@@ -47,7 +47,6 @@ jobs:
           type=ref,event=branch
           type=ref,event=pr
           type=raw,value=${{ steps.gitversion.outputs.semVer }}
-          type=raw,value=${{ steps.gitversion.outputs.semVer }}
           type=sha
 
     - name: Login to Docker Hub
