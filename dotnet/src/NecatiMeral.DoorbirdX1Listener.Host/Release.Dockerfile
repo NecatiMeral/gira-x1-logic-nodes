@@ -12,7 +12,7 @@ WORKDIR "/src/src/NecatiMeral.DoorbirdX1Listener.Host"
 RUN dotnet build "NecatiMeral.DoorbirdX1Listener.Host.csproj" --no-restore -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "NecatiMeral.DoorbirdX1Listener.Host.csproj" --no-build -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "NecatiMeral.DoorbirdX1Listener.Host.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
