@@ -1,9 +1,9 @@
-name: Release Doorbird X1 Listener (Docker))
+name: Release Doorbird X1 Listener (Docker)
 
 on:
   push:
-    branches:
-    - 'main'
+    tags:
+    - "v*.*.*"
 
 jobs:
   docker:
