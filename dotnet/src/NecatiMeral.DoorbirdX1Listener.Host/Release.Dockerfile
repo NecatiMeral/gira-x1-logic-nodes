@@ -5,6 +5,7 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:6.0-bullseye-slim AS build
 WORKDIR /src
 COPY ["src/NecatiMeral.DoorbirdX1Listener.Host/NecatiMeral.DoorbirdX1Listener.Host.csproj", "src/NecatiMeral.DoorbirdX1Listener.Host/"]
+COPY ["*.props", "*.targets", "./"]
 RUN dotnet restore "src/NecatiMeral.DoorbirdX1Listener.Host/NecatiMeral.DoorbirdX1Listener.Host.csproj"
 COPY . .
 WORKDIR "/src/src/NecatiMeral.DoorbirdX1Listener.Host"
