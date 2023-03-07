@@ -10,11 +10,13 @@ GIRA's documentation of the logic node SDK can be found on the [Gira Logic nodes
 
 ### Necati_Meral_Yahoo_De.Logic.ComfortOnline
 
-Contains a logic module to retrieve data from the Comfort online platform of the heating manufacturer KWB.
+* Contains a logic module to retrieve data from the Comfort online platform of the heating manufacturer KWB.
+* [ComfortOnline input (german)](https://necatimeral.github.io/gira-x1-logic-nodes/dotnet/src/NecatiMeral.Logic.ComfortOnline/help/ComfortOnlineRequestNode.html)
 
 ### Necati_Meral_Yahoo_De.Logic.Common
 
-Contains general logic nodes
+* Contains general logic nodes
+* [Key value selection (german)](https://necatimeral.github.io/gira-x1-logic-nodes/dotnet/src/NecatiMeral.Logic.Common/help/KeyValueNode.html)
 
 ## Standalone tools
 
