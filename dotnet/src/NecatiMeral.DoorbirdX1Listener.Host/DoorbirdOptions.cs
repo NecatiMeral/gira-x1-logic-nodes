@@ -16,7 +16,7 @@ public class DoorbirdConfigurationDictionary : Dictionary<string, DoorbirdConfig
 
     public DoorbirdConfiguration Default
     {
-        get => TryGetValue(DefaultName, out var config) ? config : null;
+        get => TryGetValue(DefaultName, out var config) ? config : new DoorbirdConfiguration();
         set => this[DefaultName] = value;
     }
 

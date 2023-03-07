@@ -25,14 +25,21 @@ app.MapGet("/trigger/{key}/{clientToken}/{dataPointUid}", async (
     string key,
     string clientToken,
     string dataPointUid,
+    string target,
     IHttpClientFactory httpClientFactory,
     IOptions<DoorbirdOptions> options) =>
 {
     var integration = options.Value.Doorbirds.GetOrDefault(key);
 
+    var hostOrIp = string.IsNullOrEmpty(integration.HostOrIp) ? target : integration.HostOrIp;
+    if (string.IsNullOrEmpty(hostOrIp))
+    {
+        return Results.NotFound();
+    }
+
     var httpClient = httpClientFactory.CreateClient(DoorbirdX1ListenerConsts.HttpClientName);
     var method = HttpMethodParser.Parse(integration.Method);
-    var url = GiraIOTUrlBuilder.GetUrl(integration.UrlTemplate, integration.HostOrIp, clientToken, dataPointUid);
+    var url = GiraIOTUrlBuilder.GetUrl(integration.UrlTemplate, hostOrIp, clientToken, dataPointUid);
 
     var response = await httpClient
         .SendAsync(new HttpRequestMessage(method, url) { Content = new StringContent(integration.Payload)})
