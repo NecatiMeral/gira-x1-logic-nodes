@@ -1,0 +1,17 @@
+{
+  "ExtendedData": {
+    "inputs": [
+      "TcAdsWebService.wsdl"
+    ],
+    "collectionTypes": [
+      "System.Array",
+      "System.Collections.Generic.Dictionary`2"
+    ],
+    "internalTypeAccess": true,
+    "namespaceMappings": [
+      "*, TcAdsWebService"
+    ],
+    "targetFramework": "net45",
+    "typeReuseMode": "None"
+  }
+}

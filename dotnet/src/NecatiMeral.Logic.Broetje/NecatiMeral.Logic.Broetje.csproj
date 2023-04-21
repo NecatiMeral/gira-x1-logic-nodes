@@ -3,13 +3,17 @@
   <PropertyGroup>
     <TargetFramework>net45</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <ProjectGuid>{722DD859-ABFA-4B2C-94A6-5D4AD5C5F377}</ProjectGuid>
-    <AssemblyName>Necati_Meral_Yahoo_De.Logic.Common</AssemblyName>
-    <RootNamespace>Necati_Meral_Yahoo_De.Logic.Common</RootNamespace>
+    <ProjectGuid>{3F1FF768-FD27-46B2-961C-B6EFDF9CB3A4}</ProjectGuid>
+    <AssemblyName>Necati_Meral_Yahoo_De.Logic.Broetje</AssemblyName>
+    <RootNamespace>Necati_Meral_Yahoo_De.Logic.Broetje</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\NecatiMeral.LogicNodes\NecatiMeral.LogicNodes.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.ServiceModel" />
   </ItemGroup>
 
   <ItemGroup>
