@@ -4,8 +4,8 @@
     <TargetFramework>net45</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <ProjectGuid>{3F1FF768-FD27-46B2-961C-B6EFDF9CB3A4}</ProjectGuid>
-    <AssemblyName>Necati_Meral_Yahoo_De.Logic.Broetje</AssemblyName>
-    <RootNamespace>Necati_Meral_Yahoo_De.Logic.Broetje</RootNamespace>
+    <AssemblyName>Necati_Meral_Yahoo_De.Logic.Ads</AssemblyName>
+    <RootNamespace>Necati_Meral_Yahoo_De.Logic.Ads</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
