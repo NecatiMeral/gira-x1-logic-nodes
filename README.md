@@ -8,6 +8,12 @@ GIRA's documentation of the logic node SDK can be found on the [Gira Logic nodes
 
 ## Logic nodes
 
+### Necati_Meral_Yahoo_De.Logic.Ads
+
+* Contains logic nodes to interact with [Beckhoff TwinCAT](https://www.beckhoff.com/de-de/produkte/automation/twincat/txxxxx-twincat-2-base/tabellarische-produktuebersicht/) systems by utilizing the [ADS (Automation Device Specification)](https://infosys.beckhoff.com/index.php?content=../content/1031/tcba/12269581963.html&id=8978321744740978019) protocol.
+* [ADS: Read value (german)](https://necatimeral.github.io/gira-x1-logic-nodes/dotnet/src/NecatiMeral.Logic.Ads/help/ReadAdsDataNode.html)
+* [ADS: Write value (german)](https://necatimeral.github.io/gira-x1-logic-nodes/dotnet/src/NecatiMeral.Logic.Ads/help/WriteAdsDataNode.html)
+
 ### Necati_Meral_Yahoo_De.Logic.ComfortOnline
 
 * Contains a logic module to retrieve data from the Comfort online platform of the heating manufacturer KWB.
@@ -17,6 +23,7 @@ GIRA's documentation of the logic node SDK can be found on the [Gira Logic nodes
 
 * Contains general logic nodes
 * [Key value selection (german)](https://necatimeral.github.io/gira-x1-logic-nodes/dotnet/src/NecatiMeral.Logic.Common/help/KeyValueNode.html)
+
 
 ## Standalone tools
 
