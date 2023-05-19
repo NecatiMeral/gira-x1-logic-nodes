@@ -1,0 +1,51 @@
+{
+  "PackageFormatVersion": "1.0",
+  "Assembly": "Necati_Meral_Yahoo_De.Logic.Ads.dll",
+  "PackageName": {
+    "en": "ADS client nodes",
+    "de": "ADS client Logikbausteine"
+  },
+  "DependentFiles": [
+    "NecatiMeral.LogicNodes.dll",
+    "LogicModule.Nodes.Helpers.dll",
+    "LogicModule.ObjectModel.dll"
+  ],
+  "Version": "0.1.0",
+  "Author": "Necati Meral",
+  "Copyright": "2023 Necati Meral",
+  "DeveloperId": "necati_meral_yahoo_de",
+  "License": "Free",
+  "PackageId": "3F1FF768-FD27-46B2-961C-B6EFDF9CB3A4",
+  "Nodes": [
+    {
+      "Type": "Necati_Meral_Yahoo_De.Logic.Ads.ReadAdsDataNode",
+      "Name": {
+        "en": "ADS: Read value",
+        "de": "ADS: Wert lesen"
+      },
+      "IsConverter": false,
+      "Category": "Node",
+      "DefaultIcon": "icons/noun-ventilation-3506887-44x44.png",
+      "HelpTooltip": {
+        "en": "Reads a value by using the ADS protocol.",
+        "de": "Ließt einen Wert mit Hilfe des ADS-Protokolls."
+      },
+      "HelpFileReference": "$help/ReadAdsDataNode.html"
+    },
+    {
+      "Type": "Necati_Meral_Yahoo_De.Logic.Ads.WriteAdsDataNode",
+      "Name": {
+        "en": "ADS: Write value",
+        "de": "ADS: Wert schreiben"
+      },
+      "IsConverter": false,
+      "Category": "Node",
+      "DefaultIcon": "icons/noun-ventilation-3506887-44x44.png",
+      "HelpTooltip": {
+        "en": "Writes a value by using the ADS protocol.",
+        "de": "Schreibt einen Wert mit Hilfe des ADS-Protokolls."
+      },
+      "HelpFileReference": "$help/WriteAdsDataNode.html"
+    }
+  ]
+}
