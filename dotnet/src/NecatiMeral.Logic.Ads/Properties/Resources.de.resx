@@ -121,10 +121,7 @@
     <value>Ausgang</value>
   </data>
   <data name="ReadAdsDataNodeDataType" xml:space="preserve">
-    <value>Diagnosemeldung</value>
-  </data>
-  <data name="ReadAdsDataNodeDiagnostics" xml:space="preserve">
-    <value>Diagnosemeldung</value>
+    <value>Datentyp</value>
   </data>
   <data name="ReadAdsDataNodeIndexGroup" xml:space="preserve">
     <value>Index-Group</value>
@@ -167,5 +164,8 @@
   </data>
   <data name="WriteAdsDataNodeRemoteAddress" xml:space="preserve">
     <value>Remote-Adresse</value>
+  </data>
+  <data name="ReadAdsDataNodeDiagnostics" xml:space="preserve">
+    <value>Diagnosemeldung</value>
   </data>
 </root>

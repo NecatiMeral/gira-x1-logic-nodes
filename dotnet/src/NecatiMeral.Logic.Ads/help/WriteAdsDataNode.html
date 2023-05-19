@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>NecatiMeral - Hilfe - ComfortOnline Eingang</title>
+        <link rel="StyleSheet" href="default.css" type="text/css" />
+    </head>
+
+    <body>
+        <header>
+            <span id="headBlack">NecatiMeral Logikbausteine</span>
+            <span id="headGray">Hilfe</span>
+        </header>
+        <section>
+            <div class="contentholder">
+                <div class="navlinks-top"></div>
+                <h1>
+                    <img src="../icons/noun-ventilation-3506887-44x44.png" alt="" />&nbsp;
+                    ADS: Wert schreiben
+                </h1>
+                <h2>Inhaltsverzeichnis</h2>
+                <img
+                    src="WriteAdsDataNode.png"
+                    alt=""
+                    class="description"
+                />
+                <ul>
+                    <li><a href="#description">Beschreibung</a></li>
+                    <li><a href="#inputs">Eingänge</a></li>
+                    <li><a href="#outputs">Ausgänge</a></li>
+                    <li><a href="#related-links">Weiterführende Links</a></li>
+                </ul>
+                <h2 id="description">Beschreibung</h2>
+                <p>
+                    Mit diesem Baustein kann man mithilfe des ADS-Protokolls (Automation Device Specification)
+                    der Firma Beckhoff Daten in ein TwinCAT system schreiben.
+
+                    Dieses System wird unter anderem in Wohnraumlüftungen der Firma Brötje verwendet.
+                </p>
+                <h2 id="inputs">Eingänge</h2>
+                <p>
+                    Um Daten zu schreiben, muss der <c>Eingang</c>-Eingang
+                    geschaltet werden. Weitere Eingänge sind:
+                </p>
+                <table class="Tabelle_Logicnode">
+                    <colgroup>
+                        <col style="width: 115px" />
+                        <col style="width: 180px" />
+                        <col />
+                    </colgroup>
+                    <tr>
+                        <th>Bezeichnung</th>
+                        <th>Porttyp</th>
+                        <th>Beschreibung</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><i>Eingang</i></p>
+                        </td>
+                        <td>
+                            <p>Any</p>
+                        </td>
+                        <td>
+                            <p>
+                                Schreibt die angegebenen Daten entsprechend der Konfiguration
+                                in das TwinCAT system. Der Typ des hier bereitgestellten Werts
+                                muss mit dem <c>Datentyp</c>-Eingang übereinstimmen.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><i>Remote-Adresse</i></p>
+                        </td>
+                        <td>
+                            <p>Text</p>
+                        </td>
+                        <td>
+                            <p>
+                                Die Adresse des SOAP-API-Hosts.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><i>NET ID</i></p>
+                        </td>
+                        <td>
+                            <p>Text</p>
+                        </td>
+                        <td>
+                            <p>
+                                Hiermit ist die AMS NET ID, oder auch die TwinCAT system ID gemeint.
+                            </p>
+                            <p>
+                                Dies kann zum Beispiel wie folgt aufgebaut sein: `192.168.178.24.1.1`
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><i>Port</i></p>
+                        </td>
+                        <td>
+                            <p>Integer</p>
+                        </td>
+                        <td>
+                            <p>
+                                Portnummer. Die TwinCAT Geräte-ID.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><i>Index-Gruppe</i></p>
+                        </td>
+                        <td>
+                            <p>16-Bit Integer</p>
+                        </td>
+                        <td>
+                            <p>
+                                Index Group der Daten, die geschrieben werden sollen.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><i>Index-Offset</i></p>
+                        </td>
+                        <td>
+                            <p>16-Bit Integer</p>
+                        </td>
+                        <td>
+                            <p>
+                                Index Offset der Daten, die geschrieben werden sollen.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><i>Datentyp</i></p>
+                        </td>
+                        <td>
+                            <p>Auswahl</p>
+                        </td>
+                        <td>
+                            <p>
+                                Der zu sendende Datentyp.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                <h2 id="outputs">Ausgänge</h2>
+                <table class="Tabelle_Logicnode">
+                    <colgroup>
+                        <col style="width: 115px" />
+                        <col style="width: 180px" />
+                        <col />
+                    </colgroup>
+                    <tr>
+                        <th>Bezeichnung</th>
+                        <th>Porttyp</th>
+                        <th>Beschreibung</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><i>Diagnostics</i></p>
+                        </td>
+                        <td>
+                            <p>Text</p>
+                        </td>
+                        <td>
+                            <p>Im Fehlerfall: Detailinformationen zur Diagnose.</p>
+                        </td>
+                    </tr>
+                </table>
+                <h2 id="related-links">Weiterführende Links</h2>
+                <div class="row">
+                    <ul>
+                        <li>
+                            <a href="https://www.plccoder.com/communicating-between-beckhoff-controllers-part-2-ads/">
+                                PLCCoder.com: Communicating between Beckhoff controllers part 2: ADS
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://infosys.beckhoff.com/index.php?content=../content/1031/tcba/12269581963.html&id=8978321744740978019">
+                                Beckhoff Information System: TS8040 | TwinCAT 2 Building Automation > Lüftungsanlagen
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div id="footerHead">
+                NecatiMeral Logikbausteine &nbsp;
+                <span style="color: #a0a0a0">Hilfe</span>
+            </div>
+            <div id="footerNav">
+                <span style="float: right"
+                    ><a
+                        href="https://github.com/NecatiMeral/gira-x1-logic-nodes"
+                        target="_blank"
+                        >NecatiMeral / gira-x1-logic-nodes auf GitHub</a
+                    ></span
+                >
+            </div>
+        </footer>
+    </body>
+</html>

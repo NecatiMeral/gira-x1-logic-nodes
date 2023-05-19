@@ -39,7 +39,7 @@ namespace Necati_Meral_Yahoo_De.Logic.Ads.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Necati_Meral_Yahoo_De.Logic.Broetje.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Necati_Meral_Yahoo_De.Logic.Ads.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,6 +57,159 @@ namespace Necati_Meral_Yahoo_De.Logic.Ads.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Output ähnelt.
+        /// </summary>
+        internal static string ReadAdsDataNodeData {
+            get {
+                return ResourceManager.GetString("ReadAdsDataNodeData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Data type ähnelt.
+        /// </summary>
+        internal static string ReadAdsDataNodeDataType {
+            get {
+                return ResourceManager.GetString("ReadAdsDataNodeDataType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Diagnostic message ähnelt.
+        /// </summary>
+        internal static string ReadAdsDataNodeDiagnostics {
+            get {
+                return ResourceManager.GetString("ReadAdsDataNodeDiagnostics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Index-Group ähnelt.
+        /// </summary>
+        internal static string ReadAdsDataNodeIndexGroup {
+            get {
+                return ResourceManager.GetString("ReadAdsDataNodeIndexGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Index-Offset ähnelt.
+        /// </summary>
+        internal static string ReadAdsDataNodeIndexOffset {
+            get {
+                return ResourceManager.GetString("ReadAdsDataNodeIndexOffset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die NET ID ähnelt.
+        /// </summary>
+        internal static string ReadAdsDataNodeNetId {
+            get {
+                return ResourceManager.GetString("ReadAdsDataNodeNetId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Port ähnelt.
+        /// </summary>
+        internal static string ReadAdsDataNodePort {
+            get {
+                return ResourceManager.GetString("ReadAdsDataNodePort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Remote-Address ähnelt.
+        /// </summary>
+        internal static string ReadAdsDataNodeRemoteAddress {
+            get {
+                return ResourceManager.GetString("ReadAdsDataNodeRemoteAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Trigger ähnelt.
+        /// </summary>
+        internal static string ReadAdsDataNodeTrgger {
+            get {
+                return ResourceManager.GetString("ReadAdsDataNodeTrgger", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Input ähnelt.
+        /// </summary>
+        internal static string WriteAdsDataNodeData {
+            get {
+                return ResourceManager.GetString("WriteAdsDataNodeData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Data type ähnelt.
+        /// </summary>
+        internal static string WriteAdsDataNodeDataType {
+            get {
+                return ResourceManager.GetString("WriteAdsDataNodeDataType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Diagnostic message ähnelt.
+        /// </summary>
+        internal static string WriteAdsDataNodeDiagnostics {
+            get {
+                return ResourceManager.GetString("WriteAdsDataNodeDiagnostics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Index-Group ähnelt.
+        /// </summary>
+        internal static string WriteAdsDataNodeIndexGroup {
+            get {
+                return ResourceManager.GetString("WriteAdsDataNodeIndexGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Index-Offset ähnelt.
+        /// </summary>
+        internal static string WriteAdsDataNodeIndexOffset {
+            get {
+                return ResourceManager.GetString("WriteAdsDataNodeIndexOffset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die NET ID ähnelt.
+        /// </summary>
+        internal static string WriteAdsDataNodeNetId {
+            get {
+                return ResourceManager.GetString("WriteAdsDataNodeNetId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Port ähnelt.
+        /// </summary>
+        internal static string WriteAdsDataNodePort {
+            get {
+                return ResourceManager.GetString("WriteAdsDataNodePort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Remote-Address ähnelt.
+        /// </summary>
+        internal static string WriteAdsDataNodeRemoteAddress {
+            get {
+                return ResourceManager.GetString("WriteAdsDataNodeRemoteAddress", resourceCulture);
             }
         }
     }
