@@ -33,6 +33,9 @@ When using the nodes from this repository, you can hit the `F1` key in the logic
 
 Docker service which acts as a proxy to integrate a doorbird doorbell into a gira-x1 server.
 
+> I recommend you not to use the X1 as trigger for the sonos doorbell. Prefer a standalone web api instead, since the Sonos integration is well known to break on the X1 which requires a system restart.
+> You can use my fork of the [node-sonos-http-api](https://github.com/NecatiMeral/node-sonos-http-api)-project to trigger your sonos directly from your doorbird (`http://your-host:5005/clipall[groups]/doorbell.mp3/50`). This approach is way more reliable.
+
 * [Technical description (german)](./docs/de/Doorbird-X1-Listener.md)
 * [Setup guide (german)](./docs/de/Doorbird-X1-Listener-Setup.md)
 
