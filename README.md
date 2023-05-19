@@ -6,6 +6,8 @@ Custom logic nodes for personal use and other useful stuff to use with the GIRA 
 
 GIRA's documentation of the logic node SDK can be found on the [Gira Logic nodes page](https://partner.gira.com/en/service/software-tools/developer.html).
 
+When using the nodes from this repository, you can hit the `F1` key in the logic editor for help.
+
 ## Logic nodes
 
 ### Necati_Meral_Yahoo_De.Logic.Ads
