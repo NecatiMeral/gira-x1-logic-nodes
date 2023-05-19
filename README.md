@@ -39,3 +39,8 @@ Docker service which acts as a proxy to integrate a doorbird doorbell into a gir
 ## Scripts
 
 Contains scripts for minor automations of our home.
+
+
+## Icons
+
+This project uses [icons](images/Noun-Project/readme.md) from the glorious noun project.
