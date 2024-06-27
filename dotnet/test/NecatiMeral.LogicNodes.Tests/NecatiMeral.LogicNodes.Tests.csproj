@@ -14,6 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\src\NecatiMeral.Logic.Common\NecatiMeral.Logic.Common.csproj" />
     <ProjectReference Include="..\..\src\NecatiMeral.LogicNodes\NecatiMeral.LogicNodes.csproj" />
     <ProjectReference Include="..\..\src\NecatiMeral.Logic.ComfortOnline\NecatiMeral.Logic.ComfortOnline.csproj" />

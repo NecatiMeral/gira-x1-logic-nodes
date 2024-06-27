@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Platform>AnyCPU</Platform>
+    <ProjectGuid>{8188F938-CD29-467E-AA81-5D731FDD3466}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <RootNamespace>Necati_Meral_Yahoo_De.LogicNodes.Meltem.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentModbus" Version="5.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\NecatiMeral.Logic.Meltem\NecatiMeral.Logic.Meltem.csproj" />
+    <ProjectReference Include="..\NecatiMeral.LogicNodes.Tests\NecatiMeral.LogicNodes.Tests.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="Shouldly" Version="4.2.1" />
+  </ItemGroup>
+
+
+</Project>
