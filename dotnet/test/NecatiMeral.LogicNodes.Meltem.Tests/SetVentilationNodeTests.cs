@@ -25,7 +25,7 @@ public class SetVentilationNodeTests : NodeTestBase<SetVentilationNode>
         _server.AddUnit((byte)UnitIdentifier);
         _server.Start(new IPEndPoint(IPAddress.Any, _port));
 
-        Sut.UnitIdentifier.Value = UnitIdentifier;
+        Sut.UnitId.Value = UnitIdentifier;
         Sut.IPAddress.Value = "localhost";
         Sut.Port.Value = _port;
     }

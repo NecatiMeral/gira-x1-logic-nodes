@@ -11,7 +11,7 @@
     "LogicModule.ObjectModel.dll",
     "EasyModbus.dll"
   ],
-  "Version": "0.0.5",
+  "Version": "0.0.9",
   "Author": "Necati Meral",
   "Copyright": "2024 Necati Meral",
   "DeveloperId": "necati_meral_yahoo_de",
@@ -26,22 +26,24 @@
       },
       "IsConverter": false,
       "Category": "Node",
+      "DefaultIcon": "icons/meltem.png",
       "HelpTooltip": {
         "en": "Sets the ventilation level on a Meltem appliance.",
         "de": "Setzt die Lüftungsstufe an einem Meltem-Gerät."
       }
     },
     {
-      "Type": "Necati_Meral_Yahoo_De.Logic.Meltem.SetVentilationNode",
+      "Type": "Necati_Meral_Yahoo_De.Logic.Meltem.GetVentilationNode",
       "Name": {
-        "en": "Meltem - Set fan speed",
-        "de": "Meltem - Lüfterstufe setzen"
+        "en": "Meltem - Get fan speed",
+        "de": "Meltem - Lüfterstufe abfragen"
       },
       "IsConverter": false,
       "Category": "Node",
+      "DefaultIcon": "icons/meltem.png",
       "HelpTooltip": {
-        "en": "Sets the ventilation level on a Meltem appliance.",
-        "de": "Setzt die Lüftungsstufe an einem Meltem-Gerät."
+        "en": "Gets the ventilation level from a Meltem appliance.",
+        "de": "Ruft die Lüftungsstufe von einem Meltem-Gerät ab."
       }
     }
   ]

@@ -117,16 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="SetVentilationIPAddress" xml:space="preserve">
+  <data name="IPAddress" xml:space="preserve">
     <value>IP-Adresse</value>
   </data>
-  <data name="SetVentilationPort" xml:space="preserve">
+  <data name="Port" xml:space="preserve">
     <value>Port</value>
   </data>
-  <data name="SetVentilationDeviceId" xml:space="preserve">
+  <data name="UnitId" xml:space="preserve">
     <value>Geräte ID</value>
   </data>
-  <data name="SetVentilationAction" xml:space="preserve">
+  <data name="Action" xml:space="preserve">
     <value>Aktion</value>
   </data>
   <data name="SetVentilationBalancedVentilation" xml:space="preserve">
@@ -137,5 +137,8 @@
   </data>
   <data name="SetVentilationUnbalancedExhaustVentilation" xml:space="preserve">
     <value>Fortluft (%)</value>
+  </data>
+  <data name="GetVentilationVentilationPercentage" xml:space="preserve">
+    <value>Lüftungsstufe (%)</value>
   </data>
 </root>

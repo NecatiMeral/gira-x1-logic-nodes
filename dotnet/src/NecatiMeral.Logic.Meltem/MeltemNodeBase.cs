@@ -15,7 +15,7 @@ public abstract class MeltemNodeBase : LocalizableNode
     public IntValueObject Port { get; }
 
     [Input(DisplayOrder = 4, IsDefaultShown = true, IsInput = false)]
-    public IntValueObject UnitIdentifier { get; }
+    public IntValueObject UnitId { get; }
 
     protected bool WasTriggered => Trigger != null && Trigger.HasValue && Trigger.WasSet && Trigger.Value;
 
@@ -35,9 +35,9 @@ public abstract class MeltemNodeBase : LocalizableNode
         Port = TypeService.CreateInt("INTEGER", "Port", 502);
         Port.MinValue = 0;
 
-        UnitIdentifier = TypeService.CreateInt("INTEGER", "UnitIdentifier", 1);
-        UnitIdentifier.MinValue = 0;
-        UnitIdentifier.MaxValue = 255;
+        UnitId = TypeService.CreateInt("INTEGER", "UnitId", 1);
+        UnitId.MinValue = 0;
+        UnitId.MaxValue = 255;
 
         _client = new ModbusClient
         {
@@ -47,7 +47,7 @@ public abstract class MeltemNodeBase : LocalizableNode
 
     public override void Execute()
     {
-        if (!IPAddress.HasValue || !Port.HasValue || !UnitIdentifier.HasValue)
+        if (!IPAddress.HasValue || !Port.HasValue || !UnitId.HasValue)
         {
             return;
         }
@@ -60,7 +60,7 @@ public abstract class MeltemNodeBase : LocalizableNode
     protected void ExecuteWithConnection(Action<ModbusClient> action)
     {
         _client.Connect(IPAddress.Value, Port.Value);
-        _client.UnitIdentifier = (byte)UnitIdentifier.Value;
+        _client.UnitIdentifier = (byte)UnitId.Value;
         if (!_client.Connected)
         {
             return;

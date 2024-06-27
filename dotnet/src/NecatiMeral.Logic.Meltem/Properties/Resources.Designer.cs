@@ -63,9 +63,36 @@ namespace Necati_Meral_Yahoo_De.Logic.Meltem.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Action ähnelt.
         /// </summary>
-        internal static string SetVentilationAction {
+        internal static string Action {
             get {
-                return ResourceManager.GetString("SetVentilationAction", resourceCulture);
+                return ResourceManager.GetString("Action", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Lüftungsstufe (%) ähnelt.
+        /// </summary>
+        internal static string GetVentilationVentilationPercentage {
+            get {
+                return ResourceManager.GetString("GetVentilationVentilationPercentage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die IP address ähnelt.
+        /// </summary>
+        internal static string IPAddress {
+            get {
+                return ResourceManager.GetString("IPAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Port ähnelt.
+        /// </summary>
+        internal static string Port {
+            get {
+                return ResourceManager.GetString("Port", resourceCulture);
             }
         }
         
@@ -75,33 +102,6 @@ namespace Necati_Meral_Yahoo_De.Logic.Meltem.Properties {
         internal static string SetVentilationBalancedVentilation {
             get {
                 return ResourceManager.GetString("SetVentilationBalancedVentilation", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Device Id ähnelt.
-        /// </summary>
-        internal static string SetVentilationDeviceId {
-            get {
-                return ResourceManager.GetString("SetVentilationDeviceId", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die IP address ähnelt.
-        /// </summary>
-        internal static string SetVentilationIPAddress {
-            get {
-                return ResourceManager.GetString("SetVentilationIPAddress", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Port ähnelt.
-        /// </summary>
-        internal static string SetVentilationPort {
-            get {
-                return ResourceManager.GetString("SetVentilationPort", resourceCulture);
             }
         }
         
@@ -120,6 +120,15 @@ namespace Necati_Meral_Yahoo_De.Logic.Meltem.Properties {
         internal static string SetVentilationUnbalancedIntakeVentilation {
             get {
                 return ResourceManager.GetString("SetVentilationUnbalancedIntakeVentilation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Device Id ähnelt.
+        /// </summary>
+        internal static string UnitId {
+            get {
+                return ResourceManager.GetString("UnitId", resourceCulture);
             }
         }
     }

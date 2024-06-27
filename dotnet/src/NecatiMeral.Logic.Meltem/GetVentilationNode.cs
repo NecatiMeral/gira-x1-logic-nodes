@@ -16,7 +16,7 @@ public class GetVentilationNode : MeltemNodeBase
     {
         context.ThrowIfNull(nameof(context));
 
-        Action = TypeService.CreateEnum(nameof(SetDeviceAction), "Action", GetDeviceAction.Values, GetDeviceAction.GetVentilationPercent);
+        Action = TypeService.CreateEnum(nameof(GetDeviceAction), "Action", GetDeviceAction.Values, GetDeviceAction.GetVentilationPercent);
         Action.ValueSet += OnActionValueSet;
         InitializeActionInputs(GetDeviceAction.GetVentilationPercent);
     }
@@ -31,7 +31,7 @@ public class GetVentilationNode : MeltemNodeBase
         var action = Action.Value.ToString();
         switch (action)
         {
-            case SetDeviceAction.SetBalancedVentilationPercent:
+            case GetDeviceAction.GetVentilationPercent:
                 GetVentilationPercent();
                 break;
         }

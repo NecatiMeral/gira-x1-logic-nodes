@@ -31,7 +31,7 @@ public class GetVentilationNodeTests : NodeTestBase<GetVentilationNode>
 
     private void ConfigureMeltemNode(MeltemNodeBase node)
     {
-        node.UnitIdentifier.Value = UnitIdentifier;
+        node.UnitId.Value = UnitIdentifier;
         node.IPAddress.Value = "localhost";
         node.Port.Value = _port;
     }
