@@ -2,8 +2,10 @@
 public static class GetDeviceAction
 {
     public const string GetVentilationPercent = "GetVentilationPercent";
+    public const string GetVentilationLevelNumeric = "GetVentilationLevelNumeric";
 
     public static string[] Values { get; } = [
-        GetVentilationPercent
+        GetVentilationPercent,
+        GetVentilationLevelNumeric
     ];
 }

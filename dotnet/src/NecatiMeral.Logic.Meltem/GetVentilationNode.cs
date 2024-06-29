@@ -3,11 +3,14 @@
 namespace Necati_Meral_Yahoo_De.Logic.Meltem;
 public class GetVentilationNode : MeltemNodeBase
 {
-    [Parameter(DisplayOrder = 4, IsDefaultShown = true)]
+    [Parameter(DisplayOrder = 5, IsDefaultShown = true)]
     public EnumValueObject Action { get; }
 
     [Output]
     public IntValueObject VentilationPercentage { get; private set; }
+
+    [Output]
+    public IntValueObject VentilationLevelNumeric { get; private set; }
 
     private const int _maxVentilationValue = 200;
 
@@ -34,11 +37,27 @@ public class GetVentilationNode : MeltemNodeBase
             case GetDeviceAction.GetVentilationPercent:
                 GetVentilationPercent();
                 break;
+            case GetDeviceAction.GetVentilationLevelNumeric:
+                GetVentilationLevelNumeric();
+                break;
         }
+    }
+
+    private void GetVentilationLevelNumeric()
+    {
+        var percent = GetVentilationPercentCore();
+
+        VentilationLevelNumeric.Value = VentilationPreset.GetNearestVentilationLevel(percent);
     }
 
     private void GetVentilationPercent()
     {
+        VentilationPercentage.Value = GetVentilationPercentCore();
+    }
+
+    private int GetVentilationPercentCore()
+    {
+        var percentage = 0;
         ExecuteWithConnection(client =>
         {
             var intake = client.ReadHoldingRegisters(MeltemRegisters.GetIntakeVentilation, 1);
@@ -46,18 +65,17 @@ public class GetVentilationNode : MeltemNodeBase
 
             var total = intake[0] + exhaust[0];
 
-            VentilationPercentage.Value = total * 100 / _maxVentilationValue;
+            percentage = total * 100 / _maxVentilationValue;
         });
+        return percentage;
     }
 
     private void OnActionValueSet(object sender, ValueChangedEventArgs e)
     {
-        if (Equals(e.NewValue, e.OldValue))
+        if (!Equals(e.NewValue, e.OldValue))
         {
-            return;
+            InitializeActionInputs(e.NewValue.ToString());
         }
-
-        InitializeActionInputs(e.NewValue.ToString());
     }
 
     private void InitializeActionInputs(string action)
@@ -65,6 +83,12 @@ public class GetVentilationNode : MeltemNodeBase
         if (action == GetDeviceAction.GetVentilationPercent)
         {
             VentilationPercentage = CreateVentilationItem("VentilationPercentage");
+            VentilationLevelNumeric = null;
+        }
+        else if (action == GetDeviceAction.GetVentilationLevelNumeric)
+        {
+            VentilationPercentage = null;
+            VentilationLevelNumeric = CreateVentilationItem("VentilationLevelNumeric");
         }
     }
 

@@ -70,11 +70,209 @@ namespace Necati_Meral_Yahoo_De.Logic.Meltem.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Air filter change indicator ähnelt.
+        /// </summary>
+        internal static string GetDeviceInfoAirFilterChangeIndicator {
+            get {
+                return ResourceManager.GetString("GetDeviceInfoAirFilterChangeIndicator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die CO2 exhaust air ähnelt.
+        /// </summary>
+        internal static string GetDeviceInfoCo2ExhaustAir {
+            get {
+                return ResourceManager.GetString("GetDeviceInfoCo2ExhaustAir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Time until air filter change (days) ähnelt.
+        /// </summary>
+        internal static string GetDeviceInfoDaysToAirFilterChange {
+            get {
+                return ResourceManager.GetString("GetDeviceInfoDaysToAirFilterChange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Error message ähnelt.
+        /// </summary>
+        internal static string GetDeviceInfoDeviceErrorMessage {
+            get {
+                return ResourceManager.GetString("GetDeviceInfoDeviceErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Humidity exhaust air (%) ähnelt.
+        /// </summary>
+        internal static string GetDeviceInfoExhaustAirHumdity {
+            get {
+                return ResourceManager.GetString("GetDeviceInfoExhaustAirHumdity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Exhaust air temperature (°C) ähnelt.
+        /// </summary>
+        internal static string GetDeviceInfoExhaustAirTemperature {
+            get {
+                return ResourceManager.GetString("GetDeviceInfoExhaustAirTemperature", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ventilation level exhaust air (m3/h) ähnelt.
+        /// </summary>
+        internal static string GetDeviceInfoExhaustVentilation {
+            get {
+                return ResourceManager.GetString("GetDeviceInfoExhaustVentilation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Frost protection function ähnelt.
+        /// </summary>
+        internal static string GetDeviceInfoFrostProtectionFunction {
+            get {
+                return ResourceManager.GetString("GetDeviceInfoFrostProtectionFunction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Exhaust air temperature (°C) ähnelt.
+        /// </summary>
+        internal static string GetDeviceInfoInnerExhaustAirTemperature {
+            get {
+                return ResourceManager.GetString("GetDeviceInfoInnerExhaustAirTemperature", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Supply air humidity (%) ähnelt.
+        /// </summary>
+        internal static string GetDeviceInfoIntakeAirHumdity {
+            get {
+                return ResourceManager.GetString("GetDeviceInfoIntakeAirHumdity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Supply air temperature (°C) ähnelt.
+        /// </summary>
+        internal static string GetDeviceInfoIntakeAirTemperature {
+            get {
+                return ResourceManager.GetString("GetDeviceInfoIntakeAirTemperature", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ventilation level exhaust air (m3/h) ähnelt.
+        /// </summary>
+        internal static string GetDeviceInfoIntakeVentilation {
+            get {
+                return ResourceManager.GetString("GetDeviceInfoIntakeVentilation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Operating hours fan motors ähnelt.
+        /// </summary>
+        internal static string GetDeviceInfoOperatingHoursFanMotors {
+            get {
+                return ResourceManager.GetString("GetDeviceInfoOperatingHoursFanMotors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Operating hours ventilation unit ähnelt.
+        /// </summary>
+        internal static string GetDeviceInfoOperatingHoursVentilationDevice {
+            get {
+                return ResourceManager.GetString("GetDeviceInfoOperatingHoursVentilationDevice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Outside air temperature (°C) ähnelt.
+        /// </summary>
+        internal static string GetDeviceInfoOutdoorAirTemperature {
+            get {
+                return ResourceManager.GetString("GetDeviceInfoOutdoorAirTemperature", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die VOC supply air ähnelt.
+        /// </summary>
+        internal static string GetDeviceInfoVocIntake {
+            get {
+                return ResourceManager.GetString("GetDeviceInfoVocIntake", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ventilation level (numerical) ähnelt.
+        /// </summary>
+        internal static string GetVentilationLevelNumeric {
+            get {
+                return ResourceManager.GetString("GetVentilationLevelNumeric", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ventilation level (percentage) ähnelt.
+        /// </summary>
+        internal static string GetVentilationPercent {
+            get {
+                return ResourceManager.GetString("GetVentilationPercent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ventilation level (numerical) ähnelt.
+        /// </summary>
+        internal static string GetVentilationVentilationLevelNumeric {
+            get {
+                return ResourceManager.GetString("GetVentilationVentilationLevelNumeric", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Lüftungsstufe (%) ähnelt.
         /// </summary>
         internal static string GetVentilationVentilationPercentage {
             get {
                 return ResourceManager.GetString("GetVentilationVentilationPercentage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Increased ventilation 1 ähnelt.
+        /// </summary>
+        internal static string IncreasedVentilation1 {
+            get {
+                return ResourceManager.GetString("IncreasedVentilation1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Increased ventilation 2 ähnelt.
+        /// </summary>
+        internal static string IncreasedVentilation2 {
+            get {
+                return ResourceManager.GetString("IncreasedVentilation2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Intensive ventilation ähnelt.
+        /// </summary>
+        internal static string IntensiveVentilation {
+            get {
+                return ResourceManager.GetString("IntensiveVentilation", resourceCulture);
             }
         }
         
@@ -88,6 +286,24 @@ namespace Necati_Meral_Yahoo_De.Logic.Meltem.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ventilation during presence (nominal ventilation) ähnelt.
+        /// </summary>
+        internal static string NominalVentilation {
+            get {
+                return ResourceManager.GetString("NominalVentilation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die From ähnelt.
+        /// </summary>
+        internal static string Off {
+            get {
+                return ResourceManager.GetString("Off", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Port ähnelt.
         /// </summary>
         internal static string Port {
@@ -97,11 +313,83 @@ namespace Necati_Meral_Yahoo_De.Logic.Meltem.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ventilation during absence (reduced ventilation) ähnelt.
+        /// </summary>
+        internal static string ReducedVentilation {
+            get {
+                return ResourceManager.GetString("ReducedVentilation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Balanced (Level) ähnelt.
+        /// </summary>
+        internal static string SetBalancedVentilationLevel {
+            get {
+                return ResourceManager.GetString("SetBalancedVentilationLevel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Balanced (Level; numeric) ähnelt.
+        /// </summary>
+        internal static string SetBalancedVentilationNumeric {
+            get {
+                return ResourceManager.GetString("SetBalancedVentilationNumeric", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Balanced: (Percent) ähnelt.
+        /// </summary>
+        internal static string SetBalancedVentilationPercent {
+            get {
+                return ResourceManager.GetString("SetBalancedVentilationPercent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Unbalanced (Percent) ähnelt.
+        /// </summary>
+        internal static string SetUnbalancedVentilationPercent {
+            get {
+                return ResourceManager.GetString("SetUnbalancedVentilationPercent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Ventilation level (%) ähnelt.
         /// </summary>
         internal static string SetVentilationBalancedVentilation {
             get {
                 return ResourceManager.GetString("SetVentilationBalancedVentilation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ventilation program ähnelt.
+        /// </summary>
+        internal static string SetVentilationBalancedVentilationLevel {
+            get {
+                return ResourceManager.GetString("SetVentilationBalancedVentilationLevel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ventilation program ähnelt.
+        /// </summary>
+        internal static string SetVentilationBalancedVentilationLevelNumeric {
+            get {
+                return ResourceManager.GetString("SetVentilationBalancedVentilationLevelNumeric", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Output ähnelt.
+        /// </summary>
+        internal static string SetVentilationOutput {
+            get {
+                return ResourceManager.GetString("SetVentilationOutput", resourceCulture);
             }
         }
         

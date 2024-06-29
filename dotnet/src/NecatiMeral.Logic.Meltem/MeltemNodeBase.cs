@@ -19,7 +19,7 @@ public abstract class MeltemNodeBase : LocalizableNode
 
     protected bool WasTriggered => Trigger != null && Trigger.HasValue && Trigger.WasSet && Trigger.Value;
 
-    private ModbusClient _client;
+    private readonly ModbusClient _client;
 
     public MeltemNodeBase(INodeContext context, string nodeTypeName, bool hasTrigger = false)
         : base(context, nodeTypeName)
