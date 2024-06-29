@@ -11,7 +11,7 @@
     "LogicModule.ObjectModel.dll",
     "EasyModbus.dll"
   ],
-  "Version": "0.0.19",
+  "Version": "0.0.20",
   "Author": "Necati Meral",
   "Copyright": "2024 Necati Meral",
   "DeveloperId": "necati_meral_yahoo_de",
