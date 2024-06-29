@@ -3,9 +3,9 @@
   <PropertyGroup>
     <TargetFramework>net45</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <ProjectGuid>{3F1FF768-FD27-46B2-961C-B6EFDF9CB3B3}</ProjectGuid>
-    <AssemblyName>Necati_Meral_Yahoo_De.Logic.ComfortOnline</AssemblyName>
-    <RootNamespace>Necati_Meral_Yahoo_De.Logic.ComfortOnline</RootNamespace>
+    <ProjectGuid>{4D325486-7AC1-4973-B59D-60A6A5E81779}</ProjectGuid>
+    <AssemblyName>Necati_Meral_Yahoo_De.Logic.Meltem</AssemblyName>
+    <RootNamespace>Necati_Meral_Yahoo_De.Logic.Meltem</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,15 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Properties\Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <EmbeddedResource Update="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <PackageReference Include="EasyModbusTCP" Version="5.6.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,6 +26,15 @@
     <None Update="help\*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
 
     <Reference Update="System.IO.Compression.FileSystem">
       <IncludeAssets>all</IncludeAssets>

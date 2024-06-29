@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="IPAddress" xml:space="preserve">
+    <value>IP address</value>
+  </data>
+  <data name="Port" xml:space="preserve">
+    <value>Port</value>
+  </data>
+  <data name="UnitId" xml:space="preserve">
+    <value>Device Id</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="SetVentilationBalancedVentilation" xml:space="preserve">
+    <value>Ventilation level (%)</value>
+  </data>
+  <data name="SetVentilationUnbalancedIntakeVentilation" xml:space="preserve">
+    <value>Intake (%)</value>
+  </data>
+  <data name="SetVentilationUnbalancedExhaustVentilation" xml:space="preserve">
+    <value>Exhaust (%)</value>
+  </data>
+  <data name="GetVentilationVentilationPercentage" xml:space="preserve">
+    <value>Lüftungsstufe (%)</value>
+  </data>
+  <data name="GetDeviceInfoDeviceErrorMessage" xml:space="preserve">
+    <value>Error message</value>
+  </data>
+  <data name="GetDeviceInfoFrostProtectionFunction" xml:space="preserve">
+    <value>Frost protection function</value>
+  </data>
+  <data name="GetDeviceInfoExhaustAirTemperature" xml:space="preserve">
+    <value>Exhaust air temperature (°C)</value>
+  </data>
+  <data name="GetDeviceInfoOutdoorAirTemperature" xml:space="preserve">
+    <value>Outside air temperature (°C)</value>
+  </data>
+  <data name="GetDeviceInfoInnerExhaustAirTemperature" xml:space="preserve">
+    <value>Exhaust air temperature (°C)</value>
+  </data>
+  <data name="GetDeviceInfoIntakeAirTemperature" xml:space="preserve">
+    <value>Supply air temperature (°C)</value>
+  </data>
+  <data name="GetDeviceInfoExhaustAirHumdity" xml:space="preserve">
+    <value>Humidity exhaust air (%)</value>
+  </data>
+  <data name="GetDeviceInfoIntakeAirHumdity" xml:space="preserve">
+    <value>Supply air humidity (%)</value>
+  </data>
+  <data name="GetDeviceInfoIntakeVentilation" xml:space="preserve">
+    <value>Ventilation level exhaust air (m3/h)</value>
+  </data>
+  <data name="GetDeviceInfoExhaustVentilation" xml:space="preserve">
+    <value>Ventilation level exhaust air (m3/h)</value>
+  </data>
+  <data name="GetDeviceInfoAirFilterChangeIndicator" xml:space="preserve">
+    <value>Air filter change indicator</value>
+  </data>
+  <data name="GetDeviceInfoDaysToAirFilterChange" xml:space="preserve">
+    <value>Time until air filter change (days)</value>
+  </data>
+  <data name="GetDeviceInfoOperatingHoursVentilationDevice" xml:space="preserve">
+    <value>Operating hours ventilation unit</value>
+  </data>
+  <data name="GetDeviceInfoOperatingHoursFanMotors" xml:space="preserve">
+    <value>Operating hours fan motors</value>
+  </data>
+  <data name="GetDeviceInfoCo2ExhaustAir" xml:space="preserve">
+    <value>CO2 exhaust air</value>
+  </data>
+  <data name="GetDeviceInfoVocIntake" xml:space="preserve">
+    <value>VOC supply air</value>
+  </data>
+  <data name="SetVentilationBalancedVentilationLevel" xml:space="preserve">
+    <value>Ventilation program</value>
+  </data>
+  <data name="SetBalancedVentilationPercent" xml:space="preserve">
+    <value>Balanced: (Percent)</value>
+  </data>
+  <data name="SetBalancedVentilationLevel" xml:space="preserve">
+    <value>Balanced (Level)</value>
+  </data>
+  <data name="SetUnbalancedVentilationPercent" xml:space="preserve">
+    <value>Unbalanced (Percent)</value>
+  </data>
+  <data name="Off" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="ReducedVentilation" xml:space="preserve">
+    <value>Ventilation during absence (reduced ventilation)</value>
+  </data>
+  <data name="NominalVentilation" xml:space="preserve">
+    <value>Ventilation during presence (nominal ventilation)</value>
+  </data>
+  <data name="IncreasedVentilation1" xml:space="preserve">
+    <value>Increased ventilation 1</value>
+  </data>
+  <data name="IncreasedVentilation2" xml:space="preserve">
+    <value>Increased ventilation 2</value>
+  </data>
+  <data name="IntensiveVentilation" xml:space="preserve">
+    <value>Intensive ventilation</value>
+  </data>
+  <data name="GetVentilationPercent" xml:space="preserve">
+    <value>Ventilation level (percentage)</value>
+  </data>
+  <data name="SetBalancedVentilationNumeric" xml:space="preserve">
+    <value>Balanced (Level; numeric)</value>
+  </data>
+  <data name="SetVentilationBalancedVentilationLevelNumeric" xml:space="preserve">
+    <value>Ventilation program</value>
+  </data>
+  <data name="GetVentilationLevelNumeric" xml:space="preserve">
+    <value>Ventilation level (numerical)</value>
+  </data>
+  <data name="GetVentilationVentilationLevelNumeric" xml:space="preserve">
+    <value>Ventilation level (numerical)</value>
+  </data>
+  <data name="SetVentilationOutput" xml:space="preserve">
+    <value>Output</value>
+  </data>
+</root>
