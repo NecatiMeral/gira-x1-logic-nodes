@@ -90,7 +90,7 @@ public class SetVentilationNode : MeltemNodeBase
             client.WriteSingleRegister(MeltemRegisters.ApplyVentilation, 0);
         });
 
-        BalancedVentilation.Value = UnbalancedIntakeVentilation.Value + UnbalancedExhaustVentilation.Value;
+        Output.Value = UnbalancedIntakeVentilation.Value + UnbalancedExhaustVentilation.Value;
     }
 
     private void SetBalancedVentilationLevel()
