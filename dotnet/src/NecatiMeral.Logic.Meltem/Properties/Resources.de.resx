@@ -237,4 +237,7 @@
   <data name="SetVentilationOutput" xml:space="preserve">
     <value>Ausgang</value>
   </data>
+  <data name="Diagnostics" xml:space="preserve">
+    <value>Diagnosetext</value>
+  </data>
 </root>

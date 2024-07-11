@@ -62,12 +62,10 @@ public class GetDeviceInfoNode : MeltemNodeBase
 
     protected override void ExecuteCore()
     {
-        if (!WasTriggered)
+        if (WasTriggered)
         {
-            return;
+            GetData();
         }
-
-        GetData();
     }
 
     private void GetData()

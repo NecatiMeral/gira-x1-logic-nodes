@@ -70,6 +70,15 @@ namespace Necati_Meral_Yahoo_De.Logic.Meltem.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Diagnostic text ähnelt.
+        /// </summary>
+        internal static string Diagnostics {
+            get {
+                return ResourceManager.GetString("Diagnostics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Air filter change indicator ähnelt.
         /// </summary>
         internal static string GetDeviceInfoAirFilterChangeIndicator {
