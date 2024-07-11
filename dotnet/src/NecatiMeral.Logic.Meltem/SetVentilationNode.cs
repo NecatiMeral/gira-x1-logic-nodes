@@ -104,7 +104,7 @@ public class SetVentilationNode : MeltemNodeBase
 
     private void SetBalancedVentilationLevelNumeric()
     {
-        if (!BalancedVentilationLevelNumeric.WasSet)
+        if (BalancedVentilationLevelNumeric.WasSet)
         {
             SetVentilationPercent(
                 VentilationPreset.GetVentilationPercent(BalancedVentilationLevelNumeric.Value)
