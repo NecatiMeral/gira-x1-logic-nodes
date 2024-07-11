@@ -1,0 +1,180 @@
+<!--
+Filename: f:\Projekte\gira-x1-logic-nodes\dotnet\src\NecatiMeral.Logic.Meltem\help\ComfortOnlineRequestNode.html
+Path: f:\Projekte\gira-x1-logic-nodes\dotnet\src\NecatiMeral.Logic.Meltem\help
+Created Date: Monday, July 1st 2024, 10:21:54 pm
+Author: Necati Meral https://meral.cloud
+
+Copyright (c) 2024 Meral IT
+-->
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta content="text/html; charset=utf-8" />
+        <title>NecatiMeral - Hilfe - Meltem - Lüfterstufe abfragen</title>
+        <link rel="StyleSheet" href="default.css" type="text/css" />
+    </head>
+
+    <body>
+        <header>
+            <span id="headBlack">NecatiMeral Logikbausteine</span>
+            <span id="headGray">Hilfe</span>
+        </header>
+        <section>
+            <div class="contentholder">
+                <div class="navlinks-top"></div>
+                <h1>
+                    <img src="../icons/meltem.png" alt="" />&nbsp; Meltem -
+                    Lüfterstufe abfragen
+                </h1>
+                <h2>Inhaltsverzeichnis</h2>
+                <img src="GetVentilationNode.png" alt="" class="description" />
+                <ul>
+                    <li><a href="#description">Beschreibung</a></li>
+                    <li><a href="#inputs">Eingänge</a></li>
+                    <li><a href="#outputs">Ausgänge</a></li>
+                </ul>
+                <h2 id="description">Beschreibung</h2>
+                <p>
+                    Dieser Baustein ist in der Lage die aktuelle Lüfterstufe
+                    eines Meltem-Lüftungsgerätes abzufragen. Die Abfrage erfolgt
+                    über die Modbus-Schnittstelle (derzeit nur RTU-over-TCP).
+                </p>
+                <h2 id="inputs">Eingänge</h2>
+                <p>
+                    Um Daten abzurufen, muss der <c>Trigger</c>-Eingang
+                    geschaltet werden. Weitere Eingänge sind:
+                </p>
+                <table class="Tabelle_Logicnode">
+                    <colgroup>
+                        <col style="width: 115px" />
+                        <col style="width: 180px" />
+                        <col />
+                    </colgroup>
+                    <tr>
+                        <th>Bezeichnung</th>
+                        <th>Porttyp</th>
+                        <th>Beschreibung</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><i>Trigger</i></p>
+                        </td>
+                        <td>
+                            <p>Bool</p>
+                        </td>
+                        <td>
+                            <p>Triggert das abrufen der Daten</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><i>IP-Adresse</i></p>
+                        </td>
+                        <td>
+                            <p>Text</p>
+                        </td>
+                        <td>
+                            <p>
+                                Die IP-Adresse des abzufragenden Meltem-Gerätes
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><i>Port</i></p>
+                        </td>
+                        <td>
+                            <p>Text</p>
+                        </td>
+                        <td>
+                            <p>Der Port des abzufragenden Meltem-Gerätes</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><i>Geräte-ID</i></p>
+                        </td>
+                        <td>
+                            <p>Integer</p>
+                        </td>
+                        <td>
+                            <p>
+                                Die Modbus Slave-ID des abzufragenden
+                                Meltem-Gerätes
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><i>Aktion</i></p>
+                        </td>
+                        <td>
+                            <p>Auswahlwert</p>
+                        </td>
+                        <td>
+                            <p>
+                                Gibt die Art der Darstellung der Lüfterstufe an.
+                                Folgende Werte sind möglich:
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>Lüfterstufe (Prozent):</strong> Gibt
+                                    die Lüfterstärke von 0-100% an.
+                                </li>
+                                <li>
+                                    <strong>Lüfterstufe (Numerisch):</strong>
+                                    Gibt die Lüfterstärke entsprechend der
+                                    Handbedienung als Stufe 0-5 an.
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <p></p>
+                <h2 id="outputs">Ausgänge</h2>
+                <table class="Tabelle_Logicnode">
+                    <colgroup>
+                        <col style="width: 115px" />
+                        <col style="width: 180px" />
+                        <col />
+                    </colgroup>
+                    <tr>
+                        <th>Bezeichnung</th>
+                        <th>Porttyp</th>
+                        <th>Beschreibung</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><i>Lüfterstufe</i></p>
+                        </td>
+                        <td>
+                            <p>Integer</p>
+                        </td>
+                        <td>
+                            <p>
+                                Gibt den aktuellen Wert der Lüfterstufe zurück.
+                                Der zurückgegebene Wert ist abhängig von der
+                                gewählten Aktion.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <footer>
+            <div id="footerHead">
+                NecatiMeral Logikbausteine &nbsp;
+                <span style="color: #a0a0a0">Hilfe</span>
+            </div>
+            <div id="footerNav">
+                <span style="float: right"
+                    ><a
+                        href="https://github.com/NecatiMeral/gira-x1-logic-nodes"
+                        target="_blank"
+                        >NecatiMeral / gira-x1-logic-nodes auf GitHub</a
+                    ></span
+                >
+            </div>
+        </footer>
+    </body>
+</html>

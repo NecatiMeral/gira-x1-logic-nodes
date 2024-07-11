@@ -30,7 +30,8 @@
       "HelpTooltip": {
         "en": "Sets the ventilation level on a Meltem appliance.",
         "de": "Setzt die Lüftungsstufe an einem Meltem-Gerät."
-      }
+      },
+      "HelpFileReference": "$help/SetVentilationNode.html"
     },
     {
       "Type": "Necati_Meral_Yahoo_De.Logic.Meltem.GetVentilationNode",
@@ -44,13 +45,14 @@
       "HelpTooltip": {
         "en": "Retrieves the ventilation level from a Meltem appliance.",
         "de": "Ruft die Lüftungsstufe von einem Meltem-Gerät ab."
-      }
+      },
+      "HelpFileReference": "$help/GetVentilationNode.html"
     },
     {
       "Type": "Necati_Meral_Yahoo_De.Logic.Meltem.GetDeviceInfoNode",
       "Name": {
-        "en": "Meltem - Get full device info",
-        "de": "Meltem - Vollständige Geräteinformation"
+        "en": "Meltem - Get device info",
+        "de": "Meltem - Gerätedaten abrufen"
       },
       "IsConverter": false,
       "Category": "Node",
@@ -58,7 +60,8 @@
       "HelpTooltip": {
         "en": "Retrieves the complete device information.",
         "de": "Ruft die vollständigen Geräteinformationen ab."
-      }
+      },
+      "HelpFileReference": "$help/GetDeviceInfoNode.html"
     }
   ]
 }

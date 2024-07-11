@@ -63,13 +63,11 @@ public class SetVentilationNode : MeltemNodeBase
 
     private void SetBalancedVentilationPercent()
     {
-        if (!BalancedVentilation.WasSet)
+        if (BalancedVentilation.WasSet)
         {
-            return;
+            SetVentilationPercent(BalancedVentilation.Value);
+            Output.Value = BalancedVentilation.Value;
         }
-
-        SetVentilationPercent(BalancedVentilation.Value);
-        Output.Value = BalancedVentilation.Value;
     }
 
     private void SetUnbalancedVentilationPercent()
@@ -95,28 +93,24 @@ public class SetVentilationNode : MeltemNodeBase
 
     private void SetBalancedVentilationLevel()
     {
-        if (!BalancedVentilationLevel.WasSet)
+        if (BalancedVentilationLevel.WasSet)
         {
-            return;
+            SetVentilationPercent(
+                VentilationPreset.GetVentilationPercent(BalancedVentilationLevel.Value)
+            );
+            Output.Value = BalancedVentilationLevel.Value;
         }
-
-        SetVentilationPercent(
-            VentilationPreset.GetVentilationPercent(BalancedVentilationLevel.Value)
-        );
-        Output.Value = BalancedVentilationLevel.Value;
     }
 
     private void SetBalancedVentilationLevelNumeric()
     {
         if (!BalancedVentilationLevelNumeric.WasSet)
         {
-            return;
+            SetVentilationPercent(
+                VentilationPreset.GetVentilationPercent(BalancedVentilationLevelNumeric.Value)
+            );
+            Output.Value = BalancedVentilationLevelNumeric.Value;
         }
-
-        SetVentilationPercent(
-            VentilationPreset.GetVentilationPercent(BalancedVentilationLevelNumeric.Value)
-        );
-        Output.Value = BalancedVentilationLevelNumeric.Value;
     }
 
     private void SetVentilationPercent(int percent)
