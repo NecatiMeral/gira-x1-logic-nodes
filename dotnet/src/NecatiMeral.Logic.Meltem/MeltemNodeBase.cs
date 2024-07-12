@@ -84,7 +84,7 @@ public abstract class MeltemNodeBase : LocalizableNode
             _client.UnitIdentifier = (byte)UnitId.Value;
             if (!_client.Connected)
             {
-                return;
+                throw new InvalidOperationException("Connection failed");
             }
 
             action(_client);
