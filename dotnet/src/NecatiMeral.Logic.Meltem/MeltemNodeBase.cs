@@ -78,15 +78,15 @@ public abstract class MeltemNodeBase : LocalizableNode
 
     protected void ExecuteWithConnection(Action<ModbusClient> action)
     {
-        _client.Connect(IPAddress.Value, Port.Value);
-        _client.UnitIdentifier = (byte)UnitId.Value;
-        if (!_client.Connected)
-        {
-            return;
-        }
-
         try
         {
+            _client.Connect(IPAddress.Value, Port.Value);
+            _client.UnitIdentifier = (byte)UnitId.Value;
+            if (!_client.Connected)
+            {
+                throw new InvalidOperationException("Connection failed");
+            }
+
             action(_client);
         }
         finally
