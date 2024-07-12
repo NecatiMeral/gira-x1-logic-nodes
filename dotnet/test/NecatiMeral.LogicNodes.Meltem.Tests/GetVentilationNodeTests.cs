@@ -51,7 +51,7 @@ public class GetVentilationNodeTests : MeltemNodeTestBase<GetVentilationNode>
         var node = CreateNode();
 
         ConfigureMeltemNode(node);
-        node.Port.Value += 1;
+        node.Port.Value = 99999;
         node.Action.Value = GetDeviceAction.GetVentilationPercent;
         node.Trigger.Value = true;
 
