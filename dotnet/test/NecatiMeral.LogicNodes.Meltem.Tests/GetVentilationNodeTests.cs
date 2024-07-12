@@ -43,4 +43,23 @@ public class GetVentilationNodeTests : MeltemNodeTestBase<GetVentilationNode>
         // Assert
         Sut.VentilationPercentage.Value.ShouldBe(50);
     }
+
+    [Fact]
+    public void Should_Handle_Errors()
+    {
+        // Arrange
+        var node = CreateNode();
+
+        ConfigureMeltemNode(node);
+        node.Port.Value += 1;
+        node.Action.Value = GetDeviceAction.GetVentilationPercent;
+        node.Trigger.Value = true;
+
+        // Act
+        node.Execute();
+
+        // Assert
+        node.VentilationPercentage.Value.ShouldBe(0);
+        node.Diagnostics.Value.ShouldContain("Exception");
+    }
 }
